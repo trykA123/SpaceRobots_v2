@@ -7,6 +7,9 @@ module.exports = {
         chakraPetch: "ChakraPetch",
         archivo: "Archivo",
       },
+      backgroundImage: {
+        hero: "url('./assets/images/herobackground.jpg')",
+      },
     },
   },
   plugins: [],
