@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+@font-face {
+  font-family: "ChakraPetch";
+  src: url("../src/fonts/ChakraPetch-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Archivo";
+  src: url("../src/fonts/Archivo-Regular.ttf");
+}
+
+@layer base {
+  h1 {
+    @apply font-chakraPetch uppercase md:text-5xl md:leading-10 font-semibold text-white
+     /* xl:text-8xl xl:leading-[95px]; */;
+  }
+
+  p {
+    @apply font-archivo text-xl leading-5 font-normal;
+  }
+}
