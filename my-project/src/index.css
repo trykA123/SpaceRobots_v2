@@ -22,8 +22,10 @@
 
 @layer base {
   h1 {
-    @apply font-chakraPetch uppercase md:text-5xl md:leading-10 font-semibold text-white
-     xl:text-[90px] xl:leading-[95px];
+    @apply font-chakraPetch uppercase font-semibold text-white
+    md:text-5xl md:leading-10 
+    lg:text-7xl lg:leading-[60px]
+    2xl:text-[90px] xl:leading-[95px];
   }
 
   p {

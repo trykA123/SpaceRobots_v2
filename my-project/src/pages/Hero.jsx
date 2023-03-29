@@ -11,7 +11,7 @@ const Hero = () => {
               Explore the unknown with Space Robots
             </h1>
             <div className="flex space-x-10">
-              <div className="w-64 bg-teal-400 rounded-sm flex items-center justify-center">
+              <div className="w-64 bg-teal-400 rounded-sm flex items-center justify-center cursor-pointer">
                 <a href="#" className="font-chakraPetch text-base uppercase">
                   Connect wallet
                 </a>

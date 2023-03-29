@@ -1,21 +1,37 @@
 import React from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faTwitter,
+  faDiscord,
+  faYoutube,
+} from "@fortawesome/free-brands-svg-icons";
 import { images } from "../utils/constants";
 
 const Navbar = () => {
   return (
     <div className="fixed z-30 hidden h-screen w-screen text-white md:block">
-      <ul className="flex items-center justify-center space-x-36 w-full h-5 mt-10">
-        <li className="cursor-auto">
+      <div className="grid grid-cols-3 h-5 mt-5">
+        <div className="flex justify-center">
           <img src={images.titleLogo} alt="" className="w-72" />
-        </li>
-        <li>Connect</li>
-        <li>Market</li>
-        <li>Stacking</li>
-        <li>Upgrading</li>
-        <li className="ml-20">5</li>
-        <li className="ml-20">6</li>
-        <li className="ml-20">7</li>
-      </ul>
+        </div>
+        <ul className="flex justify-between">
+          <li>Connect</li>
+          <li>Market</li>
+          <li class="opacity-50 before:content-['Stacking'] hover:before:content-['Soon'] duration-300"></li>
+          <li className="opacity-50 before:content-['Upgrading'] hover:before:content-['Soon']"></li>
+        </ul>
+        <div className="flex justify-center space-x-8">
+          <a href="#">
+            <FontAwesomeIcon icon={faTwitter} />
+          </a>
+          <a href="#">
+            <FontAwesomeIcon icon={faDiscord} />
+          </a>
+          <a href="#">
+            <FontAwesomeIcon icon={faYoutube} />
+          </a>
+        </div>
+      </div>
       <div className="flex items-center w-60 h-[90%] ml-14">
         <img src={images.sideMenu} alt="" className="h-[476px]" />
         <ul className="flex flex-col pr-20 justify-center space-y-[50px]">
