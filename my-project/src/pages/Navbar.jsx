@@ -10,9 +10,11 @@ import { images } from "../utils/constants";
 const Navbar = () => {
   return (
     <div className="fixed z-30 hidden h-screen w-screen text-white md:block">
-      <div className="grid grid-cols-3 h-5 mt-5">
+      <div className="grid grid-cols-3 h-5 mt-14">
         <div className="flex justify-center">
-          <img src={images.titleLogo} alt="" className="w-72" />
+          <a href="#hero" className="cursor-pointer">
+            <img src={images.titleLogo} alt="" className="w-72" />
+          </a>
         </div>
         <ul className="flex justify-between">
           <li>Connect</li>
@@ -36,10 +38,10 @@ const Navbar = () => {
         <img src={images.sideMenu} alt="" className="h-[476px]" />
         <ul className="flex flex-col pr-20 justify-center space-y-[50px]">
           <li>
-            <a href="#">Project</a>
+            <a href="#project">Project</a>
           </li>
           <li>
-            <a href="#">Collection</a>
+            <a href="#collection">Collection</a>
           </li>
           <li>
             <a href="#">Markets</a>

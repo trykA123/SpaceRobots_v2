@@ -9,6 +9,8 @@ module.exports = {
       },
       backgroundImage: {
         hero: "url('./assets/images/herobackground.jpg')",
+        projectImg: "url('./assets/images/project.png')",
+        packImg: "url('./assets/images/pack.png')",
       },
     },
   },

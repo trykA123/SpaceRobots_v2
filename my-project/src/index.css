@@ -8,6 +8,7 @@
   box-sizing: border-box;
   overflow: hidden;
   font-family: Archivo;
+  scroll-behavior: smooth;
 }
 
 @font-face {

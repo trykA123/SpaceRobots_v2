@@ -3,11 +3,11 @@ import { heroVideo } from "../utils/constants";
 
 const Hero = () => {
   return (
-    <section>
+    <section id="hero">
       <div className="h-screen bg-slate-700 text-white relative">
-        <div className="flex h-full w-full pl-[20%] pt-[15%]">
+        <div className="flex h-full w-full pl-[20%] pt-[15%] 2xl:pt-[10%]">
           <div className="flex-col space-y-11 items-center justify-center">
-            <h1 className="md:w-[700px] xl:w-[1080px]">
+            <h1 className="md:w-[700px] xl:w-[1080px] 2xl:w-[1200px]">
               Explore the unknown with Space Robots
             </h1>
             <div className="flex space-x-10">
@@ -25,7 +25,7 @@ const Hero = () => {
               </p>
             </div>
           </div>
-          <div className="flex items-end w-96 px-10 pb-36 mx-auto">
+          <div className="flex items-end 2xl:w-[600px] 2xl:pb-48 w-96 px-10 pb-36 mx-auto">
             <video className="w-full" autoPlay controls muted loop>
               <source src={heroVideo.video} type="video/mp4" />
             </video>
