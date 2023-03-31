@@ -17,7 +17,7 @@ const CollectionPack = ({ borderRight }) => {
         <img
           src={images.roboPack}
           alt=""
-          className="translate-y-96 group-hover:translate-y-0 duration-700"
+          className="translate-y-96 scale-75 group-hover:translate-y-0 group-hover:scale-110 duration-700"
         />
         <p className="py-10">
           By owning a Space Robots NFT, you're not just collecting a unique
