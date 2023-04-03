@@ -3,7 +3,7 @@ import React from "react";
 const Project = () => {
   return (
     <section id="project">
-      <div className="h-screen w-screen bg-slate-800 text-white">
+      <div className="h-screen w-screen bg-saturn bg-cover text-white">
         <div className="flex h-full w-full justify-around">
           <div className="flex-col space-y-11 items-center justify-center pt-[15%] pl-[10%]">
             <h1 className="md:w-[700px] xl:w-[1080px]">UPGRADABLE ROBOTS</h1>

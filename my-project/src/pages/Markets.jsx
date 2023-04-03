@@ -22,7 +22,7 @@ const Markets = () => {
 
   return (
     <section id="markets">
-      <div className="flex flex-col bg-slate-600 pl-[15%] pt-[5%] h-screen w-screen">
+      <div className="flex flex-col bg-background bg-cover pl-[15%] pt-[5%] h-screen w-screen">
         <div className="flex space-x-12 justify-center w-[90%] py-10">
           {smallPacks.map((pack) => (
             <div className="flex items-center justify-center w-36 h-36 border-[1px] rounded-md relative duration-700 z-30 group">
