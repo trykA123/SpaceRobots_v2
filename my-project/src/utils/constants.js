@@ -7,4 +7,5 @@ export const images = {
   sideMenu: "src/assets/images/sidemenu.svg",
   roboPack: "src/assets/images/robopack.png",
   banner: "src/assets/images/banner.png",
+  xlogo: "src/assets/images/xlogo.png",
 };

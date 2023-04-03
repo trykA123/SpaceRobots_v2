@@ -42,10 +42,12 @@ const Markets = () => {
               <h2 className="text-4xl text-white uppercase font-chakraPetch mb-4">
                 Space Robots
               </h2>
-              <p className="text-white">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum
-                illo excepturi deleniti sint et eius, ducimus architecto eos
-                labore
+              <p className="text-white w-[80%]">
+                Space Robots NFTs are part of an upgradable collection that
+                allows collectors to enhance their digital assets over time.
+                With each upgrade, the capabilities and abilities of the robot
+                are expanded, providing new opportunities for exploration and
+                discovery.
               </p>
             </div>
           </div>
