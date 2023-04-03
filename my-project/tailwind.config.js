@@ -9,8 +9,12 @@ module.exports = {
       },
       backgroundImage: {
         hero: "url('./assets/images/herobackground.jpg')",
-        projectImg: "url('./assets/images/project.png')",
+        projectImg: "url('./assets/images/upgraderobot.png')",
         packImg: "url('./assets/images/pack.png')",
+        packImg1: "url('./assets/images/robo1.png')",
+      },
+      backgroundColor: {
+        "gray-15": "rgba(68, 68, 68, 0.15)",
       },
     },
   },
