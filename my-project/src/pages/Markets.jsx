@@ -1,6 +1,95 @@
 import React from "react";
 import MarketCard from "../components/MarketCard";
 import { images } from "../utils/constants";
+import { useQuery, gql } from "@apollo/client";
+
+
+const COLLECTION_AUCTIONS_QUERY = gql`
+  query collectionAuctions(
+    $customFilters: [AuctionCustomFilter]
+    $sorting: [Sorting!]
+    $filters: FiltersExpression
+    $grouping: Grouping
+    $pagination: ConnectionArgs
+  ) {
+    auctions(
+      customFilters: $customFilters
+      sorting: $sorting
+      filters: $filters
+      grouping: $grouping
+      pagination: $pagination
+    ) {
+      edges {
+        node {
+          asset {
+            identifier
+            name
+            media {
+              url
+            }
+          }
+          marketplaceKey
+          marketplace {
+            iconUrl
+          }
+          maxBid {
+            amount
+            token
+            usdAmount
+            tokenData {
+              decimals
+              symbol
+              __typename
+            }
+            __typename
+          }
+          minBid {
+            amount
+            token
+            usdAmount
+            tokenData {
+              decimals
+              symbol
+              __typename
+            }
+            __typename
+          }
+          status
+        }
+      }
+    }
+  }
+`;
+
+const COLLECTION_VARIABLES = {
+  customFilters: [],
+  filters: {
+    filters: [
+      {
+        field: "status",
+        op: "EQ",
+        values: ["Running"],
+      },
+      {
+        field: "collection",
+        op: "EQ",
+        values: ["SRC-27d8ff"],
+      },
+    ],
+    operator: "AND",
+  },
+  pagination: {
+    after: "",
+    first: 5,
+  },
+  sorting: [
+    {
+      direction: "DESC",
+      field: "creationDate",
+    },
+  ],
+};
+
 
 const Markets = () => {
   const smallPacks = [
@@ -11,8 +100,6 @@ const Markets = () => {
     { bgImg: "packImg5", number: 5 },
   ];
 
-  const cards = [{ bgImg: "bg-packImg", number: 1 }];
-
   let numCards = 3;
   if (window.innerWidth >= 1920 && window.innerWidth < 3440) {
     numCards = 4;
@@ -20,7 +107,15 @@ const Markets = () => {
     numCards = 5;
   }
 
-  return (
+  const { loading, error, data } = useQuery(COLLECTION_AUCTIONS_QUERY, {
+    variables: COLLECTION_VARIABLES,
+  });
+
+
+  if (loading) return <p>Loading...</p>;
+  if (error) return <p>Error: {error.message}</p>;
+
+    return (
     <section id="markets">
       <div className="flex flex-col bg-background bg-cover pl-[15%] pt-[5%] h-screen w-screen">
         <div className="flex space-x-12 justify-center w-[90%] py-10">
@@ -52,9 +147,18 @@ const Markets = () => {
             </div>
           </div>
           <div className="flex">
-            {[...Array(numCards)].map((_, i) => (
-              <MarketCard key={i} />
-            ))}
+          {data.auctions.edges.map((edge) => {
+          const price = edge.node.maxBid.amount / Math.pow(10, edge.node.maxBid.tokenData.decimals);
+          const url = edge.node.asset.media[0].url;
+          const name = edge.node.asset.name;
+          const key = edge.node.id;
+
+          const assetId = edge.node.asset.identifier;
+
+          return (
+            <MarketCard price={price} url={url} name={name} key={key} assetId={assetId}/>
+          );
+          })}
           </div>
         </div>
       </div>
