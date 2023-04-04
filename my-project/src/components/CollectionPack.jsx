@@ -1,5 +1,7 @@
 import React from "react";
 import { images } from "../utils/constants";
+import banner from "../assets/images/banner.png"
+import roboPack from "../assets/images/robopack.png"
 
 const CollectionPack = ({ borderRight }) => {
   const classNames = `flex flex-col relative items-center justify-center text-white bg-packImg bg-cover border-l-2 z-30 ${
@@ -8,14 +10,14 @@ const CollectionPack = ({ borderRight }) => {
   return (
     <div className={classNames}>
       <div className="relative opacity-0 -translate-y-96 group-hover:opacity-100 group-hover:translate-y-0 duration-700 ">
-        <img src={images.banner} alt="" />
+        <img src={banner} alt="" />
         <p className="absolute z-20 top-2 font-chakraPetch text-xl uppercase left-6">
           Robopacks
         </p>
       </div>
       <div className="flex flex-col pt-12 items-center absolute mx-auto px-20 opacity-0 group-hover:opacity-100 duration-700 z-30">
         <img
-          src={images.roboPack}
+          src={roboPack}
           alt=""
           className="translate-y-96 scale-75 group-hover:translate-y-0 group-hover:scale-110 duration-700"
         />

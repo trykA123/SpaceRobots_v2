@@ -6,6 +6,8 @@ import {
   faYoutube,
 } from "@fortawesome/free-brands-svg-icons";
 import { images } from "../utils/constants";
+import titleLogo from "../assets/images/titleLogo.png"
+import sideMenu from "../assets/images/sideMenu.svg"
 
 const Navbar = () => {
   return (
@@ -13,7 +15,7 @@ const Navbar = () => {
       <div className="grid grid-cols-3 h-10 mt-12">
         <div className="flex justify-center items-center">
           <a href="#hero" className="cursor-pointer">
-            <img src={images.titleLogo} alt="" className="w-72" />
+            <img src={titleLogo} alt="" className="w-72" />
           </a>
         </div>
         <ul className="flex justify-between items-center">
@@ -35,7 +37,7 @@ const Navbar = () => {
         </div>
       </div>
       <div className="flex items-center w-60 h-[90%] ml-14">
-        <img src={images.sideMenu} alt="" className="h-[476px]" />
+        <img src={sideMenu} alt="" className="h-[476px]" />
         <ul className="flex flex-col pr-20 justify-center space-y-[50px]">
           <li>
             <a href="#project">Project</a>

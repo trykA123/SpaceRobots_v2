@@ -1,5 +1,6 @@
 import React from "react";
 import { heroVideo } from "../utils/constants";
+import heroVideo from "../assets/videos/heroVideo.mp4"
 
 const Hero = () => {
   return (
@@ -27,7 +28,7 @@ const Hero = () => {
           </div>
           <div className="flex items-end 2xl:w-[600px] 2xl:pb-48 w-96 px-10 pb-36 mx-auto">
             <video className="w-full" autoPlay controls muted loop>
-              <source src={heroVideo.video} type="video/mp4" />
+              <source src={heroVideo} type="video/mp4" />
             </video>
           </div>
         </div>

@@ -2,6 +2,8 @@ import React from "react";
 import MarketCard from "../components/MarketCard";
 import { images } from "../utils/constants";
 import { useQuery, gql } from "@apollo/client";
+import roboPack from "../assets/images/robopack.png"
+
 
 
 const COLLECTION_AUCTIONS_QUERY = gql`
@@ -132,7 +134,7 @@ const Markets = () => {
         </div>
         <div className="flex flex-col px-20">
           <div className="flex py-10">
-            <img src={images.roboPack} alt="" className="w-24 h-24" />
+            <img src={roboPack} alt="" className="w-24 h-24" />
             <div className="flex flex-col px-12">
               <h2 className="text-4xl text-white uppercase font-chakraPetch mb-4">
                 Space Robots
