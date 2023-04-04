@@ -1,10 +1,7 @@
+import { gql, useQuery } from "@apollo/client";
 import React from "react";
+import roboPack from "../assets/images/robopack.png";
 import MarketCard from "../components/MarketCard";
-import { images } from "../utils/constants";
-import { useQuery, gql } from "@apollo/client";
-import roboPack from "../assets/images/robopack.png"
-
-
 
 const COLLECTION_AUCTIONS_QUERY = gql`
   query collectionAuctions(
@@ -29,10 +26,6 @@ const COLLECTION_AUCTIONS_QUERY = gql`
             media {
               url
             }
-          }
-          marketplaceKey
-          marketplace {
-            iconUrl
           }
           maxBid {
             amount
@@ -92,7 +85,6 @@ const COLLECTION_VARIABLES = {
   ],
 };
 
-
 const Markets = () => {
   const smallPacks = [
     { bgImg: "packImg1", number: 1 },
@@ -102,22 +94,21 @@ const Markets = () => {
     { bgImg: "packImg5", number: 5 },
   ];
 
-  let numCards = 3;
+  let numMarketCards = 3;
   if (window.innerWidth >= 1920 && window.innerWidth < 3440) {
-    numCards = 4;
+    numMarketCards = 4;
   } else if (window.innerWidth >= 3440) {
-    numCards = 5;
+    numMarketCards = 5;
   }
 
   const { loading, error, data } = useQuery(COLLECTION_AUCTIONS_QUERY, {
     variables: COLLECTION_VARIABLES,
   });
 
-
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Error: {error.message}</p>;
 
-    return (
+  return (
     <section id="markets">
       <div className="flex flex-col bg-background bg-cover pl-[15%] pt-[5%] h-screen w-screen">
         <div className="flex space-x-12 justify-center w-[90%] py-10">
@@ -149,18 +140,32 @@ const Markets = () => {
             </div>
           </div>
           <div className="flex">
-          {data.auctions.edges.map((edge) => {
-          const price = edge.node.maxBid.amount / Math.pow(10, edge.node.maxBid.tokenData.decimals);
-          const url = edge.node.asset.media[0].url;
-          const name = edge.node.asset.name;
-          const key = edge.node.id;
+            {[...Array(numMarketCards)].map((_, index) => {
+              const edge = data.auctions.edges[index];
+              if (!edge) {
+                return null;
+              }
+              const price =
+                edge.node.maxBid.amount /
+                Math.pow(10, edge.node.maxBid.tokenData.decimals);
+              const token = edge.node.maxBid.token;
+              const url = edge.node.asset.media[0].url;
+              const name = edge.node.asset.name;
+              const key = edge.node.id;
+              const assetId = edge.node.asset.identifier;
+              console.log(token);
 
-          const assetId = edge.node.asset.identifier;
-
-          return (
-            <MarketCard price={price} url={url} name={name} key={key} assetId={assetId}/>
-          );
-          })}
+              return (
+                <MarketCard
+                  price={price}
+                  url={url}
+                  token={token}
+                  name={name}
+                  key={key}
+                  assetId={assetId}
+                />
+              );
+            })}
           </div>
         </div>
       </div>

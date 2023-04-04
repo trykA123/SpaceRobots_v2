@@ -1,6 +1,5 @@
+import { gql, useQuery } from "@apollo/client";
 import React from "react";
-import { images } from "../utils/constants";
-import { useQuery, gql } from "@apollo/client";
 
 const SELECTED_AUCTION_QUERY = gql`
   query selectedAuction(
@@ -29,7 +28,7 @@ const SELECTED_AUCTION_QUERY = gql`
 `;
 
 const MarketCard = (props) => {
-  console.log(props.assetId)
+  console.log(props.assetId);
   const SELECTED_VARIABLES = {
     filters: {
       filters: [
@@ -62,14 +61,10 @@ const MarketCard = (props) => {
   const marketIconUrl = data.auctions.edges[0].node.marketplace.iconUrl;
 
   return (
-    <div className="flex pr-12 z-40 group">
+    <div className="flex pr-12 z-30 group">
       <div className="flex flex-col w-96 h-[530px] bg-gray-15 rounded-md group-hover:bg-gradient-to-b from-teal-text-100 via-teal-text-40 to-teal-text-0">
         <div className="flex flex-col mx-auto">
-          <img
-            src={props.url}
-            alt=""
-            className="w-80 h-80 mt-6 rounded-md"
-          />
+          <img src={props.url} alt="" className="w-80 h-80 mt-6 rounded-md" />
           <h3 className="font-chakraPetch text-2xl text-white pt-3 font-semibold">
             {props.name}
           </h3>
@@ -78,15 +73,15 @@ const MarketCard = (props) => {
           </p>
           <div className="flex justify-between items-center">
             <div className="flex items-center space-x-4">
-            <img src={marketIconUrl} 
-              className="w-12 h-12"
-              />
+              <img src={marketIconUrl} className="w-12 h-12" />
               <h4 className="text-teal-text-100 text-2xl leading-[95px] font-chakraPetch font-semibold">
-                {props.price} 
+                {props.price}
               </h4>
             </div>
             <div className="flex items-center justify-center text-white hover:text-black w-48 h-12 hover:bg-teal-300 bg-gray-15 rounded-sm font-semibold gap-4">
-              <a href={marketUrl} target="_blank">BUY from {marketName}</a>
+              <a href={marketUrl} target="_blank">
+                BUY from {marketName}
+              </a>
             </div>
           </div>
         </div>
