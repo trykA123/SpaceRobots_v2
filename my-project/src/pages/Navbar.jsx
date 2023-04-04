@@ -1,13 +1,12 @@
-import React from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
-  faTwitter,
   faDiscord,
+  faTwitter,
   faYoutube,
 } from "@fortawesome/free-brands-svg-icons";
-import { images } from "../utils/constants";
-import titleLogo from "../assets/images/titleLogo.png"
-import sideMenu from "../assets/images/sideMenu.svg"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import React from "react";
+import titleLogo from "../assets/images/logo.png";
+import sideMenu from "../assets/images/sidemenu.svg";
 
 const Navbar = () => {
   return (
