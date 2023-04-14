@@ -4,8 +4,8 @@ import CollectionPack from "../components/CollectionPack";
 const Collection = () => {
   return (
     <section id="collection">
-      <div className="h-screen bg-collectionBackgound bg-cover w-screen">
-        <div className="grid grid-cols-3 pl-[10%] pr-[10%] h-[90%] pt-[10%] w-[80%] mx-auto">
+      <div className="h-screen bg-collectionBackgound bg-cover">
+        <div className="grid grid-cols-3 3xl:w-[50%] w-[70%] mx-auto 3xl:py-48 py-36 h-full">
           <CollectionPack />
           <CollectionPack />
           <CollectionPack borderRight={true} />

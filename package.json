@@ -6,18 +6,22 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "host": "vite --host"
   },
   "dependencies": {
     "@apollo/client": "^3.7.11",
     "@fortawesome/fontawesome-svg-core": "^6.4.0",
     "@fortawesome/free-brands-svg-icons": "^6.4.0",
+    "@fortawesome/free-solid-svg-icons": "^6.4.0",
     "@fortawesome/react-fontawesome": "^0.2.0",
+    "@react-hook/resize-observer": "^1.2.6",
     "axios": "^1.3.4",
+    "framer-motion": "^10.11.4",
     "graphql": "^16.6.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-id-swiper": "^4.0.0"
+    "react-intersection-observer": "^9.4.3"
   },
   "devDependencies": {
     "@types/react": "^18.0.28",

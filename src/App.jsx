@@ -1,19 +1,16 @@
-import Collection from "./pages/Collection";
-import Hero from "./pages/Hero";
 import Markets from "./pages/Markets";
 import Navbar from "./pages/Navbar";
-import Project from "./pages/Project";
-import AuctionsList from "./services/api";
-import { ApolloClient } from "@apollo/client";
+import Roadmap from "./pages/Roadmap";
 
 function App() {
   return (
     <div>
-      <Navbar />
-      <Hero />
+      {/* <Navbar /> */}
+      {/*<Hero />
       <Project />
-      <Collection />
-      <Markets />
+      <Collection /> */}
+      {/* <Markets /> */}
+      <Roadmap />
     </div>
   );
 }

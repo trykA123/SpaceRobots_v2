@@ -24,6 +24,12 @@ module.exports = {
         "teal-text-40": "rgba(20, 194, 163, 0.4)",
         "teal-text-0": "rgba(20, 194, 163, 0.01)",
         "white-40": "rgba(255, 255, 255, 0.4)",
+        "gray-15": "rgba(68, 68, 68, 0.15)",
+      },
+      screens: {
+        "3xl": "1920px",
+        "4xl": "2560px",
+        "5xl": "3840px",
       },
     },
   },
