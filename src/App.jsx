@@ -5,7 +5,7 @@ import Roadmap from "./pages/Roadmap";
 function App() {
   return (
     <div>
-      {/* <Navbar /> */}
+      <Navbar />
       {/*<Hero />
       <Project />
       <Collection /> */}
