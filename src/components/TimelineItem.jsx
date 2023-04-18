@@ -2,7 +2,7 @@ import React from "react";
 
 const TimelineItem = ({ status, title, content }) => {
   return (
-    <div className="relative ml-3 mt-3 py-16 space-y-14">
+    <div className="flex relative ml-3 mt-3 py-16 space-y-14 border-2 border-teal-600">
       <div className="pl-10">
         <span className="text-base font-bold opacity-40 tracking-widest">
           {status}

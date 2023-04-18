@@ -140,6 +140,7 @@ export const roadmapSections = [
   {
     title: titles.Q3,
     firstInfo: {
+      status: "Doing nothing",
       title: "ΣForge",
       info: "A ΣForge process will be launched in Q3. Redesigning your Space Robots using RoboParts to alter their performance stats while maintaining their visual appearance.",
     },

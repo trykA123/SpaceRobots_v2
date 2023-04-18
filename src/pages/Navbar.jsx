@@ -10,8 +10,8 @@ import sideMenu from "../assets/images/sidemenu.svg";
 
 const Navbar = () => {
   return (
-    <div className="fixed z-30 hidden h-screen w-screen text-white md:block">
-      <div className="flex items-center h-32">
+    <div className="fixed hidden h-screen w-screen text-white md:block">
+      <div className="flex items-center h-32 z-30">
         <div className="flex flex-1 justify-center items-center">
           <a href="#hero" className="cursor-pointer">
             <img src={titleLogo} alt="" className="w-72" />
@@ -46,7 +46,7 @@ const Navbar = () => {
           </a>
         </div>
       </div>
-      <div className="flex items-center w-60 h-[90%] ml-14">
+      <div className="flex items-center w-60 h-[90%] ml-14 z-30">
         <img src={sideMenu} alt="" className="h-[476px]" />
         <ul className="flex flex-col pr-20 justify-center space-y-[50px]">
           <li>
@@ -62,7 +62,7 @@ const Navbar = () => {
             <a href="#">Events</a>
           </li>
           <li>
-            <a href="#">Road Map</a>
+            <a href="#roadmap">Road Map</a>
           </li>
           <li>
             <a href="#">Team</a>
