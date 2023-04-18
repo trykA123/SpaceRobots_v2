@@ -11,13 +11,8 @@ const Hero = () => {
             <h1 className="md:w-[700px] xl:w-[1080px] 2xl:w-[1200px]">
               Explore the unknown with Space Robots
             </h1>
-            <div className="flex space-x-10">
-              <div className="w-64 bg-teal-400 rounded-sm flex items-center justify-center cursor-pointer">
-                <a href="#" className="font-chakraPetch text-base uppercase">
-                  Connect wallet
-                </a>
-              </div>
-              <p className="md:w-[600px] xl:w-[750px] h-14">
+            <div className="flex h-full">
+              <p className="md:w-[600px] xl:w-[750px] ">
                 Space Robots NFTs are unique digital collectibles that represent
                 a robotic explorer in the vast universe. These NFTs offer a
                 glimpse into the future of space exploration, where robots are

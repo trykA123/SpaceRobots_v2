@@ -10,20 +10,31 @@ import sideMenu from "../assets/images/sidemenu.svg";
 
 const Navbar = () => {
   return (
-    <div className="fixed z-30 hidden h-screen w-screen text-white md:block">
-      <div className="grid grid-cols-3 h-10 mt-12">
-        <div className="flex justify-center items-center">
+    <div className="fixed hidden h-screen w-screen text-white md:block">
+      <div className="flex items-center h-32 z-30">
+        <div className="flex flex-1 justify-center items-center">
           <a href="#hero" className="cursor-pointer">
             <img src={titleLogo} alt="" className="w-72" />
           </a>
         </div>
-        <ul className="flex justify-between items-center">
-          <li>Connect</li>
+        <ul className="flex flex-1 justify-between items-center h-full">
+          <li className="">Connect</li>
           <li>Market</li>
-          <li class="opacity-50 before:content-['Stacking'] hover:before:content-['Soon'] duration-300"></li>
-          <li className="opacity-50 before:content-['Upgrading'] hover:before:content-['Soon']"></li>
+          <li className="relative group opacity-50">
+            <div className="flex items-center justify-center opacity-0 duration-500 absolute w-32 top-full left-0 bg-teal-text-100 text-white py-2 px-4 -translate-y-4 -translate-x-2 group-hover:opacity-100 group-hover:translate-y-2 group-hover:translate-x-2 rounded-md">
+              Soon
+            </div>
+            Stacking
+          </li>
+          <li className="opacity-50">Upgrading</li>
+          <li>
+            <a href="https://spacerobots.club/" target="_blank">
+              DAPP
+            </a>
+          </li>
         </ul>
-        <div className="flex justify-center items-center space-x-8">
+
+        <div className="flex flex-1 justify-center items-center space-x-8">
           <a href="#" className="hover:scale-150 duration-300">
             <FontAwesomeIcon icon={faTwitter} />
           </a>
@@ -35,7 +46,7 @@ const Navbar = () => {
           </a>
         </div>
       </div>
-      <div className="flex items-center w-60 h-[90%] ml-14">
+      <div className="flex items-center w-60 h-[90%] ml-14 z-30">
         <img src={sideMenu} alt="" className="h-[476px]" />
         <ul className="flex flex-col pr-20 justify-center space-y-[50px]">
           <li>
@@ -51,7 +62,7 @@ const Navbar = () => {
             <a href="#">Events</a>
           </li>
           <li>
-            <a href="#">Road Map</a>
+            <a href="#roadmap">Road Map</a>
           </li>
           <li>
             <a href="#">Team</a>

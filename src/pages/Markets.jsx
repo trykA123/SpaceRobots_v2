@@ -87,15 +87,15 @@ const COLLECTION_VARIABLES = {
 
 const Markets = () => {
   const smallPacks = [
-    { bgImg: "packImg1", number: 1 },
-    { bgImg: "packImg2", number: 2 },
-    { bgImg: "packImg3", number: 3 },
-    { bgImg: "packImg4", number: 4 },
-    { bgImg: "packImg5", number: 5 },
+    { bgImg: "packImg1", info: "Space Robots - Roboparts" },
+    { bgImg: "packImg2", info: "Space Robots - General" },
+    { bgImg: "packImg3", info: "Space Robots - Roboparts" },
+    { bgImg: "packImg4", info: "Space Robots - Backgrounds" },
+    { bgImg: "packImg5", info: "Proteo Robots" },
   ];
 
   let numMarketCards = 3;
-  if (window.innerWidth >= 1920 && window.innerWidth < 3440) {
+  if (window.innerWidth > 1920 && window.innerWidth < 3440) {
     numMarketCards = 4;
   } else if (window.innerWidth >= 3440) {
     numMarketCards = 5;
@@ -110,36 +110,21 @@ const Markets = () => {
 
   return (
     <section id="markets">
-      <div className="flex flex-col bg-background bg-cover pl-[15%] pt-[5%] h-screen w-screen">
+      <div className="flex flex-col bg-background bg-cover pl-[10%] 4xl:pl-[15%] pt-[5%] h-screen w-screen">
         <div className="flex space-x-12 justify-center w-[90%] py-10">
           {smallPacks.map((pack) => (
-            <div className="flex items-center justify-center w-36 h-36 border-[1px] rounded-md relative duration-700 z-30 group">
+            <div className="flex items-center justify-center w-48 h-48 border-[1px] border-gray-15 rounded-md relative duration-700 z-30 group">
               <div
-                className={`bg-${pack.bgImg} bg-cover opacity-40 group-hover:opacity-100`}
+                className={`bg-${pack.bgImg} bg-cover opacity-40 group-hover:opacity-100 duration-500`}
               ></div>
-              <p className="position abosolute text-white opacity-100 group-hover:opacity-0">
-                {pack.number}
+              <p className="text-center abosolute font-bold text-white opacity-100 group-hover:opacity-0">
+                {pack.info}
               </p>
             </div>
           ))}
         </div>
-        <div className="flex flex-col px-20">
-          <div className="flex py-10">
-            <img src={roboPack} alt="" className="w-24 h-24" />
-            <div className="flex flex-col px-12">
-              <h2 className="text-4xl text-white uppercase font-chakraPetch mb-4">
-                Space Robots
-              </h2>
-              <p className="text-white w-[80%]">
-                Space Robots NFTs are part of an upgradable collection that
-                allows collectors to enhance their digital assets over time.
-                With each upgrade, the capabilities and abilities of the robot
-                are expanded, providing new opportunities for exploration and
-                discovery.
-              </p>
-            </div>
-          </div>
-          <div className="flex">
+        <div className="flex px-20">
+          <div className="flex 3xl:justify-center gap-16 pt-9">
             {[...Array(numMarketCards)].map((_, index) => {
               const edge = data.auctions.edges[index];
               if (!edge) {

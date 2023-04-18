@@ -24,16 +24,33 @@
 @layer base {
   h1 {
     @apply font-chakraPetch uppercase font-semibold text-white
-    md:text-5xl md:leading-10 
-    lg:text-7xl lg:leading-[60px]
-    2xl:text-[90px] xl:leading-[95px];
+    md:text-3xl md:leading-10 
+    lg:text-5xl lg:leading-[60px]
+    3xl:text-6xl
+    4xl:text-[90px] xl:leading-[95px];
   }
 
+  h3 {
+    @apply font-chakraPetch text-2xl text-white pt-3 font-semibold uppercase;
+  }
+
+  h4 {
+    @apply text-4xl text-gray-300 px-3 py-4 font-bold tracking-widest;
+  }
   p {
-    @apply font-archivo text-base leading-[18px] font-normal;
+    @apply font-archivo text-base leading-4 font-normal 3xl:text-xl 3xl:leading-8;
   }
 
   li {
-    @apply font-chakraPetch uppercase text-base leading-[24px] tracking-tighter font-bold cursor-pointer;
+    @apply font-chakraPetch uppercase text-base leading-6 tracking-tighter font-bold cursor-pointer;
+  }
+}
+
+@layer components {
+  .container-content {
+    @apply flex h-full w-full;
+  }
+  .content {
+    @apply my-auto ml-[18%] 4xl:mx-[15%];
   }
 }
