@@ -2,12 +2,12 @@ import React from "react";
 import banner from "../assets/images/banner.png";
 import roboPack from "../assets/images/robopack.png";
 
-const CollectionPack = ({ borderRight }) => {
-  const classNames = `flex flex-col 3xl:h-full h-[80%] relative items-center justify-center text-white bg-packImg bg-cover border-l-2 z-30 ${
-    borderRight ? "border-r-2" : ""
-  } opacity-40 group hover:opacity-100 duration-700`;
+const CollectionPack = () => {
+  const classNames = `flex flex-col w-1/3 3xl:h-full h-[80%] relative items-center justify-center text-white bg-packImg bg-cover z-30 opacity-40 group hover:opacity-100 duration-700`;
   return (
     <div className={classNames}>
+      {/* TODO: move the image from bg to an img, and on bg add a gradient overit
+       */}
       <div className="relative opacity-0 md:-translate-y-64 md:group-hover:translate-y-6 3xl:-translate-y-96 group-hover:opacity-100 3xl:group-hover:-translate-y-12 duration-700 ">
         <img src={banner} alt="" />
         <p className="absolute z-20 top-2 font-chakraPetch text-xl uppercase left-6">
