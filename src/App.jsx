@@ -1,8 +1,9 @@
-import Hero from './pages/Hero';
-import Project from "./pages/Project";
 import Collection from "./pages/Collection";
+import Events from "./pages/Events";
+import Hero from "./pages/Hero";
 import Markets from "./pages/Markets";
 import Navbar from "./pages/Navbar";
+import Project from "./pages/Project";
 import Roadmap from "./pages/Roadmap";
 
 function App() {
@@ -13,6 +14,7 @@ function App() {
       <Project />
       <Collection />
       <Markets />
+      <Events />
       <Roadmap />
     </div>
   );

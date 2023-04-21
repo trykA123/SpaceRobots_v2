@@ -21,14 +21,19 @@ const Navbar = () => {
           <li className="">Connect</li>
           <li>Market</li>
           <li className="relative group opacity-50">
-            <div className="flex items-center justify-center opacity-0 duration-500 absolute w-32 top-full left-0 bg-teal-text-100 text-white py-2 px-4 -translate-y-4 -translate-x-2 group-hover:opacity-100 group-hover:translate-y-2 group-hover:translate-x-2 rounded-md">
+            <div className="flex items-center justify-center opacity-0 duration-500 absolute w-32 top-full left-0 bg-teal-text-100 text-white py-2 px-4 group-hover:opacity-100  group-hover:translate-x-12 rounded-md">
               Soon
             </div>
             Stacking
           </li>
-          <li className="opacity-50">Upgrading</li>
+          <li className="relative group opacity-50">
+            <div className="flex items-center justify-center opacity-0 duration-500 absolute w-32 top-full left-0 bg-teal-text-100 py-2 px-4 group-hover:opacity-100 group-hover:translate-x-12 rounded-md">
+              Soon
+            </div>
+            Upgrading
+          </li>
           <li>
-            <a href="https://spacerobots.club/" target="_blank">
+            <a href="https://dapp.spacerobotsclub.com/" target="_blank">
               DAPP
             </a>
           </li>
@@ -59,7 +64,7 @@ const Navbar = () => {
             <a href="#markets">Markets</a>
           </li>
           <li>
-            <a href="#">Events</a>
+            <a href="#events">Events</a>
           </li>
           <li>
             <a href="#roadmap">Road Map</a>
