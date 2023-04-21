@@ -3,7 +3,7 @@ import React from "react";
 const EventCardLeft = () => {
   return (
     <div className="flex w-full justify-end">
-      <div className="flex w-[600px] h-[160px] items-center space-x-6">
+      <div className="flex w-[450px] 3xl:w-[600px] h-[100px] 3xl:h-[160px] items-center space-x-6">
         <div className="flex flex-col space-y-6 w-[400px] h-36">
           <p className="h-20 text-base text-white leading-4">
             Space Robots NFTs are part of an upgradable collection that allows
@@ -17,7 +17,7 @@ const EventCardLeft = () => {
             </div>
           </div>
         </div>
-        <div className="bg-packImg bg-cover rounded-md h-40 w-40"></div>
+        <div className="bg-packImg bg-cover rounded-md 3xl:h-40 3xl:w-40 w-28 h-24"></div>
         {/* <img src={roboPack} alt="" className="flex object-contain"/> */}
       </div>
       <div className="h-[1px] w-1/12 bg-gradient-to-r from-transparent to-white"></div>

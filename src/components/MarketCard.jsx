@@ -66,23 +66,24 @@ const MarketCard = (props) => {
 
   return (
     <div className="flex z-30 group">
-      <div className="flex flex-col 3xl:w-[400px] 3xl:h-[550px] bg-gray-15 rounded-md group-hover:bg-gradient-to-b from-teal-text-100 via-teal-text-40 to-teal-text-0 px-6 space-y-3">
+      <div className="flex flex-col md:w-80 h-[450px] 3xl:w-[400px] 3xl:h-[550px] bg-gray-15 rounded-md group-hover:bg-gradient-to-b from-teal-text-100 via-teal-text-40 to-teal-text-0 px-6 space-y-3">
         <img src={props.url} alt="" className="pt-6 rounded-md object-cover" />
         <h3>{props.name}</h3>
         <div className="flex h-16 items-center justify-between">
           <div className="flex items-center">
             <img src={xlogo} className="w-7 h-7" />
-            <h4 className="text-teal-text-100 text-2xl leading-[95px] font-chakraPetch font-semibold">
+            <h4 className="text-teal-text-100 text-xl 3xl:text-2xl leading-[95px] font-chakraPetch font-semibold">
               {props.price}
             </h4>
           </div>
-          <div className="flex items-center justify-center text-white hover:text-black w-2/5 h-16 hover:bg-teal-300 bg-gray-15 rounded-md font-semibold gap-4 group-hover:w-3/5 duration-500 group-hover:-translate-x-2">
+          <div className="flex items-center justify-center text-white hover:text-black w-[50%] h-16 hover:bg-teal-300 bg-gray-15 rounded-md font-semibold gap-4 group-hover:w-3/5 duration-500 group-hover:-translate-x-2">
             <a
               href={marketUrl}
               target="_blank"
-              className="flex items-center text-xl"
+              className="flex items-center 3xl:text-xl"
             >
-              BUY on <img src={marketIconUrl} className="w-12 h-12" />
+              BUY on{" "}
+              <img src={marketIconUrl} className="w-8 h-8 3xl:w-12 3xl:h-12" />
             </a>
             {/* <FontAwesomeIcon
               icon={faArrowUpRightFromSquare}

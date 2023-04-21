@@ -11,7 +11,7 @@ const Events = () => {
   return (
     <section id="events">
       <div className="h-screen bg-background bg-cover">
-        <div className="flex flex-col pt-44 mx-auto w-3/4 h-full pb-24">
+        <div className="flex flex-col pt-24 4xl:pt-44 mx-auto w-3/4 h-full pb-24">
           {/* Tabs navbar */}
           <div className="flex items-center justify-center h-32">
             <ul className="flex space-x-6 text-4xl text-white ">

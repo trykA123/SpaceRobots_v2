@@ -28,10 +28,10 @@
 
   h1 {
     @apply font-chakraPetch uppercase font-semibold text-white
-    md:text-3xl md:leading-10 
-    lg:text-5xl lg:leading-[60px]
+    md:text-5xl
     3xl:text-6xl
-    4xl:text-[90px] xl:leading-[95px];
+    3xl:leading-[95px]
+    4xl:text-[90px];
   }
 
   h3 {

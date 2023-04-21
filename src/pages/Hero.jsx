@@ -4,15 +4,16 @@ import heroVideo from "../assets/videos/video.mp4";
 
 const Hero = () => {
   return (
+    // 3xl:pl-[15%] pt-[15%] 2xl:pt-[10%]
     <section id="hero">
       <div className="h-screen bg-heroBackground bg-cover text-white w-screen">
-        <div className="flex h-full w-full pl-[20%] pt-[15%] 2xl:pt-[10%]">
-          <div className="flex-col space-y-11 items-center justify-center">
-            <h1 className="md:w-[700px] xl:w-[1080px] 2xl:w-[1200px]">
+        <div className="flex flex-col justify-between h-full w-[80%] mx-auto md:pt-64 md:pb-14 md:pl-24 4xl:pt-72 4xl:pb-24">
+          <div className="flex flex-col space-y-11">
+            <h1 className="md:w-[600px] 3xl:w-[1080px] 4xl:w-[1200px]">
               Explore the unknown with Space Robots
             </h1>
             <div className="flex h-full">
-              <p className="md:w-[600px] xl:w-[750px] ">
+              <p className="md:w-[600px] 3xl:w-[1080px]">
                 Space Robots NFTs are unique digital collectibles that represent
                 a robotic explorer in the vast universe. These NFTs offer a
                 glimpse into the future of space exploration, where robots are
@@ -21,8 +22,14 @@ const Hero = () => {
               </p>
             </div>
           </div>
-          <div className="flex items-end 2xl:w-[600px] 2xl:pb-48 w-96 px-10 pb-36 mx-auto">
-            <video className="w-full" autoPlay controls muted loop>
+          <div className="flex justify-end w-full px-10">
+            <video
+              className="md:w-64 3xl:w-72 4xl:w-96"
+              autoPlay
+              controls
+              muted
+              loop
+            >
               <source src={heroVideo} type="video/mp4" />
             </video>
           </div>

@@ -113,7 +113,7 @@ const Markets = () => {
       <div className="flex flex-col bg-background bg-cover pl-[10%] 4xl:pl-[15%] pt-[5%] h-screen w-screen">
         <div className="flex space-x-12 justify-center w-[90%] py-10">
           {smallPacks.map((pack) => (
-            <div className="flex items-center justify-center w-48 h-48 border-[1px] border-gray-15 rounded-md relative duration-700 z-30 group">
+            <div className="flex items-center justify-center md:w-32 md:h-32 3xl:w-40 3xl:h-40 4xl:w-48 4xl:h-48 border-[1px] border-gray-15 rounded-md relative duration-700 z-30 group">
               <div
                 className={`bg-${pack.bgImg} bg-cover opacity-40 group-hover:opacity-100 duration-500`}
               ></div>
@@ -124,7 +124,7 @@ const Markets = () => {
           ))}
         </div>
         <div className="flex px-20">
-          <div className="flex 3xl:justify-center gap-16 pt-9">
+          <div className="flex 3xl:justify-center md:space-x-8 3xl:space-x-16 pt-4 3xl:pt-9">
             {[...Array(numMarketCards)].map((_, index) => {
               const edge = data.auctions.edges[index];
               if (!edge) {

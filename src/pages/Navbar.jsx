@@ -11,7 +11,7 @@ import sideMenu from "../assets/images/sidemenu.svg";
 const Navbar = () => {
   return (
     <div className="fixed hidden h-screen w-screen text-white md:block">
-      <div className="flex items-center h-32 z-30">
+      <div className="flex items-center h-32 z-10">
         <div className="flex flex-1 justify-center items-center">
           <a href="#hero" className="cursor-pointer">
             <img src={titleLogo} alt="" className="w-72" />
