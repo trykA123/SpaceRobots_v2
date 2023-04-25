@@ -59,8 +59,6 @@ const MarketCard = (props) => {
   if (error) return <p>Error: {error.message}</p>;
 
   console.log(data.auctions);
-
-  const marketName = data.auctions.edges[0].node.marketplace.name;
   const marketUrl = data.auctions.edges[0].node.marketplace.url;
   const marketIconUrl = data.auctions.edges[0].node.marketplace.iconUrl;
 
@@ -71,13 +69,16 @@ const MarketCard = (props) => {
           <img
             src={props.url}
             alt=""
-            className="pt-6 rounded-md object-cover"
+            className="pt-6 rounded-md object-cover group-hover:scale-110 duration-500"
           />
         ) : (
           <video
             src={props.url}
             alt=""
-            className="pt-6 rounded-md object-cover"
+            className="pt-6 rounded-md object-cover group-hover:scale-110 duration-500"
+            autoPlay
+            muted
+            loop
           />
         )}
 
@@ -89,7 +90,7 @@ const MarketCard = (props) => {
               {props.price}
             </h4>
           </div>
-          <div className="flex items-center justify-center text-white hover:text-black w-[50%] h-16 hover:bg-teal-300 bg-gray-15 rounded-md font-semibold gap-4 group-hover:w-3/5 duration-500 group-hover:-translate-x-2">
+          <button className="flex items-center justify-center text-white hover:text-black w-[50%] h-16 hover:bg-teal-300 bg-gray-15 rounded-md font-semibold gap-4 group-hover:w-3/5 duration-500 group-hover:-translate-x-2">
             <a
               href={marketUrl}
               target="_blank"
@@ -105,7 +106,7 @@ const MarketCard = (props) => {
               icon={faArrowUpRightFromSquare}
               className="text-teal-text-100 hidden opacity-0 group-hover:block group-hover:opacity-100 duration-500"
             /> */}
-          </div>
+          </button>
         </div>
       </div>
     </div>
