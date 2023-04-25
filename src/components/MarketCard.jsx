@@ -67,7 +67,9 @@ const MarketCard = (props) => {
   return (
     <div className="flex z-30 group">
       <div className="flex flex-col md:w-80 h-[450px] 3xl:w-[400px] 3xl:h-[550px] bg-gray-15 rounded-md group-hover:bg-gradient-to-b from-teal-text-100 via-teal-text-40 to-teal-text-0 px-6 space-y-3">
-        <img src={props.url} alt="" className="pt-6 rounded-md object-cover" />
+        {props.extension == "mp4" && <video src={props.url} alt="" className="pt-6 rounded-md object-cover" />} 
+        {props.extension == "png" && <img src={props.url} alt="" className="pt-6 rounded-md object-cover" />}
+        
         <h3>{props.name}</h3>
         <div className="flex h-16 items-center justify-between">
           <div className="flex items-center">

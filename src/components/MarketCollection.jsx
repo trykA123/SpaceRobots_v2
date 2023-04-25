@@ -30,11 +30,15 @@ const MarketCollection = () => {
         const name = edge.node.asset.name;
         const key = edge.node.id;
         const assetId = edge.node.asset.identifier;
-        console.log(token);
+        
+        
+        const urlExtenstion = url.split(".").pop()
+        console.log(urlExtenstion);
 
         return (
           <MarketCard
             price={price}
+            extension={urlExtenstion}
             url={url}
             token={token}
             name={name}
