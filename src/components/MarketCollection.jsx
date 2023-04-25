@@ -2,7 +2,12 @@ import React from "react";
 import MarketCard from "../components/MarketCard";
 import { useCollectionAuctions } from "../services/api";
 
-const MarketCollection = () => {
+const MarketCollection = ({ collectionTicker }) => {
+  // SRP-ec2514 - roboparts
+  // "SRC-27d8ff" - main collection
+  // SRB - 0f1b1d - background
+  // PROTEOROBO - 6df9cd - proteo
+  // SPACEROBOT-bfbf9d - spacerobots general
   let numMarketCards = 3;
   if (window.innerWidth > 1920 && window.innerWidth < 3440) {
     numMarketCards = 4;
@@ -10,7 +15,7 @@ const MarketCollection = () => {
     numMarketCards = 5;
   }
 
-  const { loading, error, data } = useCollectionAuctions();
+  const { loading, error, data } = useCollectionAuctions(collectionTicker);
 
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Error: {error.message}</p>;
@@ -30,9 +35,8 @@ const MarketCollection = () => {
         const name = edge.node.asset.name;
         const key = edge.node.id;
         const assetId = edge.node.asset.identifier;
-        
-        
-        const urlExtenstion = url.split(".").pop()
+
+        const urlExtenstion = url.split(".").pop();
         console.log(urlExtenstion);
 
         return (

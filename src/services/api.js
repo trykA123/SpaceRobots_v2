@@ -53,8 +53,6 @@ const COLLECTION_AUCTIONS_QUERY = gql`
   }
 `;
 
-// SRP-ec2514 / "SRC-27d8ff" / SRB-0f1b1d / PROTEOROBO-6df9cd
-
 const COLLECTION_VARIABLES = (collectionTicker) => {
   return {
     customFilters: [],
@@ -83,14 +81,12 @@ const COLLECTION_VARIABLES = (collectionTicker) => {
         field: "creationDate",
       },
     ],
-  } 
+  };
 };
-  
-  
 
-export const useCollectionAuctions = () => {
+export const useCollectionAuctions = (collectionTicker) => {
   const { loading, error, data } = useQuery(COLLECTION_AUCTIONS_QUERY, {
-    variables: COLLECTION_VARIABLES("SRC-27d8ff"),
+    variables: COLLECTION_VARIABLES(collectionTicker),
   });
 
   return { loading, error, data };

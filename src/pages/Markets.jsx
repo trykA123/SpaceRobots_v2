@@ -4,12 +4,33 @@ import MarketCollection from "../components/MarketCollection";
 
 const Markets = () => {
   const smallPacks = [
-    { bgImg: "roboPack", info: "Space Robots - Roboparts" },
-    { bgImg: "packImg2", info: "Space Robots - General" },
-    { bgImg: "packImg3", info: "Space Robots - Roboparts" },
-    { bgImg: "packImg4", info: "Space Robots - Backgrounds" },
-    { bgImg: "packImg5", info: "Proteo Robots" },
+    {
+      bgImg: "roboPack",
+      info: "Space Robots - Roboparts",
+      collectionTicker: "SRP-ec2514",
+    },
+    {
+      bgImg: "packImg2",
+      info: "Space Robots - General",
+      collectionTicker: "SPACEROBOT-bfbf9d",
+    },
+    {
+      bgImg: "packImg3",
+      info: "Space Robots",
+      collectionTicker: "SRC-27d8ff",
+    },
+    {
+      bgImg: "packImg4",
+      info: "Space Robots - Backgrounds",
+      collectionTicker: "SRB-0f1b1d",
+    },
+    {
+      bgImg: "packImg5",
+      info: "Proteo Robots",
+      collectionTicker: "PROTEOROBO-6df9cd",
+    },
   ];
+
   const [selectedSmallPackIndex, setSelectedSmallPackIndex] = useState(0);
 
   return (
@@ -31,7 +52,12 @@ const Markets = () => {
           ))}
         </div>
         <div className="flex px-20">
-          <MarketCollection selectedSmallPackIndex={selectedSmallPackIndex} />
+          <MarketCollection
+            selectedSmallPackIndex={selectedSmallPackIndex}
+            collectionTicker={
+              smallPacks[selectedSmallPackIndex].collectionTicker
+            }
+          />
         </div>
       </div>
     </section>
