@@ -1,6 +1,4 @@
-import React from "react";
-import { useQuery, gql } from "@apollo/client";
-
+import { gql, useQuery } from "@apollo/client";
 
 const COLLECTION_AUCTIONS_QUERY = gql`
   query collectionAuctions(
@@ -25,10 +23,6 @@ const COLLECTION_AUCTIONS_QUERY = gql`
             media {
               url
             }
-          }
-          marketplaceKey
-          marketplace {
-            iconUrl
           }
           maxBid {
             amount
@@ -59,7 +53,7 @@ const COLLECTION_AUCTIONS_QUERY = gql`
   }
 `;
 
-const variables = {
+const COLLECTION_VARIABLES = {
   customFilters: [],
   filters: {
     filters: [
@@ -88,34 +82,10 @@ const variables = {
   ],
 };
 
-const AuctionsList = () => {
+export const useCollectionAuctions = () => {
   const { loading, error, data } = useQuery(COLLECTION_AUCTIONS_QUERY, {
-    variables: variables,
+    variables: COLLECTION_VARIABLES,
   });
 
-  if (loading) return <p>Loading...</p>;
-  if (error) return <p>Error: {error.message}</p>;
-
-  return (
-    <div>
-        {data.auctions.edges.map((edge) => {
-          const price = edge.node.maxBid.amount / Math.pow(10, edge.node.maxBid.tokenData.decimals);
-          const url = edge.node.asset.media[0].url;
-          return (
-            <li key={edge.node.id}>
-              <h3>{edge.node.asset.name}</h3>
-              <p>Asset Identifier: {edge.node.asset.identifier}</p>
-              <p>Max bid: {edge.node.maxBid.amount}</p>
-              <p>Decimals: {edge.node.maxBid.tokenData.decimals}</p>
-              <p>Price: {price}</p>
-              <p>Status: {edge.node.status}</p>
-              <p>URL: {}</p>
-              {/* You can display more information as needed */}
-            </li>
-          );
-        })}
-    </div>
-  );
+  return { loading, error, data };
 };
-
-export default AuctionsList;
