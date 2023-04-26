@@ -15,12 +15,6 @@ const MarketCollection = ({ collectionTicker }) => {
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Error: {error.message}</p>;
 
-  const convertToWebp = (url) => {
-    const imageUrl = new URL(url);
-    const cloudinaryUrl = `https://res.cloudinary.com/dts1mcl43/image/fetch/f_auto,q_auto,w_auto,dpr_auto/${imageUrl.href}`;
-    return cloudinaryUrl;
-  };
-
   return (
     <div className="flex 3xl:justify-center md:space-x-8 3xl:space-x-16 pt-4 3xl:pt-9">
       {[...Array(numMarketCards)].map((_, index) => {
@@ -33,17 +27,20 @@ const MarketCollection = ({ collectionTicker }) => {
           Math.pow(10, edge.node.maxBid.tokenData.decimals);
         const token = edge.node.maxBid.token;
         const url = edge.node.asset.media[0].url;
-        const webpUrl = convertToWebp(url);
+        const thumbnailUrl = edge.node.asset.media[0].thumbnailUrl;
+        console.log(thumbnailUrl);
+        console.log(url);
         const name = edge.node.asset.name;
         const key = edge.node.id;
         const assetId = edge.node.asset.identifier;
 
-        const urlExtenstion = webpUrl.split(".").pop();
+        const urlExtenstion = url.split(".").pop();
 
         return (
           <MarketCard
             price={price}
-            url={urlExtenstion}
+            extension={urlExtenstion}
+            url={thumbnailUrl}
             token={token}
             name={name}
             key={key}

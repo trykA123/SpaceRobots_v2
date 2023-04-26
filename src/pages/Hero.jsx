@@ -1,6 +1,5 @@
 import React from "react";
-// import { heroVideo } from "../utils/constants";
-import heroVideo from "../assets/videos/video.mp4";
+// import heroVideo from "../assets/videos/video.mp4";
 
 const Hero = () => {
   return (
@@ -23,7 +22,7 @@ const Hero = () => {
             </div>
           </div>
           <div className="flex justify-end w-full px-10">
-            <video
+            {/* <video
               className="md:w-64 3xl:w-72 4xl:w-96"
               autoPlay
               controls
@@ -32,7 +31,7 @@ const Hero = () => {
               alt=""
             >
               <source src={heroVideo} type="video/mp4" />
-            </video>
+            </video> */}
           </div>
         </div>
       </div>

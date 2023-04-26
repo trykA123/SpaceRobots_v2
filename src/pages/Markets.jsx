@@ -43,6 +43,7 @@ const Markets = () => {
         <div className="flex space-x-12 justify-center w-[90%] py-10 rounded-xl shadow">
           {smallPacks.map((pack, index) => (
             <button
+              key={index}
               className="flex items-center justify-center md:w-32 md:h-32 3xl:w-40 3xl:h-40 4xl:w-48 4xl:h-48 border-[1px] border-gray-15 relative duration-700 z-30 group"
               onClick={() => setSelectedSmallPackIndex(index)}
             >

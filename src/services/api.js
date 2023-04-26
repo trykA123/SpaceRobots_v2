@@ -22,6 +22,7 @@ const COLLECTION_AUCTIONS_QUERY = gql`
             name
             media {
               url
+              thumbnailUrl
             }
           }
           maxBid {

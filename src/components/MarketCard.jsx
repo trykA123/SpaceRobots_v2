@@ -31,8 +31,7 @@ const SELECTED_AUCTION_QUERY = gql`
   }
 `;
 
-const MarketCard = (props) => {
-  console.log(props.assetId);
+const MarketCard = ({ key, ...props }) => {
   const SELECTED_VARIABLES = {
     filters: {
       filters: [
@@ -58,14 +57,13 @@ const MarketCard = (props) => {
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Error: {error.message}</p>;
 
-  console.log(data.auctions);
   const marketUrl = data.auctions.edges[0].node.marketplace.url;
   const marketIconUrl = data.auctions.edges[0].node.marketplace.iconUrl;
 
   return (
-    <div className="flex z-30 group">
+    <div className="flex z-30 group" key={key}>
       <div className="flex flex-col md:w-80 h-[450px] 3xl:w-[400px] 3xl:h-[550px] bg-gray-15 rounded-md group-hover:bg-gradient-to-b from-teal-text-100 via-teal-text-40 to-teal-text-0 px-6 space-y-3">
-        {props.extension === "webp" ? (
+        {/* {props.extension === "png" ? (
           <img
             src={props.url}
             alt="MarketCard image"
@@ -80,7 +78,13 @@ const MarketCard = (props) => {
             muted
             loop
           />
-        )}
+        )} */}
+
+        <img
+          src={props.url}
+          alt="MarketCard image"
+          className="pt-6 rounded-md object-cover group-hover:scale-110 duration-500"
+        />
 
         <h3>{props.name}</h3>
         <div className="flex h-16 items-center justify-between">
