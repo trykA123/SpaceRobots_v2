@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import backgroundRobotLogo from "../assets/images/backgroundLogo.png";
-import proteo from "../assets/images/proteo.jpeg";
-import roboPack from "../assets/images/robopack.png";
-import robopartLogo from "../assets/images/robopartLogo.png";
-import spaceRobotLogo from "../assets/images/spacerobotlogo.png";
+import backgroundRobotLogo from "../assets/images/backgroundLogo.webp";
+import proteo from "../assets/images/proteo.webp";
+import roboPack from "../assets/images/robopack.webp";
+import robopartLogo from "../assets/images/robopartLogo_1.webp";
+import spaceRobotLogo from "../assets/images/spacerobotlogo.webp";
 import MarketCollection from "../components/MarketCollection";
 
 const Markets = () => {

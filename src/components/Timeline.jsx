@@ -1,7 +1,6 @@
 import { motion, useAnimation } from "framer-motion";
 import React, { useEffect } from "react";
 import { useInView } from "react-intersection-observer";
-import { titles } from "../utils/constants";
 import TimelineItem from "./TimelineItem";
 
 const Timeline = ({ quater, firstInfo, secondInfo, thirdInfo, fourthInfo }) => {
@@ -43,7 +42,7 @@ const Timeline = ({ quater, firstInfo, secondInfo, thirdInfo, fourthInfo }) => {
       animate={controls}
     >
       <div className="flex flex-col w-[95%] mx-auto">
-        <div className="sticky top-0 bg-white py-4 my-4 z-10 shadow-lg shadow-teal-300">
+        <div className="sticky top-0 bg-slate-950 py-4 my-4 z-10 shadow-lg shadow-teal-300">
           <h4>{quater}</h4>
         </div>
         <motion.div

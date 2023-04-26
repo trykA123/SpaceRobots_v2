@@ -5,8 +5,7 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
-import titleLogo from "../assets/images/logo.png";
-import sideMenu from "../assets/images/sidemenu.svg";
+import titleLogo from "../assets/images/logo.webp";
 
 const Navbar = () => {
   return (
@@ -20,13 +19,13 @@ const Navbar = () => {
         <ul className="flex flex-1 justify-between items-center h-full">
           <li className="">Connect</li>
           <li>Market</li>
-          <li className="relative group opacity-50">
+          <li className="relative group opacity-50 cursor-default">
             <div className="flex items-center justify-center opacity-0 duration-500 absolute w-32 top-full left-0 bg-teal-text-100 text-white py-2 px-4 group-hover:opacity-100  group-hover:translate-x-12 rounded-md">
               Soon
             </div>
             Stacking
           </li>
-          <li className="relative group opacity-50">
+          <li className="relative group opacity-50 cursor-default">
             <div className="flex items-center justify-center opacity-0 duration-500 absolute w-32 top-full left-0 bg-teal-text-100 py-2 px-4 group-hover:opacity-100 group-hover:translate-x-12 rounded-md">
               Soon
             </div>
@@ -51,27 +50,50 @@ const Navbar = () => {
           </a>
         </div>
       </div>
-      <div className="flex items-center w-60 h-[90%] ml-14 z-30">
-        <img src={sideMenu} alt="" className="h-[476px]" />
-        <ul className="flex flex-col pr-20 justify-center space-y-[50px]">
-          <li>
-            <a href="#project">Project</a>
+      <div className="flex items-center w-60 h-full ml-14 z-30">
+        <ul className="flex flex-col w-full justify-center border-l-[2px] rounded-sm border-teal-400">
+          <div className="flex w-full">
+            <div class="h-[2px] w-1/5 bg-teal-400"></div>
+          </div>
+          <li className="flex w-full space-x-3 pt-12">
+            <div class="h-[2px] w-[10%] bg-teal-400"></div>
+            <a href="#project" className="-translate-y-[10px]">
+              Project
+            </a>
           </li>
-          <li>
-            <a href="#collection">Collection</a>
+          <li className="flex w-full space-x-3 pt-12">
+            <div class="h-[2px] w-[10%] bg-teal-400"></div>
+            <a href="#collection" className="-translate-y-[10px]">
+              Collection
+            </a>
           </li>
-          <li>
-            <a href="#markets">Markets</a>
+          <li className="flex w-full space-x-3 pt-12">
+            <div class="h-[2px] w-[10%] bg-teal-400"></div>
+            <a href="#markets" className="-translate-y-[10px]">
+              Markets
+            </a>
           </li>
-          <li>
-            <a href="#events">Events</a>
+          <li className="flex w-full space-x-3 pt-12">
+            <div class="h-[2px] w-[10%] bg-teal-400"></div>
+            <a href="#events" className="-translate-y-[10px]">
+              Events
+            </a>
           </li>
-          <li>
-            <a href="#roadmap">Road Map</a>
+          <li className="flex w-full space-x-3 pt-12">
+            <div class="h-[2px] w-[10%] bg-teal-400"></div>
+            <a href="#roadmap" className="-translate-y-[10px]">
+              RoadMap
+            </a>
           </li>
-          <li>
-            <a href="#">Team</a>
+          <li className="flex w-full space-x-3 pt-12">
+            <div class="h-[2px] w-[10%] bg-teal-400"></div>
+            <a href="#team" className="-translate-y-[10px]">
+              Team
+            </a>
           </li>
+          <div className="flex w-full pt-8">
+            <div class="h-[2px] w-1/5 bg-teal-400"></div>
+          </div>
         </ul>
       </div>
     </div>

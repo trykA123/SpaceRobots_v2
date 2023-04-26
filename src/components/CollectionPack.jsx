@@ -1,7 +1,7 @@
 import React from "react";
 import banner from "../assets/images/banner.png";
-import pack from "../assets/images/pack.png";
-import roboPack from "../assets/images/robopack.png";
+import pack from "../assets/images/pack.webp";
+import roboPack from "../assets/images/robopack.webp";
 
 const CollectionPack = () => {
   return (

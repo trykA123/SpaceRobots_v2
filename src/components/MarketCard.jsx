@@ -1,7 +1,7 @@
 import { gql, useQuery } from "@apollo/client";
 import { faArrowUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import xlogo from "../assets/images/xlogo.png";
+import xlogo from "../assets/images/xlogo.webp";
 
 import React from "react";
 
@@ -99,7 +99,7 @@ const MarketCard = (props) => {
               BUY on{" "}
               <img
                 src={marketIconUrl}
-                className="w-8 h-8 3xl:w-12 3xl:h-12 pl-2"
+                className="w-8 h-8 3xl:w-12 3xl:h-12 pl-2 animate-pulse"
               />
             </a>
             {/* <FontAwesomeIcon

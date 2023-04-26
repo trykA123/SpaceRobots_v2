@@ -1,5 +1,5 @@
 import React from "react";
-import robot from "../assets/images/upgraderobot.png";
+import robot from "../assets/images/upgraderobot.webp";
 
 const Project = () => {
   return (
