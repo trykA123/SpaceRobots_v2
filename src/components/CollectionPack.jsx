@@ -1,5 +1,4 @@
 import React from "react";
-import banner from "../assets/images/banner.png";
 import pack from "../assets/images/pack.webp";
 import roboPack from "../assets/images/robopack.webp";
 
@@ -13,7 +12,6 @@ const CollectionPack = () => {
         className="object-cover absolute top-0 h-full"
       />
       <div className="relative opacity-0 md:-translate-y-32 md:group-hover:translate-y-0 3xl:group-hover:translate-y-0 group-hover:opacity-100 4xl:group-hover:-translate-y-12 duration-700 z-20">
-        {/* <img src={banner} alt="" className="md:h-[90%] 3xl:h-full" /> */}
         <div className="w-40 h-[370px] 3xl:h-[540px] bg-gradient-to-b from-teal-text-100 to-transparent rounded-md">
           <p className="absolute top-2 font-chakraPetch text-xl uppercase left-6">
             Robopacks
