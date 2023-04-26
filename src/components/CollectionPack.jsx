@@ -8,7 +8,7 @@ const CollectionPack = () => {
       <div className="flex items-center justify-center absolute z-10 top-0 w-full h-full bg-gradient-to-b from-gray-gradient-full via-gray-gradient to-gray-gradient-full"></div>
       <img
         src={pack}
-        alt="Pack background"
+        alt="RoboPack background"
         className="object-cover absolute top-0 h-full"
       />
       <div className="relative opacity-0 md:-translate-y-32 md:group-hover:translate-y-0 3xl:group-hover:translate-y-0 group-hover:opacity-100 4xl:group-hover:-translate-y-12 duration-700 z-20">
@@ -21,7 +21,7 @@ const CollectionPack = () => {
       <div className="flex flex-col pt-12  items-center absolute mx-auto opacity-0 group-hover:opacity-100 duration-700 z-30">
         <img
           src={roboPack}
-          alt=""
+          alt="Collection pack robopack image"
           className="translate-y-96 scale-90 md:group-hover:translate-y-16
           3xl:group-hover:-translate-y-0 3xl:group-hover:scale-110 duration-700"
         />

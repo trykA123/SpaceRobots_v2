@@ -29,6 +29,7 @@ const Hero = () => {
               controls
               muted
               loop
+              alt=""
             >
               <source src={heroVideo} type="video/mp4" />
             </video>

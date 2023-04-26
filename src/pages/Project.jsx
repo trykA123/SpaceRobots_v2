@@ -31,7 +31,7 @@ const Project = () => {
           <div className="w-1/2 flex items-center justify-center my-[10%] 3xl:my-[5%] mx-auto">
             <img
               src={robot}
-              alt=""
+              alt="Robot NFT background"
               className="object-contain 4xl:w-auto w-[60%]"
             />
           </div>
