@@ -14,7 +14,7 @@ const Events = () => {
         <div className="flex flex-col pt-24 4xl:pt-44 mx-auto w-3/4 h-full pb-24">
           {/* Tabs navbar */}
           <div className="flex items-center justify-center h-32">
-            <ul className="flex space-x-6 text-4xl text-white ">
+            <ul className="flex space-x-6 text-white ">
               <li
                 className={`event-tab-id ${
                   selectedTab === 0 ? "opacity-100" : "opacity-50"

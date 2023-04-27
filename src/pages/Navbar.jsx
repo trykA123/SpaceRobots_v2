@@ -50,7 +50,7 @@ const Navbar = () => {
           </a>
         </div>
       </div>
-      <div className="flex items-center w-60 h-full ml-14 z-30">
+      <div className="flex items-center w-60 h-[80%] 3xl:ml-14 z-30 3xl:scale-100 md:scale-[.8]">
         <ul className="flex flex-col w-full justify-center border-l-[2px] rounded-sm border-teal-400">
           <div className="flex w-full">
             <div className="h-[2px] w-1/5 bg-teal-400"></div>

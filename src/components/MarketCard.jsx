@@ -62,7 +62,7 @@ const MarketCard = ({ key, ...props }) => {
 
   return (
     <div className="flex z-30 group" key={key}>
-      <div className="flex flex-col md:w-80 h-[450px] 3xl:w-[400px] 3xl:h-[550px] bg-gray-15 rounded-md group-hover:bg-gradient-to-b from-teal-text-100 via-teal-text-40 to-teal-text-0 px-6 space-y-3">
+      <div className="flex flex-col md:w-80 h-[450px] 3xl:w-[400px] 3xl:h-[550px] bg-gray-15 rounded-md group-hover:bg-gradient-to-b from-teal-text-100 via-teal-text-40 to-teal-text-0 px-6 space-y-3 3xl:scale-100 scale-90">
         {/* {props.extension === "png" ? (
           <img
             src={props.url}
