@@ -27,6 +27,7 @@ module.exports = {
         "gray-15": "rgba(68, 68, 68, 0.15)",
         "gray-gradient": "rgba(24, 24, 24, 0.01)",
         "gray-gradient-full": "rgba(16, 16, 16, 1)",
+        "mobile-menu-blue": "rgba(12, 18, 38, 1)",
       },
       screens: {
         "3xl": "1920px",

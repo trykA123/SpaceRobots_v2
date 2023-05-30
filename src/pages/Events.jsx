@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import EventQuarter from "../components/EventQuarter";
+import MobileTitle from "../components/MobileTitle";
 
 const Events = () => {
   const [selectedTab, setSelectedTab] = useState(0);
@@ -11,10 +12,11 @@ const Events = () => {
   return (
     <section id="events">
       <div className="h-screen bg-background bg-cover">
-        <div className="flex flex-col pt-24 4xl:pt-44 mx-auto w-3/4 h-full pb-24">
+        <div className="flex flex-col items-center pt-24 4xl:pt-44 md:mx-auto md:w-3/4 h-full md:pb-24">
           {/* Tabs navbar */}
+          <MobileTitle title="Events"/>
           <div className="flex items-center justify-center h-32">
-            <ul className="flex space-x-6 text-white ">
+            <ul className="flex space-x-12 text-white ">
               <li
                 className={`event-tab-id ${
                   selectedTab === 0 ? "opacity-100" : "opacity-50"

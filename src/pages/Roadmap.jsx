@@ -6,7 +6,7 @@ const Roadmap = () => {
   return (
     <section id="roadmap">
       <div className="bg-slate-950 h-screen">
-        <div className="flex flex-col w-1/2 mx-auto pt-48 pb-8">
+        <div className="flex flex-col container mx-auto pt-48 pb-8 max-w-7xl">
           {/* <h1 className="flex w-full items-center justify-center h-32">
             ROADMAP
           </h1> */}

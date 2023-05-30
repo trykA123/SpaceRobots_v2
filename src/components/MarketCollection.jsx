@@ -6,7 +6,7 @@ const MarketCollection = ({ collectionTicker }) => {
   let numMarketCards = 3;
   if (window.innerWidth > 1920 && window.innerWidth < 3440) {
     numMarketCards = 4;
-  } else if (window.innerWidth >= 3440) {
+  } else if (window.innerWidth >= 3440 || window.innerWidth <= 768) {
     numMarketCards = 5;
   }
 
@@ -16,7 +16,7 @@ const MarketCollection = ({ collectionTicker }) => {
   if (error) return <p>Error: {error.message}</p>;
 
   return (
-    <div className="flex 3xl:justify-center md:space-x-8 3xl:space-x-16 pt-4 3xl:pt-9">
+    <div className="flex 3xl:justify-center md:space-x-8 3xl:space-x-16 pt-4 3xl:pt-9 overflow-x-auto md:overflow-x-hidden">
       {[...Array(numMarketCards)].map((_, index) => {
         const edge = data.auctions.edges[index];
         if (!edge) {
@@ -28,8 +28,6 @@ const MarketCollection = ({ collectionTicker }) => {
         const token = edge.node.maxBid.token;
         const url = edge.node.asset.media[0].url;
         const thumbnailUrl = edge.node.asset.media[0].thumbnailUrl;
-        console.log(thumbnailUrl);
-        console.log(url);
         const name = edge.node.asset.name;
         const key = edge.node.id;
         const assetId = edge.node.asset.identifier;

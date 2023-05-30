@@ -39,12 +39,12 @@ const Markets = () => {
 
   return (
     <section id="markets">
-      <div className="flex flex-col bg-background bg-cover pl-[10%] 4xl:pl-[15%] pt-[5%] h-screen w-screen">
-        <div className="flex space-x-12 justify-center w-[90%] py-10 rounded-xl shadow">
+      <div className="flex flex-col bg-background bg-cover pt-[5%] h-screen w-full md:items-center">
+        <div className="flex px-4 md:px-0 space-x-12 md:justify-center py-10 rounded-xl shadow overflow-x-auto md:overflow-x-hidden md:w-full">
           {smallPacks.map((pack, index) => (
             <button
               key={index}
-              className="flex items-center justify-center md:w-32 md:h-32 3xl:w-40 3xl:h-40 4xl:w-48 4xl:h-48 border-[1px] border-gray-15 relative duration-700 z-30 group"
+              className="flex items-center justify-center w-32 h-32 3xl:w-40 3xl:h-40 4xl:w-48 4xl:h-48 border-[1px] border-gray-15 relative duration-700 z-30 group px-12 md:px-0"
               onClick={() => setSelectedSmallPackIndex(index)}
             >
               <div
@@ -58,7 +58,7 @@ const Markets = () => {
             </button>
           ))}
         </div>
-        <div className="flex px-20">
+        <div className="flex md:px-20">
           <MarketCollection
             selectedSmallPackIndex={selectedSmallPackIndex}
             collectionTicker={

@@ -1,11 +1,24 @@
 import React from "react";
 import robot from "../assets/images/upgraderobot.webp";
+import MobileTitle from "../components/MobileTitle";
 
 const Project = () => {
   return (
     <section id="project">
       <div className="h-screen w-screen bg-saturn bg-cover text-white">
-        <div className="container-content">
+        <div className="container w-full h-full md:hidden py-12">
+          <div className="flex flex-col items-center py-24 space-y-8 w-4/5 mx-auto">
+            <MobileTitle title="Project" />
+            <h1 className="text-center mt-24">Welcome to Gamba Centauri</h1>
+            <p className="text-center">
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet
+              necessitatibus sint repellat perspiciatis ducimus, odit rem
+              voluptatum quo nostrum dignissimos delectus quod earum itaque
+              adipisci. Sit odit rerum similique asperiores?
+            </p>
+          </div>
+        </div>
+        <div className="hidden md:flex container-content">
           <div className="w-1/2 content">
             <div className="flex-col m-auto space-y-6 4xl:space-y-12 items-center justify-center">
               <h1 className="md:w-[600px] 4xl:w-[1080px]">UPGRADABLE ROBOTS</h1>
