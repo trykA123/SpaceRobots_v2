@@ -1,16 +1,9 @@
 import React from "react";
 import pack from "../assets/images/pack.webp";
 import roboPack from "../assets/images/robopack.webp";
-
-const CollectionPack = () => {
+const MobileColectionPack = () => {
   return (
-    <div className="flex flex-col w-[440px] md:w-[484px] 4xl:h-[934px] md:h-full relative items-center justify-center text-white opacity-[15%] group hover:opacity-100 duration-700">
-      <div className="flex items-center justify-center absolute z-10 top-0 w-full h-full bg-gradient-to-b from-gray-gradient-full via-gray-gradient to-gray-gradient-full"></div>
-      <img
-        src={pack}
-        alt="RoboPack background"
-        className="object-cover absolute top-0 h-full"
-      />
+    <div className="flex w-full h-[70%] justify-center items-center overflow-hidden">
       <div className="relative opacity-0 md:-translate-y-32 md:group-hover:translate-y-0 3xl:group-hover:translate-y-0 group-hover:opacity-100 4xl:group-hover:-translate-y-12 duration-700 z-20">
         <div className="w-40 h-[370px] 3xl:h-[540px] bg-gradient-to-b from-teal-text-100 to-transparent rounded-md">
           <p className="absolute top-2 font-chakraPetch text-xl uppercase left-6">
@@ -40,4 +33,4 @@ const CollectionPack = () => {
   );
 };
 
-export default CollectionPack;
+export default MobileColectionPack;

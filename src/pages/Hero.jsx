@@ -5,7 +5,7 @@ import MobileTitle from "../components/MobileTitle";
 const Hero = () => {
   return (
     <section id="hero">
-      <div className="h-screen bg-heroBackground bg-cover text-white w-screen ">
+      <div className="h-screen bg-heroBackground bg-cover text-white w-screen ">   
         <div className="flex flex-col-reverse md:flex-col  justify-around md:justify-between h-full w-[90%] md:w-[80%] mx-auto md:pt-64 md:pb-14 md:pl-24 4xl:pt-72 4xl:pb-24">
           <div className="h-full py-40 md:py-0 flex flex-col space-y-14 md:space-y-11 items-center md:items-start">
             <MobileTitle title="Space Robots"/>

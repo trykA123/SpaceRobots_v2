@@ -5,6 +5,7 @@ import roboPack from "../assets/images/robopack.webp";
 import robopartLogo from "../assets/images/robopartLogo_1.webp";
 import spaceRobotLogo from "../assets/images/spacerobotlogo.webp";
 import MarketCollection from "../components/MarketCollection";
+import MobileTitle from "../components/MobileTitle";
 
 const Markets = () => {
   const smallPacks = [
@@ -39,7 +40,11 @@ const Markets = () => {
 
   return (
     <section id="markets">
-      <div className="flex flex-col bg-background bg-cover pt-[5%] h-screen w-full md:items-center">
+      <div className="flex flex-col roadmap-gradient bg-cover pt-[5%] h-screen w-full md:items-center justify-center md:justify-normal">
+        {/* roadmap-gradient / bg-background */}
+        <div className="md:hidden w-full flex items-center justify-center pb-12">
+          <MobileTitle title="Markets" />
+        </div>
         <div className="flex px-4 md:px-0 space-x-12 md:justify-center py-10 rounded-xl shadow overflow-x-auto md:overflow-x-hidden md:w-full">
           {smallPacks.map((pack, index) => (
             <button

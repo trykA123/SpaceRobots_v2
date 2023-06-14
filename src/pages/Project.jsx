@@ -5,7 +5,8 @@ import MobileTitle from "../components/MobileTitle";
 const Project = () => {
   return (
     <section id="project">
-      <div className="h-screen w-screen bg-saturn bg-cover text-white">
+      <div className="h-screen w-screen roadmap-gradient bg-cover text-white">
+        {/* roadmap-gradient / bg-saturn */}
         <div className="container w-full h-full md:hidden py-12">
           <div className="flex flex-col items-center py-24 space-y-8 w-4/5 mx-auto">
             <MobileTitle title="Project" />
@@ -46,6 +47,7 @@ const Project = () => {
               src={robot}
               alt="Robot NFT background"
               className="object-contain 4xl:w-auto w-[60%]"
+              loading="lazy"
             />
           </div>
         </div>

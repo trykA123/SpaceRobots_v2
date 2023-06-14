@@ -89,27 +89,17 @@ const Topnav = () => {
         } flex-col items-center justify-center w-full min-h-screen py-1 font-chakraPetch text-lg text-white uppercase bg-mobile-menu-blue`}
       >
         <div className="flex flex-col items-center space-y-10 text-3xl font-bold leading-7">
-          <a href="#" target="__blank">
-            Collection
-          </a>
-          <a href="#" target="__blank">
-            Markets
-          </a>
+          <a href="#collection">Collection</a>
+          <a href="#markets">Markets</a>
           {/* <a href="#" className="opacity-50" target="__blank">
             Stacking
           </a>
           <a href="#" className="opacity-50" target="__blank">
             Upgrading
           </a> */}
-          <a href="#" target="__blank">
-            Events
-          </a>
-          <a href="#" target="__blank">
-            Road Map
-          </a>
-          <a href="#" target="__blank">
-            Team
-          </a>
+          <a href="#events">Events</a>
+          <a href="#roadmap">Road Map</a>
+          <a href="#">Team</a>
         </div>
         <div className="flex space-x-12 pt-32 text-3xl">
           <a href="#" className="hover:scale-150 duration-300">

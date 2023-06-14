@@ -11,7 +11,8 @@ const Events = () => {
 
   return (
     <section id="events">
-      <div className="h-screen bg-background bg-cover">
+      <div className="h-screen roadmap-gradient bg-cover">
+        {/* <div className="h-screen bg-background bg-cover"> */}
         <div className="flex flex-col items-center pt-24 4xl:pt-44 md:mx-auto md:w-3/4 h-full md:pb-24">
           {/* Tabs navbar */}
           <MobileTitle title="Events"/>

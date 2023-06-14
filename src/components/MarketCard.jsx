@@ -84,6 +84,7 @@ const MarketCard = ({ key, ...props }) => {
           src={props.url}
           alt="MarketCard image"
           className="pt-6 rounded-md object-cover group-hover:scale-110 duration-500"
+          loading="lazy"
         />
 
         <h3>{props.name}</h3>
