@@ -21,6 +21,17 @@ const Topnav = () => {
     menu.classList.toggle("hidden");
   };
 
+  const closeMenu = () => {
+    setIsMenuOpen(false);
+
+    const btn = document.getElementById("menu-btn");
+    const menu = document.getElementById("menu");
+
+    btn.classList.remove("open");
+    menu.classList.remove("flex");
+    menu.classList.add("hidden");
+  };
+
   return (
     <div>
       <nav className="hidden container md:px-24 md:flex items-center md:fixed justify-between text-white md:h-32">
@@ -89,26 +100,48 @@ const Topnav = () => {
         } flex-col items-center justify-center w-full min-h-screen py-1 font-chakraPetch text-lg text-white uppercase bg-mobile-menu-blue`}
       >
         <div className="flex flex-col items-center space-y-10 text-3xl font-bold leading-7">
-          <a href="#collection">Collection</a>
-          <a href="#markets">Markets</a>
+          <a href="#collection" onClick={closeMenu}>
+            Collection
+          </a>
+          <a href="#markets" onClick={closeMenu}>
+            Markets
+          </a>
           {/* <a href="#" className="opacity-50" target="__blank">
             Stacking
           </a>
           <a href="#" className="opacity-50" target="__blank">
             Upgrading
           </a> */}
-          <a href="#events">Events</a>
-          <a href="#roadmap">Road Map</a>
-          <a href="#">Team</a>
+          <a href="#events" onClick={closeMenu}>
+            Events
+          </a>
+          <a href="#roadmap" onClick={closeMenu}>
+            Road Map
+          </a>
+          <a href="#" onClick={closeMenu}>
+            Team
+          </a>
         </div>
         <div className="flex space-x-12 pt-32 text-3xl">
-          <a href="#" className="hover:scale-150 duration-300">
+          <a
+            href="#"
+            className="hover:scale-150 duration-300"
+            onClick={closeMenu}
+          >
             <FontAwesomeIcon icon={faTwitter} />
           </a>
-          <a href="#" className="hover:scale-150 duration-300">
+          <a
+            href="#"
+            className="hover:scale-150 duration-300"
+            onClick={closeMenu}
+          >
             <FontAwesomeIcon icon={faDiscord} />
           </a>
-          <a href="#" className="hover:scale-150 duration-300">
+          <a
+            href="#"
+            className="hover:scale-150 duration-300"
+            onClick={closeMenu}
+          >
             <FontAwesomeIcon icon={faYoutube} />
           </a>
         </div>

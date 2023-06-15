@@ -38,8 +38,8 @@ const Collection = () => {
 
   return (
     <section id="collection">
-      <div className="h-[100dvh] md:bg-collectionBackgound bg-cover bg-packImg">
-        <div className="hidden md:flex 4xl:w-[50%] w-[60%] mx-auto md:py-28 3xl:py-44 4xl:py-48 md h-[100dvh] relative justify-center overflow-x-auto md:overflow-x-hidden">
+      <div className="h-[100dvh] lg:bg-collectionBackgound bg-cover bg-packImg overflow-x-hidden">
+        <div className="hidden lg:flex 4xl:w-[50%] w-[60%] mx-auto lg:py-28 3xl:py-44 4xl:py-48 h-[100dvh] relative justify-center overflow-x-auto lg:overflow-x-hidden">
           <div className="h-full w-[1px] bg-gradient-to-b from-transparent via-white to-transparent"></div>
           <CollectionPack />
           <div className="h-full w-[1px] bg-gradient-to-b from-transparent via-white to-transparent"></div>
@@ -48,7 +48,7 @@ const Collection = () => {
           <CollectionPack />
           <div className="h-full w-[1px] bg-gradient-to-b from-transparent via-white to-transparent"></div>
         </div>
-        <div className="flex flex-col md:hidden items-center justify-center z-10 pt-12 w-full h-[100dvh] bg-gradient-to-b from-gray-gradient-full via-gray-gradient to-gray-gradient-full">
+        <div className="flex flex-col lg:hidden items-center justify-center z-10 pt-12 w-full h-[100dvh] bg-gradient-to-b from-gray-gradient-full via-gray-gradient to-gray-gradient-full">
           <MobileTitle title={"Collections"} />
           <div className="swiper-container">
             <div className="swiper-wrapper">

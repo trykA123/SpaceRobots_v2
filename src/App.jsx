@@ -8,7 +8,7 @@ import Roadmap from "./pages/Roadmap";
 
 function App() {
   return (
-    <div className="h-screen w-screen relative">
+    <div className="h-[100dvh] w-screen relative">
       <Navbar />
       <Hero />
       <Project />
