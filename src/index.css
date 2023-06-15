@@ -127,4 +127,40 @@
       rgba(0, 0, 0, 1) 100%
     );
   }
+
+  .swiper-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 2.5rem;
+  }
+
+  .swiper-slide {
+    width: 100%;
+    height: 100%;
+  }
+
+  .navigation-indicator-container {
+    display: flex;
+    justify-content: center;
+    width: 40%;
+    padding-bottom: 24px; /* Adjust as needed */
+  }
+
+  .navigation-indicator {
+    height: 4px;
+    background-color: #1f3033; /* Default color */
+    transition: transform 0.3s ease-in-out;
+    flex: 1; /* Distribute the width equally among indicators */
+    margin: 0 4px;
+    border-radius: 4px;
+  }
+
+  .navigation-indicator.active {
+    background-color: #14c2a399; /* Color for the active indicator */
+    width: 100%;
+  }
 }

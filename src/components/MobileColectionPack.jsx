@@ -3,31 +3,26 @@ import pack from "../assets/images/pack.webp";
 import roboPack from "../assets/images/robopack.webp";
 const MobileColectionPack = () => {
   return (
-    <div className="flex w-full h-[70%] justify-center items-center overflow-hidden">
-      <div className="relative opacity-0 md:-translate-y-32 md:group-hover:translate-y-0 3xl:group-hover:translate-y-0 group-hover:opacity-100 4xl:group-hover:-translate-y-12 duration-700 z-20">
-        <div className="w-40 h-[370px] 3xl:h-[540px] bg-gradient-to-b from-teal-text-100 to-transparent rounded-md">
-          <p className="absolute top-2 font-chakraPetch text-xl uppercase left-6">
+    <div className="flex w-full h-[80%] justify-center items-center overflow-hidden">
+      <div className="relative opacity-100 duration-700 z-10 flex items-center">
+        <div className="w-40 h-[480px] bg-gradient-to-b from-teal-text-100 to-transparent rounded-md">
+          <p className="absolute top-3 font-chakraPetch text-xl uppercase left-6 text-white rounded-sm">
             Robopacks
           </p>
+          <div className="flex flex-col space-y-24 pt-32 items-center absolute mx-auto z-10 -translate-x-4">
+            <img
+              src={roboPack}
+              alt="Collection pack robopack image"
+              className="scale-150"
+            />
+            <a
+              href="#"
+              className="flex items-center justify-center w-48 h-14 bg-teal-300 rounded-sm duration-300 -translate-y-2"
+            >
+              Open
+            </a>
+          </div>
         </div>
-      </div>
-      <div className="flex flex-col pt-12  items-center absolute mx-auto opacity-0 group-hover:opacity-100 duration-700 z-30">
-        <img
-          src={roboPack}
-          alt="Collection pack robopack image"
-          className="translate-y-96 scale-90 md:group-hover:translate-y-16
-          3xl:group-hover:-translate-y-0 3xl:group-hover:scale-110 duration-700"
-        />
-        <p className="py-10 text-base text-center">
-          By owning a Space Robots NFT, you're not just collecting a unique
-          digital asset, but also investing in the future of space exploration.
-        </p>
-        <a
-          href="#"
-          className="flex items-center justify-center w-36 3xl:w-64 h-14 bg-teal-300 rounded-sm translate-y-0 hover:-translate-y-2 duration-300"
-        >
-          Open
-        </a>
       </div>
     </div>
   );
