@@ -40,7 +40,7 @@ const Markets = () => {
 
   return (
     <section id="markets">
-      <div className="flex flex-col roadmap-gradient bg-cover pt-[5%] h-screen w-full md:items-center justify-center md:justify-normal">
+      <div className="flex flex-col roadmap-gradient bg-cover pt-[5%] h-screen w-full md:items-center justify-center md:justify-normal overflow-x-hidden">
         {/* roadmap-gradient / bg-background */}
         <div className="md:hidden w-full flex items-center justify-center pb-12">
           <MobileTitle title="Markets" />
