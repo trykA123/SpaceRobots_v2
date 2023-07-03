@@ -81,7 +81,7 @@ const Topnav = () => {
         </div>
         {/* Hamburger */}
       </nav>
-      <div className="md:hidden fixed flex items-center justify-center h-10 rounded-full w-10 right-5 top-2 bg-teal-300 z-50">
+      <div className="md:hidden absolute flex items-center justify-center h-10 rounded-full w-10 right-5 top-2 bg-teal-300 z-50">
         <button
           onClick={navToggle}
           id="menu-btn"
@@ -118,7 +118,7 @@ const Topnav = () => {
           <a href="#roadmap" onClick={closeMenu}>
             Road Map
           </a>
-          <a href="#" onClick={closeMenu}>
+          <a href="#team" onClick={closeMenu}>
             Team
           </a>
         </div>

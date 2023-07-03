@@ -6,7 +6,7 @@ import { team } from "../utils/constants";
 const Team = () => {
   return (
     <section id="team">
-      <div className="h-[100dvh] roadmap-gradient flex flex-col items-center justify-center">
+      <div className="h-screen roadmap-gradient flex flex-col items-center justify-center pt-24 md:pt-0">
         <MobileTitle title="Team" />
         <div className="flex flex-col w-full max-w-7xl h-[80%] justify-between overflow-x-auto pt-24 md:pt-0">
           <div className="flex md:grid md:grid-cols-2 xl:grid-cols-3 h-full mx-auto ">
