@@ -12,7 +12,7 @@ const Roadmap = () => {
           {/* <h1 className="flex w-full items-center justify-center h-32">
             ROADMAP
           </h1> */}
-          <div className="flex h-[600px] 3xl:h-[750px] 4xl:h-[850px]">
+          <div className="flex h-[500px] 3xl:h-[750px] 4xl:h-[850px]">
             {/* <div className="bg-gradient-to-b from-teal-text-100 via-blue-400 to-purple-900 h-full mt-10 mx-4 pt-48 fixed">
             <div className="h-full w-2 left-1 relative">
               <div className="sticky top-40 left-1/2 transform -translate-x-1/2 bg-blue-400 h-8 w-8 rounded-full border-4 border-white z-10"></div>
