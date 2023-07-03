@@ -6,7 +6,7 @@ import { roadmapSections } from "../utils/constants";
 const Roadmap = () => {
   return (
     <section id="roadmap">
-      <div className="roadmap-gradient h-screen">
+      <div className="roadmap-gradient h-[100dvh]">
         <div className="flex flex-col container items-center space-y-16 pt-16 mx-auto md:pt-48 md:pb-8 max-w-7xl">
           <MobileTitle title="Roadmap" />
           {/* <h1 className="flex w-full items-center justify-center h-32">
