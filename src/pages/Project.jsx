@@ -7,8 +7,8 @@ const Project = () => {
     <section id="project">
       <div className="h-screen w-screen roadmap-gradient bg-cover text-white">
         {/* roadmap-gradient / bg-saturn */}
-        <div className="container w-full h-full xl:hidden py-12">
-          <div className="flex flex-col items-center py-24 space-y-8 w-[90%] mx-auto">
+        <div className="w-full h-full xl:hidden py-12 flex justify-center px-12">
+          <div className="flex flex-col items-center py-24 space-y-8 w-full mx-auto">
             <MobileTitle title="Project" />
             <h1 className="text-center mt-24">Welcome to Gamba Centauri</h1>
             <p className="text-center">
