@@ -8,7 +8,7 @@ const Team = () => {
     <section id="team">
       <div className="h-screen roadmap-gradient flex flex-col items-center justify-center pt-24 md:pt-0">
         <MobileTitle title="Team" />
-        <div className="flex flex-col w-full max-w-7xl h-[80%] justify-between overflow-x-auto pt-24 md:pt-0">
+        <div className="flex flex-col w-full max-w-7xl h-[80%] justify-between overflow-x-auto pt-24 xl:pt-0 xl:mt-10">
           <div className="flex md:grid md:grid-cols-2 xl:grid-cols-3 h-full mx-auto ">
             <TeamCard name={team.names.name1} role={team.roles.role1} />
             <TeamCard name={team.names.name2} role={team.roles.role2} />

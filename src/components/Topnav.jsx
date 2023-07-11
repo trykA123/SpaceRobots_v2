@@ -34,7 +34,7 @@ const Topnav = () => {
 
   return (
     <div>
-      <nav className="hidden w-full md:px-24 md:flex items-center md:fixed justify-between text-white md:h-32">
+      <nav className="hidden w-full xl:px-24 xl:flex items-center xl:fixed justify-between text-white xl:h-32">
         {/* Logo */}
         <div className="hidden md:flex md:flex-1 md:justify-center md:items-center">
           <a href="#hero" className="cursor-pointer">
@@ -81,12 +81,12 @@ const Topnav = () => {
         </div>
         {/* Hamburger */}
       </nav>
-      <div className="md:hidden absolute flex items-center justify-center h-10 rounded-full w-10 right-5 top-2 bg-teal-300 z-50">
+      <div className="xl:hidden absolute flex items-center justify-center h-10 rounded-full w-10 right-5 top-2 bg-teal-300 z-50">
         <button
           onClick={navToggle}
           id="menu-btn"
           type="button"
-          className="z-40 block hamburger md:hidden focus:outline-none"
+          className="z-40 block hamburger xl:hidden focus:outline-none"
         >
           <span className="hamburger-top"></span>
           <span className="hamburger-middle"></span>

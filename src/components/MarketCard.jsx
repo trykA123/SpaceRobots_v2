@@ -63,30 +63,12 @@ const MarketCard = ({ key, ...props }) => {
   return (
     <div className="flex z-30 group" key={key}>
       <div className="flex flex-col w-80 h-[450px] 3xl:w-[400px] 3xl:h-[550px] bg-gray-15 rounded-md group-hover:bg-gradient-to-b from-teal-text-100 via-teal-text-40 to-teal-text-0 px-6 space-y-3 3xl:scale-100 scale-90">
-        {/* {props.extension === "png" ? (
-          <img
-            src={props.url}
-            alt="MarketCard image"
-            className="pt-6 rounded-md object-cover group-hover:scale-110 duration-500"
-          />
-        ) : (
-          <video
-            src={props.url}
-            alt="MarketCard video"
-            className="pt-6 rounded-md object-cover group-hover:scale-110 duration-500"
-            autoPlay
-            muted
-            loop
-          />
-        )} */}
-
         <img
           src={props.url}
           alt="MarketCard image"
           className="pt-6 rounded-md object-cover group-hover:scale-110 duration-500"
           loading="lazy"
         />
-
         <h3>{props.name}</h3>
         <div className="flex h-16 items-center justify-between">
           <div className="flex items-center">
@@ -108,10 +90,6 @@ const MarketCard = ({ key, ...props }) => {
                 alt="Market's Icon"
               />
             </a>
-            {/* <FontAwesomeIcon
-              icon={faArrowUpRightFromSquare}
-              className="text-teal-text-100 hidden opacity-0 group-hover:block group-hover:opacity-100 duration-500"
-            /> */}
           </button>
         </div>
       </div>

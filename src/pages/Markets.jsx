@@ -40,16 +40,15 @@ const Markets = () => {
 
   return (
     <section id="markets">
-      <div className="flex flex-col roadmap-gradient bg-cover pt-[5%] h-screen w-full md:items-center justify-center md:justify-normal overflow-x-hidden">
-        {/* roadmap-gradient / bg-background */}
-        <div className="md:hidden w-full flex items-center justify-center pb-12">
+      <div className="flex flex-col roadmap-gradient bg-cover pt-[5%] h-screen w-full xl:items-center justify-center xl:justify-normal overflow-x-hidden">
+        <div className="xl:hidden w-full flex items-center justify-center pb-12">
           <MobileTitle title="Markets" />
         </div>
-        <div className="flex px-4 md:px-0 space-x-12 md:justify-center py-10 rounded-xl shadow overflow-x-auto md:overflow-x-hidden md:w-full">
+        <div className="flex md:px-0 space-x-8 md:justify-center py-10 rounded-xl shadow overflow-x-auto xl:overflow-x-hidden md:w-full">
           {smallPacks.map((pack, index) => (
             <button
               key={index}
-              className="flex items-center justify-center w-32 h-32 3xl:w-40 3xl:h-40 4xl:w-48 4xl:h-48 border-[1px] border-gray-15 relative duration-700 z-30 group px-12 md:px-0"
+              className="flex items-center justify-center w-32 h-32 3xl:w-40 3xl:h-40 4xl:w-48 4xl:h-48 border-[1px] border-gray-15 relative duration-700 z-30 group px-12 xl:px-0"
               onClick={() => setSelectedSmallPackIndex(index)}
             >
               <div
@@ -63,7 +62,7 @@ const Markets = () => {
             </button>
           ))}
         </div>
-        <div className="flex md:px-20">
+        <div className="flex xl:px-20">
           <MarketCollection
             selectedSmallPackIndex={selectedSmallPackIndex}
             collectionTicker={
