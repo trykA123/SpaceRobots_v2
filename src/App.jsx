@@ -6,6 +6,7 @@ import Navbar from "./pages/Navbar";
 import Project from "./pages/Project";
 import Roadmap from "./pages/Roadmap";
 import Team from "./pages/Team";
+import TeamTest from "./pages/TeamTest";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
       <Events />
       <Roadmap />
       <Team />
+      <TeamTest />
     </div>
   );
 }

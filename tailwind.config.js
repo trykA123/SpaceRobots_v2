@@ -15,6 +15,13 @@ module.exports = {
         saturn: "url('./assets/images/gradients.webp')",
         collectionBackgound: "url('./assets/images/collection.webp')",
         heroBackground: "url('./assets/images/heroBackground.webp')",
+        teamBackground: "url('./assets/images/Banner.png')",
+        liviuBackground: "url('./assets/images/liviu.png')",
+        trykaBackground: "url('./assets/images/trka.png')",
+        simpleprickBackground: "url('./assets/images/simpleprick.png')",
+        jorjeBackground: "url('./assets/images/jorge.png')",
+        tarantuloBackground: "url('./assets/images/tarantulo.png')",
+        borisakeBackground: "url('./assets/images/borisake.png')",
       },
       backgroundColor: {
         "gray-15": "rgba(68, 68, 68, 0.15)",
