@@ -34,7 +34,7 @@ const Topnav = () => {
 
   return (
     <div>
-      <nav className="hidden w-full xl:px-24 xl:flex items-center xl:fixed justify-between text-white xl:h-32">
+      <nav className="hidden xl:opacity-0 xl:hover:opacity-100 duration-500 w-full xl:px-24 xl:flex items-center xl:fixed justify-between text-white xl:h-32 z-50">
         {/* Logo */}
         <div className="hidden md:flex md:flex-1 md:justify-center md:items-center">
           <a href="#hero" className="cursor-pointer">

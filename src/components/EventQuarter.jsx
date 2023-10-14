@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import EventCardLeft from "../components/EventCardLeft";
 import EventCardRight from "../components/EventCardRight";
+import { dates, infos } from "../utils/eventsConstants";
 import EventCardMobile from "./EventCardMobile";
 
 const EventQuarter = ({ selectedTab }) => {
@@ -13,7 +14,14 @@ const EventQuarter = ({ selectedTab }) => {
 
   const events = [
     {
-      left: [<EventCardLeft key={1} />, <EventCardLeft key={2} />],
+      left: [
+        <EventCardLeft
+          key={1}
+          info={infos.firstThing}
+          date={dates.autoPilot}
+        />,
+        <EventCardLeft key={2} />,
+      ],
       right: [<EventCardRight key={1} />, <EventCardRight key={2} />],
     },
     {

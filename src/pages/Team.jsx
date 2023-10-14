@@ -1,7 +1,7 @@
 import React from "react";
 import MobileTitle from "../components/MobileTitle";
 import TeamCard from "../components/TeamCard";
-import { team } from "../utils/constants";
+import { team } from "../utils/teamContants";
 
 const Team = () => {
   return (
@@ -9,7 +9,7 @@ const Team = () => {
       <div className="h-screen roadmap-gradient flex flex-col items-center justify-center pt-24 md:pt-0">
         <MobileTitle title="Team" />
         <div className="flex flex-col w-full max-w-7xl h-[80%] justify-between overflow-x-auto pt-24 xl:pt-0 xl:mt-10">
-          <div className="flex md:grid md:grid-cols-2 xl:grid-cols-3 h-full mx-auto ">
+          <div className="flex md:grid md:grid-cols-2 xl:grid-cols-3 h-full mx-auto">
             <TeamCard name={team.names.name1} role={team.roles.role1} />
             <TeamCard name={team.names.name2} role={team.roles.role2} />
             <TeamCard name={team.names.name3} role={team.roles.role3} />

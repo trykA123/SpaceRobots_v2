@@ -33,7 +33,7 @@ const Hero = () => {
           </div>
           <div className="hidden 2xl:flex justify-end w-full 2xl:px-10">
             <video
-              className="w-full 2xl:w-72 4xl:w-96"
+              className="w-full 2xl:w-72 4xl:w-96 rounded-xl shadow-2xl"
               autoPlay
               controls
               muted

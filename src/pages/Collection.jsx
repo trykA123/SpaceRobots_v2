@@ -37,8 +37,8 @@ const Collection = () => {
   };
 
   return (
-    <section id="collection">
-      <div className="h-[100dvh] xl:bg-collectionBackgound bg-cover bg-packImg overflow-x-hidden">
+    <section id="collection" className="">
+      <div className="h-[100dvh] xl:bg-collectionBackgound bg-cover bg-packImg overflow-hidden">
         <div className="hidden xl:flex 4xl:w-[50%] w-[60%] mx-auto xl:py-28 3xl:py-44 4xl:py-48 h-[100dvh] relative justify-center overflow-x-auto xl:overflow-x-hidden">
           <div className="h-full w-[1px] bg-gradient-to-b from-transparent via-white to-transparent"></div>
           <CollectionPack />
@@ -49,7 +49,7 @@ const Collection = () => {
           <div className="h-full w-[1px] bg-gradient-to-b from-transparent via-white to-transparent"></div>
         </div>
         <div className="flex flex-col xl:hidden items-center justify-center z-10 pt-12 w-full h-[100dvh] bg-gradient-to-b from-gray-gradient-full via-gray-gradient to-gray-gradient-full">
-          <MobileTitle title={"Collections"} className="mt-12"/>
+          <MobileTitle title={"Collections"} className="mt-12" />
           <div className="swiper-container">
             <div className="swiper-wrapper">
               <div className="swiper-slide">

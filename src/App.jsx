@@ -19,7 +19,7 @@ function App() {
       <Events />
       <Roadmap />
       <Team />
-      <TeamTest />
+      {/* <TeamTest /> */}
     </div>
   );
 }

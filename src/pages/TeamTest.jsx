@@ -26,14 +26,33 @@ const TeamTest = () => {
         hoveredChild !== null
           ? childBackgrounds[hoveredChild]
           : "bg-teamBackground"
-      } flex items-center justify-center relative mb-24 duration-700`}
+      } flex items-center justify-center relative mb-[200px] duration-700`}
     >
-      <div className="w-3/4 h-[600px] grid grid-cols-6 space-x-0 z-50 absolute opacity-10">
-        {childBackgrounds.map((bgColor, index) => (
+      <div className="w-3/4 h-[600px] grid grid-cols-6 space-x-0 z-50 absolute">
+        {childBackgrounds.slice(0, 2).map((bgColor, index) => (
           <div
             key={index}
-            className={`${bgColor} w-40 translate-x-44 duration-500`}
+            className={`${bgColor} w-48 translate-x-40 duration-500 opacity-0`}
             onMouseEnter={() => handleChildHover(index)}
+            onMouseLeave={handleChildLeave}
+          ></div>
+        ))}
+        <div className="bg-transparent w-48 translate-x-44 grid grid-rows-2">
+          {childBackgrounds.slice(2, 4).map((bgColor, index) => (
+            <div
+              key={index}
+              className={`${bgColor} w-40 h-[95%] space-y-12 opacity-0 duration-500`}
+              onMouseEnter={() => handleChildHover(index + 2)}
+              onMouseLeave={handleChildLeave}
+            ></div>
+          ))}
+        </div>
+
+        {childBackgrounds.slice(4).map((bgColor, index) => (
+          <div
+            key={index}
+            className={`${bgColor} w-48 translate-x-48 duration-500 opacity-0`}
+            onMouseEnter={() => handleChildHover(index + 4)}
             onMouseLeave={handleChildLeave}
           ></div>
         ))}

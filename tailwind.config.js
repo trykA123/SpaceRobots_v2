@@ -3,6 +3,9 @@ module.exports = {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
+      scale: {
+        200: "2.0",
+      },
       fontFamily: {
         chakraPetch: "ChakraPetch",
         archivo: "Archivo",
