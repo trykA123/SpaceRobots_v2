@@ -35,15 +35,13 @@
     @apply font-chakraPetch uppercase font-semibold text-white
     text-4xl
     md:text-5xl
-    3xl:text-6xl
     3xl:leading-[95px]
-    4xl:text-[90px];
+    3xl:text-[90px];
   }
 
   h3 {
     @apply font-chakraPetch text-2xl text-white pt-3 font-semibold uppercase;
   }
-
   h4 {
     @apply text-4xl text-gray-300 px-3 py-4 font-bold tracking-widest;
   }

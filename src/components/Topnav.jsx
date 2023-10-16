@@ -43,9 +43,9 @@ const Topnav = () => {
         </div>
         {/* Desktop Menu */}
         <ul className="hidden md:flex md:flex-1 md:justify-between md:items-center">
-          <li className="">Connect</li>
-          <li>Market</li>
-          <li className="relative group opacity-50 cursor-default">
+          <li className="hover:text-teal-text-100 duration-300">Connect</li>
+          <li className="hover:text-teal-text-100 duration-300">Market</li>
+          <li className="relative group opacity-50 cursor-default ">
             <div className="flex items-center justify-center opacity-0 duration-500 absolute w-32 top-full left-0 bg-teal-text-100 text-white py-2 px-4 group-hover:opacity-100  group-hover:translate-x-12 rounded-md">
               Soon
             </div>
@@ -62,6 +62,7 @@ const Topnav = () => {
               href="https://dapp.spacerobotsclub.com/"
               target="_blank"
               rel="noopener noreferrer"
+              className="hover:text-teal-text-100 duration-300"
             >
               DAPP
             </a>
@@ -69,13 +70,22 @@ const Topnav = () => {
         </ul>
 
         <div className="hidden md:flex md:flex-1 md:justify-center md:items-center md:space-x-8">
-          <a href="#" className="hover:scale-150 duration-300">
+          <a
+            href="#"
+            className="hover:scale-150 duration-300 hover:text-teal-text-100"
+          >
             <FontAwesomeIcon icon={faTwitter} />
           </a>
-          <a href="#" className="hover:scale-150 duration-300">
+          <a
+            href="#"
+            className="hover:scale-150 hover:text-teal-text-100 duration-300"
+          >
             <FontAwesomeIcon icon={faDiscord} />
           </a>
-          <a href="#" className="hover:scale-150 duration-300">
+          <a
+            href="#"
+            className="hover:scale-150 hover:text-teal-text-100 duration-300"
+          >
             <FontAwesomeIcon icon={faYoutube} />
           </a>
         </div>
