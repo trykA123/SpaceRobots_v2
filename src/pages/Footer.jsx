@@ -15,7 +15,7 @@ const Footer = () => {
   };
 
   return (
-    <footer className="w-screen fixed bottom-0 bg-transparent z-50 h-8 text-white xl:px-24 flex">
+    <footer className=" hidden w-screen fixed bottom-0 bg-transparent z-50 h-8 text-white xl:px-24 lg:flex">
       <button className="w-6 h-8 animate-wiggle" onClick={toggleTranslation}>
         <FontAwesomeIcon
           icon={faChevronUp}
@@ -28,7 +28,7 @@ const Footer = () => {
       </button>
       <div
         className={`w-full flex h-8 justify-between items-center duration-300 translate-y-[64px] opacity-0  ${
-          isButtonPressed ? "-translate-y-[0] opacity-100" : ""
+          isButtonPressed ? "-translate-y-[0px] opacity-100" : ""
         }`}
       >
         <div className="h-8 flex justify-center flex-1">

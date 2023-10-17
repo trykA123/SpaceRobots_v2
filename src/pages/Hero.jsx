@@ -9,7 +9,7 @@ const Hero = () => {
         <div className="flex flex-col-reverse md:flex-col justify-around md:justify-between h-full w-[90%] md:w-[80%] mx-auto md:pt-64 md:pb-14 xl:pl-24 4xl:pt-72 4xl:pb-24">
           <div className="h-full py-40 md:py-0 flex flex-col space-y-14 xl:space-y-6 items-center xl:items-start">
             <MobileTitle title="Space Robots" />
-            <h1 className="md:w-[600px] 3xl:w-[1080px] 4xl:w-[1200px] text-center md:text-center">
+            <h1 className="md:w-[600px] 3xl:w-[1080px] text-center md:text-center">
               Explore the unknown with Space Robots
             </h1>
             <div className="flex flex-col xl:flex-row h-full space-y-28 items-center">
@@ -31,7 +31,7 @@ const Hero = () => {
               </button>
             </div>
           </div>
-          <div className="hidden 2xl:flex justify-end w-full 2xl:px-10">
+          <div className="hidden 2xl:flex justify-end w-full 2xl:px-10 3xl:px-24">
             <video
               className="w-full 2xl:w-72 4xl:w-96 rounded-xl shadow-2xl"
               autoPlay

@@ -155,6 +155,9 @@ const Topnav = () => {
             <FontAwesomeIcon icon={faYoutube} />
           </a>
         </div>
+        <p className="absolute bottom-0 py-4">
+          &copy; 2023 SpaceRobots. All rights reserved.
+        </p>
       </div>
     </div>
   );

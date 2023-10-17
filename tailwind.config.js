@@ -49,9 +49,13 @@ module.exports = {
           "0%, 100%": { transform: "translateY(0%)" },
           "50%": { transform: "translateY(10%)" },
         },
+        slide: {
+          to: { transform: "translateX(calc(-50% - 6px))" },
+        },
       },
       animation: {
         wiggle: "wiggle 1.5s ease-in-out infinite",
+        slide: "slide 20s infinite linear",
       },
     },
   },

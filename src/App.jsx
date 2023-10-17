@@ -11,7 +11,7 @@ import TeamTest from "./pages/TeamTest";
 
 function App() {
   return (
-    <div className="h-[100dvh] w-screen relative">
+    <div className="h-[100dvh] w-screen relative snap-mandatory snap-start">
       <Navbar />
       <Footer />
       <Hero />
