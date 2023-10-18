@@ -4,11 +4,12 @@ import {
   faYoutube,
 } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import titleLogo from "../assets/images/logo.webp";
 
 const Topnav = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [showNav, setShowNav] = useState(true);
 
   const navToggle = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -32,9 +33,32 @@ const Topnav = () => {
     menu.classList.add("hidden");
   };
 
+  useEffect(() => {
+    // Initially, show the nav with opacity-100
+    const timer = setTimeout(() => {
+      setShowNav(false); // After 5 seconds, hide the nav
+    }, 3000);
+
+    return () => clearTimeout(timer);
+  }, []);
+
+  const handleMouseEnter = () => {
+    setShowNav(true);
+  };
+
+  const handleMouseLeave = () => {
+    setShowNav(false);
+  };
+
   return (
     <div>
-      <nav className="hidden xl:opacity-0 xl:hover:opacity-100 duration-500 w-full xl:px-24 xl:flex items-center xl:fixed justify-between text-white xl:h-32 z-50">
+      <nav
+        className={`w-full xl:px-24 xl:flex items-center xl:fixed justify-between text-white xl:h-32 z-50 duration-300 ${
+          showNav ? "opacity-100" : "opacity-0"
+        }`}
+        onMouseEnter={handleMouseEnter}
+        onMouseLeave={handleMouseLeave}
+      >
         {/* Logo */}
         <div className="hidden md:flex md:flex-1 md:justify-center md:items-center">
           <a href="#hero" className="cursor-pointer">
@@ -155,7 +179,7 @@ const Topnav = () => {
             <FontAwesomeIcon icon={faYoutube} />
           </a>
         </div>
-        <p className="absolute bottom-0 py-4">
+        <p className="absolute bottom-0 py-4 text-sm">
           &copy; 2023 SpaceRobots. All rights reserved.
         </p>
       </div>

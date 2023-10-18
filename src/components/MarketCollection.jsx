@@ -16,7 +16,7 @@ const MarketCollection = ({ collectionTicker }) => {
   if (error) return <p>Error: {error.message}</p>;
 
   return (
-    <div className="flex 3xl:justify-center xl:space-x-8 3xl:space-x-16 pt-4 3xl:pt-9 overflow-x-auto xl:overflow-x-hidden">
+    <div className="flex 3xl:justify-center xl:space-x-8 3xl:space-x-16 3xl:pt-9 overflow-x-auto xl:overflow-x-hidden">
       {[...Array(numMarketCards)].map((_, index) => {
         const edge = data.auctions.edges[index];
         if (!edge) {

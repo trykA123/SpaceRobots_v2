@@ -66,7 +66,7 @@ const MarketCard = ({ key, ...props }) => {
         <img
           src={props.url}
           alt="MarketCard image"
-          className="pt-6 rounded-md object-cover group-hover:scale-110 group-hover:animate-pulse duration-500"
+          className="pt-6 rounded-md object-cover group-hover:scale-110 duration-500"
           loading="lazy"
         />
         <h3>{props.name}</h3>
@@ -77,7 +77,7 @@ const MarketCard = ({ key, ...props }) => {
               {props.price}
             </h4>
           </div>
-          <button className="flex items-center justify-center text-white hover:text-black w-[50%] h-16 hover:bg-teal-300 bg-gray-15 rounded-md font-semibold gap-4 group-hover:w-3/5 duration-500 group-hover:-translate-x-2">
+          <button className="flex items-center justify-center text-white hover:text-black w-[50%] h-16 hover:bg-teal-300 bg-gray-15 rounded-md font-semibold gap-4 group-hover:w-3/5 duration-500 group-hover:-translate-x-2 shadow-md shadow-teal-text-100">
             <a
               href={marketUrl}
               target="_blank"

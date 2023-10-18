@@ -40,7 +40,7 @@ const EventQuarter = ({ selectedTab }) => {
 
   return (
     <div
-      className={`flex h-full transition-all duration-700 overflow-y-auto xl:overflow-y-hidden ${
+      className={`flex h-full transition-all duration-700 overflow-y-auto xl:overflow-hidden ${
         showContent ? "opacity-100 scale-100" : "opacity-0 scale-50"
       }`}
     >

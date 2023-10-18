@@ -7,7 +7,7 @@ const Hero = () => {
     <section id="hero">
       <div className="h-screen bg-heroBackground bg-cover text-white w-screen ">
         <div className="flex flex-col-reverse md:flex-col justify-around md:justify-between h-full w-[90%] md:w-[80%] mx-auto md:pt-64 md:pb-14 xl:pl-24 4xl:pt-72 4xl:pb-24">
-          <div className="h-full py-40 md:py-0 flex flex-col space-y-14 xl:space-y-6 items-center xl:items-start">
+          <div className="h-full py-16 md:py-0 flex flex-col space-y-14 xl:space-y-6 items-center xl:items-start">
             <MobileTitle title="Space Robots" />
             <h1 className="md:w-[600px] 3xl:w-[1080px] text-center md:text-center">
               Explore the unknown with Space Robots

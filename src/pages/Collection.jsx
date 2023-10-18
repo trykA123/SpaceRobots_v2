@@ -37,9 +37,9 @@ const Collection = () => {
   };
 
   return (
-    <section id="collection" className="">
+    <section id="collection">
       <div className="h-[100dvh] xl:bg-collectionBackgound bg-cover bg-packImg overflow-hidden">
-        <div className="hidden xl:flex 4xl:w-[50%] w-[60%] mx-auto xl:py-28 3xl:py-44 4xl:py-48 h-[100dvh] relative justify-center overflow-x-auto xl:overflow-x-hidden">
+        <div className="hidden xl:flex 4xl:w-[50%] w-[60%] mx-auto xl:py-28 3xl:py-44 4xl:py-48 h-[100dvh] relative justify-center overflow-x-auto xl:overflow-hidden">
           <div className="h-full w-[1px] bg-gradient-to-b from-transparent via-white to-transparent"></div>
           <CollectionPack />
           <div className="h-full w-[1px] bg-gradient-to-b from-transparent via-white to-transparent"></div>

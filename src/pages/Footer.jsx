@@ -27,8 +27,10 @@ const Footer = () => {
         />
       </button>
       <div
-        className={`w-full flex h-8 justify-between items-center duration-300 translate-y-[64px] opacity-0  ${
-          isButtonPressed ? "-translate-y-[0px] opacity-100" : ""
+        className={`w-full flex h-8 justify-between items-center duration-300   ${
+          isButtonPressed
+            ? "-translate-y-0 opacity-100"
+            : "translate-y-16 opacity-0"
         }`}
       >
         <div className="h-8 flex justify-center flex-1">

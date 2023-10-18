@@ -46,7 +46,7 @@
     @apply text-4xl text-gray-300 px-3 py-4 font-bold tracking-widest;
   }
   p {
-    @apply font-archivo text-base leading-4 font-normal 3xl:text-xl 3xl:leading-8;
+    @apply font-archivo text-base font-normal 3xl:text-xl 3xl:leading-8;
   }
 
   li {
@@ -166,5 +166,15 @@
   .navigation-indicator.active {
     background-color: #14c2a399; /* Color for the active indicator */
     width: 100%;
+  }
+
+  .slidein {
+    transform: -translateY(100%);
+  }
+}
+
+@layer utilities {
+  .pause-animation {
+    animation-play-state: paused;
   }
 }
