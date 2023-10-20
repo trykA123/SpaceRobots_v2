@@ -115,8 +115,8 @@ const Markets = () => {
         <div className="xl:hidden w-full flex items-center justify-center pb-4">
           <MobileTitle title="Markets" />
         </div>
-        <div className="flex md:px-0 space-x-8 md:justify-center py-2 md:py-10 rounded-xl shadow w-full">
-          <div className="hidden md:grid md:grid-flow-col md:animate-none md:gap-3 ">
+        <div className="flex md:px-0 space-x-8 md:justify-center py-2 md:py-10 lg:py-24 rounded-xl shadow w-full">
+          <div className="hidden md:grid md:grid-flow-col md:animate-none md:gap-3 lg:mt-2">
             {smallPacks.map((pack, index) => (
               <button
                 key={index}

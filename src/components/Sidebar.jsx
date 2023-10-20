@@ -2,7 +2,7 @@ import React from "react";
 
 const Sidebar = () => {
   return (
-    <div className="fixed hidden xl:flex items-center w-52 h-screen 3xl:ml-14 z-30 3xl:scale-100 text-white group">
+    <div className="fixed hidden xl:flex items-center lg:w-44 3xl:w-52 h-screen 3xl:ml-14 z-30 3xl:scale-100 text-white group lg:ml-4">
       <ul className="flex flex-col w-full justify-center border-l-[2px] rounded-sm border-teal-400">
         <div className="flex w-full">
           <div className="h-[2px] w-1/5 bg-teal-400"></div>

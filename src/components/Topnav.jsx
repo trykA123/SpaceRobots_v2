@@ -54,7 +54,7 @@ const Topnav = () => {
     <div>
       <nav
         className={`w-full xl:px-24 xl:flex items-center xl:fixed justify-between text-white xl:h-32 z-50 duration-300 ${
-          showNav ? "opacity-100" : "opacity-0"
+          showNav ? "opacity-100" : "opacity-100"
         }`}
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
