@@ -8,8 +8,8 @@ const Team = () => {
     <section id="team">
       <div className="h-screen roadmap-gradient flex flex-col items-center justify-center md:pt-0">
         <MobileTitle title="Team" />
-        <div className="flex flex-col w-full container h-[80%] justify-between overflow-hidden pt-24 xl:pt-0 xl:mt-10 border border-amber-300">
-          <div className="hidden md:grid md:grid-cols-2 xl:grid-cols-3 h-full mx-auto">
+        <div className="flex flex-col w-full lg:w-3/4 container h-[80%] justify-between overflow-hidden pt-24 xl:pt-0 xl:mt-14 lg:justify-center">
+          <div className="hidden 2xl:grid 2xl:grid-cols-3 h-full mx-auto">
             <TeamCard name={team.names.name1} role={team.roles.role1} />
             <TeamCard name={team.names.name2} role={team.roles.role2} />
             <TeamCard name={team.names.name3} role={team.roles.role3} />
@@ -17,7 +17,7 @@ const Team = () => {
             <TeamCard name={team.names.name5} role={team.roles.role5} />
             <TeamCard name={team.names.name6} role={team.roles.role6} />
           </div>
-          <div className="flex animate-slide md:hidden mx-auto max-w-fit">
+          <div className="flex animate-slide  2xl:hidden mx-auto max-w-fit overflow-x-auto">
             <TeamCard name={team.names.name1} role={team.roles.role1} />
             <TeamCard name={team.names.name2} role={team.roles.role2} />
             <TeamCard name={team.names.name3} role={team.roles.role3} />

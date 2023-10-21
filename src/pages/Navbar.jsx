@@ -1,13 +1,13 @@
 import React from "react";
-import Topnav from "../components/Topnav";
 import Sidebar from "../components/Sidebar";
+import Topnav from "../components/Topnav";
 
 const Navbar = () => {
   return (
-    <nav>
+    <>
       <Topnav />
       <Sidebar />
-    </nav>
+    </>
   );
 };
 

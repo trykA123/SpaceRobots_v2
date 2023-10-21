@@ -54,7 +54,24 @@ const MarketCard = ({ key, ...props }) => {
     variables: SELECTED_VARIABLES,
   });
 
-  if (loading) return <p>Loading...</p>;
+  if (loading) {
+    // Show skeleton loading while data is loading
+    return (
+      <div className="flex z-30 group" key={key}>
+        <div className="flex flex-col w-80 h-[450px] 3xl:w-[400px] 3xl:h-[550px] bg-gray-15 rounded-md group-hover:bg-gradient-to-b from-teal-text-100 via-teal-text-40 to-teal-text-0 px-6 space-y-3 3xl:scale-100 scale-90">
+          <div className="skeleton h-80 w-full rounded-md mt-6" />
+          <div className="skeleton h-8 w-3/4 mb-4 rounded-md" />
+          <div className="flex h-16 items-center justify-between">
+            <div className="flex items-center">
+              <div className="skeleton h-7 w-7 rounded-full mr-2" />
+              <div className="skeleton h-12 w-20 rounded-md py-4" />
+            </div>
+            <button className="skeleton h-16 w-3/5 rounded-md gap-4" />
+          </div>
+        </div>
+      </div>
+    );
+  }
   if (error) return <p>Error: {error.message}</p>;
 
   const marketUrl = data.auctions.edges[0].node.marketplace.url;

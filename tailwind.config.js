@@ -56,6 +56,7 @@ module.exports = {
       animation: {
         wiggle: "wiggle 1.5s ease-in-out infinite",
         slide: "slide 20s infinite linear",
+        skeletonLoading: "1s linear infinite alternate",
       },
     },
   },

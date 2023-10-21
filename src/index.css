@@ -167,14 +167,28 @@
     background-color: #14c2a399; /* Color for the active indicator */
     width: 100%;
   }
-
-  .slidein {
-    transform: -translateY(100%);
-  }
 }
 
 @layer utilities {
   .pause-animation {
     animation-play-state: paused;
+  }
+  .slidein {
+    transform: -translateY(100%);
+  }
+
+  .skeleton {
+    background: linear-gradient(90deg, #e5e7eb 25%, #9ca3af 50%, #9ca3af 75%);
+    background-size: 200% 100%;
+    animation: loading 1.5s infinite;
+  }
+
+  @keyframes loading {
+    0% {
+      background-position: -200% 0;
+    }
+    100% {
+      background-position: 200% 0;
+    }
   }
 }

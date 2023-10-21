@@ -53,7 +53,7 @@ const Topnav = () => {
   return (
     <div>
       <nav
-        className={`w-full xl:px-24 xl:flex items-center xl:fixed justify-between text-white xl:h-32 z-50 duration-300 ${
+        className={`hidden lg:flex w-full lg:px-24 items-center lg:fixed justify-between text-white lg:h-32 z-50 duration-300 ${
           showNav ? "opacity-100" : "opacity-100"
         }`}
         onMouseEnter={handleMouseEnter}
@@ -115,23 +115,25 @@ const Topnav = () => {
         </div>
         {/* Hamburger */}
       </nav>
-      <div className="xl:hidden absolute flex items-center justify-center h-10 rounded-full w-10 right-5 top-2 bg-teal-300 z-50">
-        <button
-          onClick={navToggle}
-          id="menu-btn"
-          type="button"
-          className="z-40 block hamburger xl:hidden focus:outline-none"
-        >
-          <span className="hamburger-top"></span>
-          <span className="hamburger-middle"></span>
-          <span className="hamburger-bottom"></span>
-        </button>
+      <div className="xl:hidden relative">
+        <div className="fixed flex items-center justify-center h-10 rounded-full w-10 right-5 top-2 bg-teal-300 z-50">
+          <button
+            onClick={navToggle}
+            id="menu-btn"
+            type="button"
+            className="z-40 block hamburger xl:hidden focus:outline-none"
+          >
+            <span className="hamburger-top"></span>
+            <span className="hamburger-middle"></span>
+            <span className="hamburger-bottom"></span>
+          </button>
+        </div>
       </div>
       <div
         id="menu"
         className={`${
           isMenuOpen ? "flex" : "hidden"
-        } flex-col items-center justify-center w-full min-h-screen py-1 font-chakraPetch text-lg text-white uppercase bg-mobile-menu-blue`}
+        } flex-col items-center justify-center w-full min-h-screen py-1 font-chakraPetch text-lg text-white uppercase bg-mobile-menu-blue fixed z-40`}
       >
         <div className="flex flex-col items-center space-y-10 text-3xl font-bold leading-7">
           <a href="#collection" onClick={closeMenu}>
@@ -140,17 +142,25 @@ const Topnav = () => {
           <a href="#markets" onClick={closeMenu}>
             Markets
           </a>
-          {/* <a href="#" className="opacity-50" target="__blank">
+          <a
+            href="#"
+            className="opacity-50 pointer-events-none"
+            target="__blank"
+          >
             Stacking
           </a>
-          <a href="#" className="opacity-50" target="__blank">
+          <a
+            href="#"
+            className="opacity-50 pointer-events-none"
+            target="__blank"
+          >
             Upgrading
-          </a> */}
+          </a>
           <a href="#events" onClick={closeMenu}>
             Events
           </a>
           <a href="#roadmap" onClick={closeMenu}>
-            Road Map
+            RoadMap
           </a>
           <a href="#team" onClick={closeMenu}>
             Team

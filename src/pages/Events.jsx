@@ -14,7 +14,7 @@ const Events = () => {
       <div className="h-screen roadmap-gradient bg-cover">
         <div className="flex flex-col items-center pt-24 4xl:pt-44 md:mx-auto md:w-3/4 h-full md:pb-24">
           {/* Tabs navbar */}
-          <MobileTitle title="Events"/>
+          <MobileTitle title="Events" />
           <div className="flex items-center justify-center h-32">
             <ul className="flex space-x-12 text-white ">
               <li
