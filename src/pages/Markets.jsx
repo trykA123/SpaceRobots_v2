@@ -101,11 +101,11 @@ const Markets = () => {
       }
     };
 
-    document.addEventListener("click", handleClickOutside);
+    document.addEventListener("mouseover", handleClickOutside);
 
     return () => {
       // Remove the event listener when the component unmounts
-      document.removeEventListener("click", handleClickOutside);
+      document.removeEventListener("mouseover", handleClickOutside);
     };
   }, []);
 

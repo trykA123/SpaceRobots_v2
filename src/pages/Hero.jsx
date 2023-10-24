@@ -1,6 +1,7 @@
 import React from "react";
 import heroVideo from "../assets/videos/video.mp4";
 import MobileTitle from "../components/MobileTitle";
+import {text } from "../utils/heroConstants";
 
 const Hero = () => {
   return (
@@ -10,15 +11,11 @@ const Hero = () => {
           <div className="h-full py-16 md:py-0 flex flex-col space-y-14 xl:space-y-6 items-center xl:items-start">
             <MobileTitle title="Space Robots" />
             <h1 className="md:w-[600px] 3xl:w-[1080px] text-center md:text-center">
-              Explore the unknown with Space Robots
+              {text.title}
             </h1>
             <div className="flex flex-col xl:flex-row h-full space-y-28 items-center">
               <p className="md:w-[600px] 3xl:w-[1080px] text-center xl:text-left">
-                Space Robots NFTs are unique digital collectibles that represent
-                a robotic explorer in the vast universe. These NFTs offer a
-                glimpse into the future of space exploration, where robots are
-                sent to faraway planets to gather data and unlock the secrets of
-                the cosmos.
+                {text.description}
               </p>
               <button className="w-64 bg-teal-400 rounded-sm flex items-center justify-center cursor-pointer h-12 xl:hidden font-bold">
                 <a
@@ -38,7 +35,7 @@ const Hero = () => {
               controls
               muted
               loop
-              alt=""
+              alt="SpaceRobots video"
             >
               <source src={heroVideo} type="video/mp4" />
             </video>
