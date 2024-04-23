@@ -23,7 +23,7 @@ const Events = () => {
                 }`}
                 onClick={() => handleTabClick(0)}
               >
-                Q1
+                Space Robots Universe
               </li>
               <li
                 className={`event-tab-id ${
