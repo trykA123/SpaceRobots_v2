@@ -4,7 +4,7 @@ export const titles = {
   Q1: "Q1 2023",
   Q2: "Q2 2023",
   Q3: "Q3 2023",
-  Q4: "Q4 2023",
+  // Q4: "Q4 2023",
 };
 
 export const firstRoadmapSection = {
@@ -145,20 +145,20 @@ export const roadmapSections = [
       info: "At this stage, we are putting forth our full efforts through completing sMining, the component that will enable users to stake for rewards. The testing on Devnet will tentatively be released.",
     },
   },
-  {
-    title: titles.Q4,
-    firstInfo: {
-      title: "ΣMining",
-      info: "The development of ΣMining will be completed and released in Q4. The participants can now compete against one another in a struggle for control over Gabma Centauri.",
-    },
-    secondInfo: {
-      title: "ΣConvert",
-      info: "ΣConvert will be available for holders to trade in their scrappy Roboparts for better ones each season.",
-    },
+  // {
+  //   title: titles.Q4,
+  //   firstInfo: {
+  //     title: "ΣMining",
+  //     info: "The development of ΣMining will be completed and released in Q4. The participants can now compete against one another in a struggle for control over Gabma Centauri.",
+  //   },
+  //   secondInfo: {
+  //     title: "ΣConvert",
+  //     info: "ΣConvert will be available for holders to trade in their scrappy Roboparts for better ones each season.",
+  //   },
 
-    thirdInfo: {
-      title: "ΣData",
-      info: "For the time being, ΣData development is our focus. A new addition that will help users dominate the metagame by providing in-depth analyses and statistics over the whole Space Robots NFTs world.",
-    },
-  },
+  //   thirdInfo: {
+  //     title: "ΣData",
+  //     info: "For the time being, ΣData development is our focus. A new addition that will help users dominate the metagame by providing in-depth analyses and statistics over the whole Space Robots NFTs world.",
+  //   },
+  // },
 ];
