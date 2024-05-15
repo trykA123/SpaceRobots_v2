@@ -29,15 +29,15 @@ const RobotModel = () => {
 
 const Project = () => {
   return (
-    <section id="project" className="container mx-auto ">
-      <div className="justify-center my-24 flex h-screen flex-col items-center">
+    <section id="project" className="container mx-auto my-24">
+      <div className="flex h-screen flex-col items-center justify-center">
         <p className="font-chakraPetch text-2xl uppercase text-accent-color">
           About
         </p>
         <h2 className="mb-12">Discover your Robot</h2>
-        <div className="flex h-full w-full gap-16">
-          <div className="flex max-w-[600px] items-center justify-center">
-            <div className="mx-auto flex-col items-center justify-center space-y-6 pl-12">
+        <div className="flex h-full w-full">
+          <div className="flex max-w-[600px] items-center justify-center ">
+            <div className="mx-auto flex-col items-center justify-center space-y-6 rounded-xl bg-background-color p-12">
               <h2 className="">{text.title}</h2>
               <p className="">{text.description}</p>
               <button className="rounded-xl bg-accent-color px-8 py-4 text-xl text-background-color">
@@ -45,7 +45,7 @@ const Project = () => {
               </button>
             </div>
           </div>
-          <div className="mx-auto flex h-full w-full items-center justify-center rounded-xl bg-background-color">
+          <div className="max-w-96 mx-auto flex h-full w-full items-center justify-center ">
             <Canvas camera={{ position: [-3, 2.5, 5.5], fov: 45 }}>
               <OrbitControls
                 enableZoom={false}

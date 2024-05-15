@@ -38,7 +38,7 @@
     @apply font-chakraPetch font-semibold uppercase 2xl:text-3xl;
   }
   h4 {
-    @apply text-xl font-bold;
+    @apply text-xl font-bold font-chakraPetch;
   }
   p {
     @apply font-archivo text-base font-normal;
