@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import EventCardLeft from "../components/EventCardLeft";
 import EventCardRight from "../components/EventCardRight";
-import { dates, infos } from "../utils/eventsConstants";
+import { infos, storyName } from "../utils/eventsConstants";
 import EventCardMobile from "./EventCardMobile";
 
 const EventQuarter = ({ selectedTab, openModal }) => {
@@ -18,49 +18,118 @@ const EventQuarter = ({ selectedTab, openModal }) => {
         <EventCardLeft
           key={1}
           info={infos.firstThing}
-          date={dates.autoPilot}
+          date={storyName.story1}
           openModal={openModal}
         />,
-        <EventCardLeft key={2} openModal={openModal} />,
-        <EventCardLeft key={3} openModal={openModal} />,
-        <EventCardLeft key={4} openModal={openModal} />,
+        <EventCardLeft
+          key={2}
+          openModal={openModal}
+          info={infos.firstThing}
+          date={storyName.story2}
+        />,
+        <EventCardLeft
+          key={3}
+          openModal={openModal}
+          info={infos.firstThing}
+          date={storyName.story3}
+        />,
+        <EventCardLeft
+          key={4}
+          openModal={openModal}
+          info={infos.firstThing}
+          date={storyName.story4}
+        />,
       ],
     },
     {
       left: [
-        <EventCardLeft key={1} openModal={openModal} />,
-        <EventCardLeft key={2} openModal={openModal} />,
-      ],
-      right: [
-        <EventCardRight key={1} openModal={openModal} />,
-        <EventCardRight key={2} openModal={openModal} />,
+        <EventCardLeft
+          key={1}
+          info={infos.firstThing}
+          date={storyName.story1}
+          openModal={openModal}
+        />,
+        <EventCardLeft
+          key={2}
+          openModal={openModal}
+          info={infos.firstThing}
+          date={storyName.story2}
+        />,
+        <EventCardLeft
+          key={3}
+          openModal={openModal}
+          info={infos.firstThing}
+          date={storyName.story3}
+        />,
+        <EventCardLeft
+          key={4}
+          openModal={openModal}
+          info={infos.firstThing}
+          date={storyName.story4}
+        />,
       ],
     },
     {
       left: [
-        <EventCardLeft key={1} openModal={openModal} />,
-        <EventCardLeft key={2} openModal={openModal} />,
-      ],
-      right: [
-        <EventCardRight key={1} openModal={openModal} />,
-        <EventCardRight key={2} openModal={openModal} />,
+        <EventCardLeft
+          key={1}
+          info={infos.firstThing}
+          date={storyName.story1}
+          openModal={openModal}
+        />,
+        <EventCardLeft
+          key={2}
+          openModal={openModal}
+          info={infos.firstThing}
+          date={storyName.story2}
+        />,
+        <EventCardLeft
+          key={3}
+          openModal={openModal}
+          info={infos.firstThing}
+          date={storyName.story3}
+        />,
+        <EventCardLeft
+          key={4}
+          openModal={openModal}
+          info={infos.firstThing}
+          date={storyName.story4}
+        />,
       ],
     },
     {
       left: [
-        <EventCardLeft key={1} openModal={openModal} />,
-        <EventCardLeft key={2} openModal={openModal} />,
-      ],
-      right: [
-        <EventCardRight key={1} openModal={openModal} />,
-        <EventCardRight key={2} openModal={openModal} />,
+        <EventCardLeft
+          key={1}
+          info={infos.firstThing}
+          date={storyName.story1}
+          openModal={openModal}
+        />,
+        <EventCardLeft
+          key={2}
+          openModal={openModal}
+          info={infos.firstThing}
+          date={storyName.story2}
+        />,
+        <EventCardLeft
+          key={3}
+          openModal={openModal}
+          info={infos.firstThing}
+          date={storyName.story3}
+        />,
+        <EventCardLeft
+          key={4}
+          openModal={openModal}
+          info={infos.firstThing}
+          date={storyName.story4}
+        />,
       ],
     },
   ];
 
   return (
     <div
-      className={`mx-auto h-full w-full justify-center flex py-12 transition-all duration-700 ${
+      className={`mx-auto flex h-full w-full justify-center py-12 transition-all duration-700 ${
         showContent ? "scale-100 opacity-100" : "scale-50 opacity-0"
       }`}
     >
