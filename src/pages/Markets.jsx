@@ -7,6 +7,8 @@ import spaceRobotLogo from "../assets/images/spacerobotlogo.webp";
 import MarketCollection from "../components/MarketCollection";
 import MobileTitle from "../components/MobileTitle";
 
+import { motion } from "framer-motion";
+
 const Markets = () => {
   const smallPacks = [
     {
@@ -111,24 +113,23 @@ const Markets = () => {
 
   return (
     <section id="markets">
-      <div className="flex flex-col roadmap-gradient bg-cover h-screen w-full xl:items-center justify-center xl:justify-normal overflow-x-hidden">
-        <div className="xl:hidden w-full flex items-center justify-center pb-4">
-          <MobileTitle title="Markets" />
+      <div className="flex flex-col container w-full items-center gap-1 justify-around h-full py-4 my-12 mx-auto">
+        <div className="w-full flex items-center justify-center">
+          {/* <MobileTitle title="Markets" /> */}
+          <div className="flex flex-col items-center justify-center py-12">
+            <p className="text-accent-color text-2xl">NFT Marketplace</p>
+            <h2 className="">Explore the latest Listings</h2>
+          </div>
         </div>
-        <div className="flex md:px-0 space-x-8 md:justify-center py-2 md:py-10 lg:py-24 xl:py-28 rounded-xl shadow w-full">
+        <div className="flex justify-center pb-12 rounded-xl shadow w-full">
           <div className="hidden md:grid md:grid-flow-col md:animate-none md:gap-3 lg:mt-2 xl:mt-8">
             {smallPacks.map((pack, index) => (
               <button
                 key={index}
-                className="flex items-center justify-center w-32 h-32 3xl:w-40 3xl:h-40 4xl:w-48 4xl:h-48 border-[1px] border-gray-15 relative duration-700 z-30 group mx-2 xl:px-0 overflow-hidden rounded-md"
+                className="flex items-center justify-center border-[1px] border-gray-15 relative duration-700 z-30 group mx-2 overflow-hidden rounded-md p-4 bg-secondary-color-2 hover:border-secondary-color"
                 onClick={() => setSelectedSmallPackIndex(index)}
               >
-                <div
-                  className={`bg-cover opacity-40 group-hover:opacity-100 duration-500 w-full h-full absolute overflow-hidden`}
-                  style={{ backgroundImage: `url(${pack.bgImg})` }}
-                ></div>
-
-                <p className="text-center abosolute font-bold text-white opacity-100 group-hover:opacity-0 duration-500">
+                <p className="text-center abosolute font-bold">
                   {pack.info}
                 </p>
               </button>
@@ -155,14 +156,14 @@ const Markets = () => {
                   style={{ backgroundImage: `url(${pack.bgImg})` }}
                 ></div>
 
-                <p className="text-center abosolute font-bold text-white opacity-100 group-hover:opacity-0 duration-500">
+                <p className="text-center abosolute font-bold opacity-100 group-hover:opacity-0 duration-500">
                   {pack.info}
                 </p>
               </button>
             ))}
           </div>
         </div>
-        <div className="flex xl:px-20">
+        <div>
           <MarketCollection
             selectedSmallPackIndex={selectedSmallPackIndex}
             collectionTicker={

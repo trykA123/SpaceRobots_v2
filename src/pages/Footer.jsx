@@ -15,7 +15,7 @@ const Footer = () => {
   };
 
   return (
-    <footer className="hidden w-screen fixed bottom-0 bg-transparent z-50 h-8 text-white xl:px-24 lg:flex">
+    <footer className="hidden w-screen fixed bottom-0 bg-transparent z-50 h-8  xl:px-24 lg:flex">
       <button className="w-6 h-8 animate-wiggle" onClick={toggleTranslation}>
         <FontAwesomeIcon
           icon={faChevronUp}

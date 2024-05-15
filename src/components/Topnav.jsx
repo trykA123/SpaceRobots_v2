@@ -53,7 +53,7 @@ const Topnav = () => {
   return (
     <div>
       <nav
-        className={`hidden lg:flex w-full lg:px-24 items-center lg:fixed justify-between text-white lg:h-32 z-50 duration-300 ${
+        className={`hidden lg:flex w-full lg:px-24 items-center lg:fixed justify-between  lg:h-20 z-50 duration-300 shadow-md bg-black  ${
           showNav ? "opacity-100" : "opacity-100"
         }`}
         onMouseEnter={handleMouseEnter}
@@ -66,11 +66,11 @@ const Topnav = () => {
           </a>
         </div>
         {/* Desktop Menu */}
-        <ul className="hidden md:flex md:flex-1 md:justify-between md:items-center">
+        <ul className="hidden md:flex md:flex-1 md:justify-between md:items-center ">
           <li className="hover:text-teal-text-100 duration-300">Connect</li>
           <li className="hover:text-teal-text-100 duration-300">Market</li>
           <li className="relative group opacity-50 cursor-default ">
-            <div className="flex items-center justify-center opacity-0 duration-500 absolute w-32 top-full left-0 bg-teal-text-100 text-white py-2 px-4 group-hover:opacity-100  group-hover:translate-x-12 rounded-md">
+            <div className="flex items-center justify-center opacity-0 duration-500 absolute w-32 top-full left-0 bg-teal-text-100  py-2 px-4 group-hover:opacity-100  group-hover:translate-x-12 rounded-md">
               Soon
             </div>
             Stacking
@@ -133,7 +133,7 @@ const Topnav = () => {
         id="menu"
         className={`${
           isMenuOpen ? "flex" : "hidden"
-        } flex-col items-center justify-center w-full min-h-screen py-1 font-chakraPetch text-lg text-white uppercase bg-mobile-menu-blue fixed z-40`}
+        } flex-col items-center justify-center w-full min-h-screen py-1 font-chakraPetch text-lg  uppercase bg-mobile-menu-blue fixed z-40`}
       >
         <div className="flex flex-col items-center space-y-10 text-3xl font-bold leading-7">
           <a href="#collection" onClick={closeMenu}>

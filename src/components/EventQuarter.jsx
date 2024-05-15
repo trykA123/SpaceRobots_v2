@@ -4,7 +4,7 @@ import EventCardRight from "../components/EventCardRight";
 import { dates, infos } from "../utils/eventsConstants";
 import EventCardMobile from "./EventCardMobile";
 
-const EventQuarter = ({ selectedTab }) => {
+const EventQuarter = ({ selectedTab, openModal }) => {
   const [showContent, setShowContent] = useState(false);
 
   useEffect(() => {
@@ -19,43 +19,60 @@ const EventQuarter = ({ selectedTab }) => {
           key={1}
           info={infos.firstThing}
           date={dates.autoPilot}
+          openModal={openModal}
         />,
-        <EventCardLeft key={2} />,
+        <EventCardLeft key={2} openModal={openModal} />,
+        <EventCardLeft key={3} openModal={openModal} />,
+        <EventCardLeft key={4} openModal={openModal} />,
       ],
-      right: [<EventCardRight key={1} />, <EventCardRight key={2} />],
     },
     {
-      left: [<EventCardLeft key={1} />, <EventCardLeft key={2} />],
-      right: [<EventCardRight key={1} />, <EventCardRight key={2} />],
+      left: [
+        <EventCardLeft key={1} openModal={openModal} />,
+        <EventCardLeft key={2} openModal={openModal} />,
+      ],
+      right: [
+        <EventCardRight key={1} openModal={openModal} />,
+        <EventCardRight key={2} openModal={openModal} />,
+      ],
     },
     {
-      left: [<EventCardLeft key={1} />, <EventCardLeft key={2} />],
-      right: [<EventCardRight key={1} />, <EventCardRight key={2} />],
+      left: [
+        <EventCardLeft key={1} openModal={openModal} />,
+        <EventCardLeft key={2} openModal={openModal} />,
+      ],
+      right: [
+        <EventCardRight key={1} openModal={openModal} />,
+        <EventCardRight key={2} openModal={openModal} />,
+      ],
     },
     {
-      left: [<EventCardLeft key={1} />, <EventCardLeft key={2} />],
-      right: [<EventCardRight key={1} />, <EventCardRight key={2} />],
+      left: [
+        <EventCardLeft key={1} openModal={openModal} />,
+        <EventCardLeft key={2} openModal={openModal} />,
+      ],
+      right: [
+        <EventCardRight key={1} openModal={openModal} />,
+        <EventCardRight key={2} openModal={openModal} />,
+      ],
     },
   ];
 
   return (
     <div
-      className={`flex h-full transition-all duration-700 overflow-y-auto xl:overflow-hidden ${
-        showContent ? "opacity-100 scale-100" : "opacity-0 scale-50"
+      className={`mx-auto h-full w-full justify-center flex py-12 transition-all duration-700 ${
+        showContent ? "scale-100 opacity-100" : "scale-50 opacity-0"
       }`}
     >
       {/* Left events */}
-      <div className="hidden xl:flex flex-col w-1/2 items-center justify-around pt-24">
-        {events[selectedTab].left}
-      </div>
-      {/* Middle line */}
-      <div className="hidden xl:block h-full w-[1px] bg-gradient-to-b from-transparent via-white"></div>
-      {/* Right events */}
-      <div className="hidden xl:flex flex-col w-1/2 items-center justify-around pb-24">
+      {events[selectedTab].left}
+      {events[selectedTab].right}
+
+      {/* <div className="hidden xl:flex flex-col items-center justify-around pb-24">
         {events[selectedTab].right}
-      </div>
+      </div> */}
       {/* Mobile events */}
-      <div className="flex flex-col space-y-12 xl:hidden px-4">
+      <div className="flex flex-col space-y-12 px-4 xl:hidden">
         <EventCardMobile />
         <EventCardMobile />
         <EventCardMobile />

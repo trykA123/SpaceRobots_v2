@@ -2,7 +2,7 @@ import React from "react";
 
 const EventCardMobile = () => {
   return (
-    <div className="flex flex-col space-y-8 text-white px-10 pb-5 border-b">
+    <div className="flex flex-col space-y-8  px-10 pb-5 border-b">
       <div className="flex flex-col items-start">
         <div className="bg-packImg bg-cover rounded-md h-32 w-full"></div>
         <h3 className="">2023.06.01</h3>

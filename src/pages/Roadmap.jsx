@@ -6,11 +6,14 @@ import { roadmapSections } from "../utils/roadmapConstants";
 const Roadmap = () => {
   return (
     <section id="roadmap">
-      <div className="roadmap-gradient h-screen md:pt-0">
-        <div className="flex flex-col container items-center space-y-16 pt-16 mx-auto md:pt-24 2xl:pt-48 md:pb-8 max-w-7xl lg:pt-16">
-          <MobileTitle title="Roadmap" />
-          <div className="flex h-[500px] md:h-[550px] lg:h-[600px] 3xl:h-[750px] 4xl:h-[850px] scrollbar-style">
-            <div className="flex flex-col overflow-y-auto max-h-fit">
+      <div className="">
+        <div className="container mx-auto flex flex-col items-center space-y-16 pt-16">
+          <p className="font-chakraPetch text-2xl uppercase text-accent-color">
+            Roadmap
+          </p>
+          <h2 className="mb-12">Building the universe</h2>
+          <div className="flex ">
+            <div className="grid grid-cols-3 gap-8">
               {roadmapSections.map((section, index) => (
                 <Timeline
                   key={index}

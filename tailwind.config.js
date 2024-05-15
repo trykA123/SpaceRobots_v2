@@ -2,6 +2,15 @@
 module.exports = {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
+    container: {
+      padding: {
+        DEFAULT: "1rem",
+        sm: "2rem",
+        lg: "5rem",
+        xl: "6rem",
+        "2xl": "12rem",
+      },
+    },
     extend: {
       scale: {
         200: "2.0",
@@ -38,6 +47,13 @@ module.exports = {
         "gray-gradient": "rgba(24, 24, 24, 0.01)",
         "gray-gradient-full": "rgba(16, 16, 16, 1)",
         "mobile-menu-blue": "rgba(12, 18, 38, 1)",
+        "background-color": "#101010",
+        "background-color-2": "#080808",
+        "primary-teal": "#14c2a3",
+        "secondary-color": "#0b9c33",
+        "secondary-color-2": "#0F1E13",
+        "accent-color": "#f1f100",
+        "modal-text": "#fddedf",
       },
       screens: {
         "3xl": "1920px",

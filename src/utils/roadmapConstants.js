@@ -1,10 +1,9 @@
 // ROADMAP CONSTANTS
 
 export const titles = {
-  Q1: "Q1 2023",
-  Q2: "Q2 2023",
-  Q3: "Q3 2023",
-  // Q4: "Q4 2023",
+  Q1: "Done",
+  Q2: "In Progress",
+  Q3: "Planned",
 };
 
 export const firstRoadmapSection = {

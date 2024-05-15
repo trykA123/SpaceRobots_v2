@@ -1,47 +1,72 @@
 import React from "react";
-import robot from "../assets/images/upgraderobot.webp";
-import MobileTitle from "../components/MobileTitle";
 import { text } from "../utils/projectConstants";
+
+import { OrbitControls, useAnimations, useGLTF } from "@react-three/drei";
+import { Canvas } from "@react-three/fiber";
+import { motion } from "framer-motion";
+import { useEffect, useRef } from "react";
+
+import walking from "../assets/models/robot.glb?url";
+
+const RobotModel = () => {
+  const group = useRef();
+
+  const { scene, animations } = useGLTF(walking, true); // Update the path to your GLTF model
+  const { actions, names } = useAnimations(animations, group);
+  console.log(names);
+
+  useEffect(() => {
+    if (actions && names && names.length > 0 && actions[names[0]]) {
+      // Use the full animation name when accessing the action
+      actions[names[0]]?.play();
+    }
+  }, [names]);
+
+  return (
+    <primitive ref={group} object={scene} scale={1} position={[0, -1.5, 0]} />
+  );
+};
 
 const Project = () => {
   return (
-    <section id="project">
-      <div className="h-screen w-screen roadmap-gradient bg-cover text-white">
-        {/* roadmap-gradient / bg-saturn */}
-        <div className="w-full h-full xl:hidden py-12 flex justify-center px-12">
-          <div className="flex flex-col items-center py-24 space-y-8 w-full mx-auto">
-            <MobileTitle title="Project" />
-            <h1 className="text-center mt-24">{text.mobileTitle}</h1>
-            <p className="text-center">{text.mobileDescription}</p>
-            <div className="hidden md:flex w-full items-center justify-center pt-14 mx-auto">
-              <img
-                src={robot}
-                alt="Robot NFT background"
-                className="object-contain 4xl:w-auto w-[60%]"
-                loading="lazy"
+    <section id="project" className="container mx-auto ">
+      <div className="justify-center my-24 flex h-screen flex-col items-center">
+        <p className="font-chakraPetch text-2xl uppercase text-accent-color">
+          About
+        </p>
+        <h2 className="mb-12">Discover your Robot</h2>
+        <div className="flex h-full w-full gap-16">
+          <div className="flex max-w-[600px] items-center justify-center">
+            <div className="mx-auto flex-col items-center justify-center space-y-6 pl-12">
+              <h2 className="">{text.title}</h2>
+              <p className="">{text.description}</p>
+              <button className="rounded-xl bg-accent-color px-8 py-4 text-xl text-background-color">
+                Read More
+              </button>
+            </div>
+          </div>
+          <div className="mx-auto flex h-full w-full items-center justify-center rounded-xl bg-background-color">
+            <Canvas camera={{ position: [-3, 2.5, 5.5], fov: 45 }}>
+              <OrbitControls
+                enableZoom={false}
+                maxDistance={6}
+                minDistance={5}
               />
-            </div>
-          </div>
-        </div>
-        <div className="hidden xl:flex container-content">
-          <div className="w-1/2 content">
-            <div className="flex-col m-auto space-y-6 4xl:space-y-12 items-center justify-center">
-              <h1 className="md:w-[600px] 4xl:w-[1080px]">{text.title}</h1>
-              <p className="md:w-[500px] 3xl:w-[750px]">{text.description}</p>
-              <div className="w-64 bg-teal-400 rounded-sm flex items-center justify-center cursor-pointer h-14">
-                <a href="#" className="font-chakraPetch text-base uppercase">
-                  Collection
-                </a>
-              </div>
-            </div>
-          </div>
-          <div className="w-1/2 flex items-center justify-center my-[10%] 3xl:my-[5%] mx-auto 3xl:px-12">
-            <img
-              src={robot}
-              alt="Robot NFT background"
-              className="object-contain 4xl:w-auto w-[60%]"
-              loading="lazy"
-            />
+              <ambientLight intensity={Math.PI / 2} />
+              <spotLight
+                position={[10, 10, 10]}
+                angle={0.15}
+                penumbra={1}
+                decay={0}
+                intensity={Math.PI}
+              />
+              <pointLight
+                position={[-10, -10, -10]}
+                decay={0}
+                intensity={Math.PI}
+              />
+              <RobotModel />
+            </Canvas>
           </div>
         </div>
       </div>

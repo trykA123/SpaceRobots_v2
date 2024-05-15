@@ -36,15 +36,15 @@ const Timeline = ({ quater, firstInfo, secondInfo, thirdInfo, fourthInfo }) => {
   return (
     <motion.div
       ref={ref}
-      className="flex flex-col items-center justify-center text-white"
+      className="flex flex-col items-center justify-start"
       variants={timelineVariants}
       initial="hidden"
       animate={controls}
     >
-      <div className="flex flex-col w-[75%] mx-auto">
-        <div className="sticky top-0 roadmap-timeline-gradient py-4 my-4 z-10 shadow-lg shadow-teal-300">
-          <h4>{quater}</h4>
-        </div>
+      <div className="my-4 py-4 self-start">
+        <h3>{quater}</h3>
+      </div>
+      <div className="mx-auto flex flex-col">
         <motion.div
           variants={timelineVariants}
           initial="hidden"

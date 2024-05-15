@@ -1,7 +1,7 @@
 // EVENT CONSTANTS
 
 export const dates = {
-  autoPilot: "23.11.2023",
+  autoPilot: "0001: Expedition into the Unknown",
 };
 
 export const infos = {

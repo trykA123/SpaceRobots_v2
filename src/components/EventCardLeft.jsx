@@ -1,24 +1,35 @@
 import React from "react";
+import placeholderImg from "../assets/images/project.webp";
 
-const EventCardLeft = ({ info, date }) => {
+const EventCardLeft = ({ info, date, openModal }) => {
+  const handleClick = () => {
+    // Call the openModal function with the appropriate title and description
+    openModal("Event Title", "Event Description");
+  };
   return (
-    <div className="flex w-full justify-end">
-      <div className="flex w-[450px] 3xl:w-[600px] 3xl:h-[200px] items-center space-x-6 justify-between mr-2 p-4 roadmap-gradient rounded-md shadow-md shadow-teal-600">
-        <div className="flex flex-col space-y-6 3xl:w-[400px] w-64">
-          <p className="h-20 text-base text-white leading-4">{info}</p>
-          <div className="flex items-center justify-between">
-            <h2 className="text-white text:lg md:text-xl 3xl:text-3xl font-chakraPetch">
-              {date}
-            </h2>
-            <button className="flex items-center justify-center text-white md:w-24 md:h-8 3xl:w-36 3xl:h-12 bg-teal-text-100 rounded-sm upper hover:3xl:w-48 duration-500">
-              Explore
-            </button>
-          </div>
+    <div className="clip-path group relative flex justify-end">
+      <img
+        src={placeholderImg}
+        alt="Story background"
+        className="h-full blur duration-500 group-hover:blur-0"
+      />
+      <div className="absolute flex h-full flex-col justify-center">
+        <div className="flex h-full flex-col items-center justify-center">
+          <h3 className="-rotate-90 duration-500 group-hover:opacity-0">
+            {date}
+          </h3>
+          <button
+            onClick={handleClick}
+            className="upper absolute  flex items-center justify-center gap-4 rounded-sm bg-teal-text-100 text-background-color duration-500 md:h-8 md:w-24 3xl:h-12 3xl:w-36 hover:3xl:w-48"
+          >
+            Explore
+          </button>
+          {/* <p className="opacity-70">{info}</p> */}
         </div>
-        <div className="bg-packImg1 bg-cover rounded-md h-40 w-40"></div>
-        {/* <img src={roboPack} alt="" className="flex object-contain"/> */}
+        {/* <div className="flex items-center justify-between">
+          
+        </div> */}
       </div>
-      <div className="h-[1px] w-24 bg-gradient-to-r from-transparent to-white"></div>
     </div>
   );
 };

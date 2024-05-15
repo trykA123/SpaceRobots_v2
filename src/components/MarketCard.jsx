@@ -1,6 +1,7 @@
 import { gql, useQuery } from "@apollo/client";
 import { faArrowUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { motion } from "framer-motion";
 import xlogo from "../assets/images/xlogo.webp";
 
 import React from "react";
@@ -58,7 +59,7 @@ const MarketCard = ({ key, ...props }) => {
     // Show skeleton loading while data is loading
     return (
       <div className="flex z-30 group" key={key}>
-        <div className="flex flex-col w-80 h-[450px] 3xl:w-[400px] 3xl:h-[550px] bg-gray-15 rounded-md group-hover:bg-gradient-to-b from-teal-text-100 via-teal-text-40 to-teal-text-0 px-6 space-y-3 3xl:scale-100 scale-90">
+        <div className="flex bg-gray-15 rounded-md group-hover:bg-gradient-to-b from-teal-text-100 via-teal-text-40 to-teal-text-0 px-6 space-y-3 3xl:scale-100 scale-90">
           <div className="skeleton h-80 w-full rounded-md mt-6" />
           <div className="skeleton h-8 w-3/4 mb-4 rounded-md" />
           <div className="flex h-16 items-center justify-between">
@@ -78,39 +79,49 @@ const MarketCard = ({ key, ...props }) => {
   const marketIconUrl = data.auctions.edges[0].node.marketplace.iconUrl;
 
   return (
-    <div className="flex z-30 group" key={key}>
-      <div className="flex flex-col w-80 h-[450px] 3xl:w-[400px] 3xl:h-[550px] bg-gray-15 rounded-md group-hover:bg-gradient-to-b from-teal-text-100 via-teal-text-40 to-teal-text-0 px-6 space-y-3 3xl:scale-100 scale-90">
+    <motion.div
+      className="flex z-30 group"
+      key={key}
+      initial={{ opacity: 0, y: 150 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 1.5 }}
+    >
+      <div className="flex flex-col bg-background-color border border-secondary-color-2 hover:border-accent-color rounded-md p-4 shadow-xl duration-500 transition-all">
         <img
           src={props.url}
           alt="MarketCard image"
-          className="pt-6 rounded-md object-cover group-hover:scale-110 duration-500"
+          className="rounded-md object-cover duration-500"
           loading="lazy"
         />
-        <h3>{props.name}</h3>
-        <div className="flex h-16 items-center justify-between">
-          <div className="flex items-center">
-            <img src={xlogo} className="w-7 h-7" alt="multiversx logo" />
-            <h4 className="text-teal-text-100 text-xl 3xl:text-2xl leading-[95px] font-chakraPetch font-semibold">
-              {props.price}
-            </h4>
-          </div>
-          <button className="flex items-center justify-center text-white hover:text-black w-[50%] h-16 hover:bg-teal-300 bg-gray-15 rounded-md font-semibold gap-4 group-hover:w-3/5 duration-500 group-hover:-translate-x-2 shadow-md shadow-teal-text-100">
-            <a
-              href={marketUrl}
-              target="_blank"
-              className="flex items-center 3xl:text-xl"
-            >
-              BUY on{" "}
+        <div className="flex flex-col justify-between p-4 w-full gap-4">
+          <h3>{props.name}</h3>
+          <div className="flex flex-col items-center justify-between gap-4">
+            <div className="flex items-center w-full justify-between">
+              <div className="flex items-center">
+                {/* <img src={xlogo} className="w-7 h-7" alt="multiversx logo" /> */}
+                <h4 className="text-primary-teal font-chakraPetch font-semibold">
+                  {props.price} EGLD
+                </h4>
+              </div>
               <img
                 src={marketIconUrl}
-                className="w-8 h-8 3xl:w-12 3xl:h-12 pl-2 animate-pulse"
+                className="w-8 h-8"
                 alt="Market's Icon"
               />
-            </a>
-          </button>
+            </div>
+            <button className="flex items-center justify-center w-full h-16 rounded-xl font-semibold gap-4 duration-500 bg-primary-teal text-background-color">
+              <a
+                href={marketUrl}
+                target="_blank"
+                className="flex items-center 3xl:text-xl"
+              >
+                Upgrade collection{" "}
+              </a>
+            </button>
+          </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

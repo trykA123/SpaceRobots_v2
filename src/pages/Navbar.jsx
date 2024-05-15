@@ -6,7 +6,7 @@ const Navbar = () => {
   return (
     <>
       <Topnav />
-      <Sidebar />
+      {/* <Sidebar /> */}
     </>
   );
 };

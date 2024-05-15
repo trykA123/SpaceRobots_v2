@@ -74,7 +74,7 @@ const COLLECTION_VARIABLES = (collectionTicker) => {
     },
     pagination: {
       after: "",
-      first: 5,
+      first: 16,
     },
     sorting: [
       {

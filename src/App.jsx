@@ -13,7 +13,7 @@ function App() {
   return (
     <div className="h-[100dvh] w-screen relative snap-mandatory snap-start">
       <Navbar />
-      <Footer />
+      {/* <Footer /> */}
       <Hero />
       <Project />
       <Collection />
