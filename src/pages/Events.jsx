@@ -31,7 +31,7 @@ const Events = () => {
           <h2 className="mb-12">Dive into the Unkown</h2>
           {/* Tabs navbar */}
 
-          <div className="flex h-32 items-center justify-center">
+          <div className="flex items-center justify-center">
             <ul className="flex space-x-12">
               <li
                 className={`event-tab-id ${
