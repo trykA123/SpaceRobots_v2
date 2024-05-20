@@ -22,7 +22,7 @@
 
 @layer base {
   body {
-    @apply space-y-32 overflow-auto bg-background-color-2 text-modal-text;
+    @apply space-y-32 overflow-auto bg-background-color-2 text-modal-text overflow-x-hidden;
   }
 
   h1 {

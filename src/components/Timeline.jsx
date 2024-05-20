@@ -41,7 +41,7 @@ const Timeline = ({ quater, firstInfo, secondInfo, thirdInfo, fourthInfo }) => {
       initial="hidden"
       animate={controls}
     >
-      <div className="my-4 py-4 self-start">
+      <div className="my-4 self-start py-4">
         <h3>{quater}</h3>
       </div>
       <div className="mx-auto flex flex-col">
@@ -53,7 +53,7 @@ const Timeline = ({ quater, firstInfo, secondInfo, thirdInfo, fourthInfo }) => {
           <motion.div
             variants={{
               visible: {
-                transition: { staggerChildren: 0.15, delayChildren: 0.5 },
+                transition: { staggerChildren: 0.5, delayChildren: 0.5 },
               },
               hidden: {},
             }}

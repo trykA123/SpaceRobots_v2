@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import React from "react";
 import placeholderImg from "../assets/images/project.webp";
 
@@ -6,8 +7,16 @@ const EventCardLeft = ({ info, date, openModal }) => {
     // Call the openModal function with the appropriate title and description
     openModal("Event Title", "Event Description");
   };
+
+  const item = {
+    hidden: { opacity: 0, x: -250 },
+    show: { opacity: 1, x: 0 },
+  };
   return (
-    <div className="clip-path group relative flex justify-end duration-700 hover:-translate-y-4">
+    <motion.div
+      variants={item}
+      className="clip-path group relative flex justify-end duration-700 hover:-translate-y-4"
+    >
       <img
         src={placeholderImg}
         alt="Story background"
@@ -30,7 +39,7 @@ const EventCardLeft = ({ info, date, openModal }) => {
           
         </div> */}
       </div>
-    </div>
+    </motion.div>
   );
 };
 

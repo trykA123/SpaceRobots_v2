@@ -11,9 +11,8 @@ import TeamTest from "./pages/TeamTest";
 
 function App() {
   return (
-    <div className="h-[100dvh] w-screen relative snap-mandatory snap-start">
+    <div className="relative h-[100dvh] w-screen snap-mandatory snap-start">
       <Navbar />
-      {/* <Footer /> */}
       <Hero />
       <Project />
       <Collection />
@@ -21,6 +20,7 @@ function App() {
       <Events />
       <Roadmap />
       <Team />
+      <Footer />
       {/* <TeamTest /> */}
     </div>
   );

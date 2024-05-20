@@ -4,13 +4,13 @@ import {
   faYoutube,
 } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { motion } from "framer-motion";
 import React, { useEffect, useState } from "react";
 import titleLogo from "../assets/images/logo.webp";
 
 const Topnav = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [showNav, setShowNav] = useState(true);
-
+  const [isAboutHovered, setIsAboutHovered] = useState(false);
   const navToggle = () => {
     setIsMenuOpen(!isMenuOpen);
 
@@ -33,95 +33,95 @@ const Topnav = () => {
     menu.classList.add("hidden");
   };
 
-  useEffect(() => {
-    // Initially, show the nav with opacity-100
-    const timer = setTimeout(() => {
-      setShowNav(false); // After 5 seconds, hide the nav
-    }, 3000);
-
-    return () => clearTimeout(timer);
-  }, []);
-
-  const handleMouseEnter = () => {
-    setShowNav(true);
-  };
-
-  const handleMouseLeave = () => {
-    setShowNav(false);
-  };
+  const handleMouseEnter = () => setIsAboutHovered(true);
+  const handleMouseLeave = () => setIsAboutHovered(false);
 
   return (
     <div>
-      <nav
-        className={`hidden lg:flex w-full lg:px-24 items-center lg:fixed justify-between  lg:h-20 z-50 duration-300 shadow-md bg-black  ${
-          showNav ? "opacity-100" : "opacity-100"
-        }`}
-        onMouseEnter={handleMouseEnter}
-        onMouseLeave={handleMouseLeave}
-      >
+      <nav className="top-0 z-50 hidden w-full items-center justify-between bg-background-color-2 shadow-md duration-300 lg:fixed lg:flex lg:h-20 ">
         {/* Logo */}
-        <div className="hidden md:flex md:flex-1 md:justify-center md:items-center">
+        <div className="hidden md:flex md:flex-1 md:items-center md:justify-center">
           <a href="#hero" className="cursor-pointer">
             <img src={titleLogo} alt="SpaceRobots Logo" className="w-72" />
           </a>
         </div>
         {/* Desktop Menu */}
-        <ul className="hidden md:flex md:flex-1 md:justify-between md:items-center ">
-          <li className="hover:text-teal-text-100 duration-300">Connect</li>
-          <li className="hover:text-teal-text-100 duration-300">Market</li>
-          <li className="relative group opacity-50 cursor-default ">
-            <div className="flex items-center justify-center opacity-0 duration-500 absolute w-32 top-full left-0 bg-teal-text-100  py-2 px-4 group-hover:opacity-100  group-hover:translate-x-12 rounded-md">
-              Soon
-            </div>
-            Stacking
+        <ul className="hidden text-accent-color md:flex md:flex-1 md:items-center md:justify-between">
+          <li
+            className="relative duration-300 hover:text-teal-text-100"
+            onMouseEnter={handleMouseEnter}
+            onMouseLeave={handleMouseLeave}
+          >
+            About
+            {isAboutHovered && (
+              <motion.div
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: -10 }}
+                exit={{ opacity: 0, y: 10 }}
+                className="absolute left-0 top-full mt-2 rounded-md bg-slate-700 shadow-lg"
+              >
+                <ul
+                  onMouseEnter={handleMouseEnter}
+                  onMouseLeave={handleMouseLeave}
+                  className="flex divide-y divide-gray-100 overflow-hidden"
+                >
+                  <li className="px-4 py-2 hover:bg-background-color-2">
+                    Upgradeable Robots
+                  </li>
+                  <li className="px-4 py-2 hover:bg-background-color-2">
+                    Stories
+                  </li>
+                  <li className="px-4 py-2 hover:bg-background-color-2">
+                    Submenu 3
+                  </li>
+                </ul>
+              </motion.div>
+            )}
           </li>
-          <li className="relative group opacity-50 cursor-default">
-            <div className="flex items-center justify-center opacity-0 duration-500 absolute w-32 top-full left-0 bg-teal-text-100 py-2 px-4 group-hover:opacity-100 group-hover:translate-x-12 rounded-md">
-              Soon
-            </div>
-            Upgrading
-          </li>
+          <li className="duration-300 hover:text-teal-text-100">Collection</li>
+          <li className="duration-300 hover:text-teal-text-100">Collections</li>
+          <li className="duration-300 hover:text-teal-text-100">Roadmap</li>
           <li>
             <a
               href="https://dapp.spacerobotsclub.com/"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:text-teal-text-100 duration-300"
+              className="duration-300 hover:text-teal-text-100"
             >
               DAPP
             </a>
           </li>
         </ul>
 
-        <div className="hidden md:flex md:flex-1 md:justify-center md:items-center md:space-x-8">
+        <div className="hidden md:flex md:flex-1 md:items-center md:justify-center md:space-x-8">
           <a
             href="#"
-            className="hover:scale-150 duration-300 hover:text-teal-text-100"
+            className="duration-300 hover:scale-150 hover:text-teal-text-100"
           >
             <FontAwesomeIcon icon={faTwitter} />
           </a>
           <a
             href="#"
-            className="hover:scale-150 hover:text-teal-text-100 duration-300"
+            className="duration-300 hover:scale-150 hover:text-teal-text-100"
           >
             <FontAwesomeIcon icon={faDiscord} />
           </a>
           <a
             href="#"
-            className="hover:scale-150 hover:text-teal-text-100 duration-300"
+            className="duration-300 hover:scale-150 hover:text-teal-text-100"
           >
             <FontAwesomeIcon icon={faYoutube} />
           </a>
         </div>
         {/* Hamburger */}
       </nav>
-      <div className="xl:hidden relative">
-        <div className="fixed flex items-center justify-center h-10 rounded-full w-10 right-5 top-2 bg-teal-300 z-50">
+      <div className="relative xl:hidden">
+        <div className="fixed right-5 top-2 z-50 flex h-10 w-10 items-center justify-center rounded-full bg-teal-300">
           <button
             onClick={navToggle}
             id="menu-btn"
             type="button"
-            className="z-40 block hamburger xl:hidden focus:outline-none"
+            className="hamburger z-40 block focus:outline-none xl:hidden"
           >
             <span className="hamburger-top"></span>
             <span className="hamburger-middle"></span>
@@ -133,7 +133,7 @@ const Topnav = () => {
         id="menu"
         className={`${
           isMenuOpen ? "flex" : "hidden"
-        } flex-col items-center justify-center w-full min-h-screen py-1 font-chakraPetch text-lg  uppercase bg-mobile-menu-blue fixed z-40`}
+        } fixed z-40 min-h-screen w-full flex-col items-center justify-center bg-mobile-menu-blue  py-1 font-chakraPetch text-lg uppercase`}
       >
         <div className="flex flex-col items-center space-y-10 text-3xl font-bold leading-7">
           <a href="#collection" onClick={closeMenu}>
@@ -144,14 +144,14 @@ const Topnav = () => {
           </a>
           <a
             href="#"
-            className="opacity-50 pointer-events-none"
+            className="pointer-events-none opacity-50"
             target="__blank"
           >
             Stacking
           </a>
           <a
             href="#"
-            className="opacity-50 pointer-events-none"
+            className="pointer-events-none opacity-50"
             target="__blank"
           >
             Upgrading
@@ -169,21 +169,21 @@ const Topnav = () => {
         <div className="flex space-x-12 pt-32 text-3xl">
           <a
             href="#"
-            className="hover:scale-150 duration-300"
+            className="duration-300 hover:scale-150"
             onClick={closeMenu}
           >
             <FontAwesomeIcon icon={faTwitter} />
           </a>
           <a
             href="#"
-            className="hover:scale-150 duration-300"
+            className="duration-300 hover:scale-150"
             onClick={closeMenu}
           >
             <FontAwesomeIcon icon={faDiscord} />
           </a>
           <a
             href="#"
-            className="hover:scale-150 duration-300"
+            className="duration-300 hover:scale-150"
             onClick={closeMenu}
           >
             <FontAwesomeIcon icon={faYoutube} />
