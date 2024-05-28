@@ -3,22 +3,23 @@ import pack from "../assets/images/pack.webp";
 
 const CollectionPack = ({ title, description, roboPack, onClick }) => {
   return (
-    <div className="flex w-full h-full relative items-center justify-center group duration-700 ">
-      <div className="flex items-center justify-center absolute z-10 top-0 w-full bg-gradient-to-b from-gray-gradient-full via-gray-gradient to-gray-gradient-full rounded-lg"></div>
+    <div className="group relative flex h-full w-full items-center justify-center duration-700 ">
+      <div className="absolute top-0 z-10 flex w-full items-center justify-center rounded-lg bg-gradient-to-b from-gray-gradient-full via-gray-gradient to-gray-gradient-full"></div>
       <img
-        src={pack}
+        src={roboPack}
         alt="RoboPack background"
-        className="object-cover absolute top-0 h-full w-full group-hover:opacity-40 duration-700 rounded-lg"
+        className="absolute top-0 h-full w-full rounded-lg object-cover duration-700 group-hover:opacity-40"
       />
-      <div className="flex flex-col pt-12 items-center absolute mx-auto opacity-0 group-hover:opacity-100 duration-700 z-30 scale-90">
-        <h3 className="uppercase p-2 text-center">{title}</h3>
-        <p className="py-10 text-base text-center">{description}</p>
+      <div className="absolute z-30 mx-auto flex scale-90 flex-col items-center pt-12 opacity-0 duration-700 group-hover:opacity-100">
+        <h3 className="p-2 text-center uppercase">{title}</h3>
+        <p className="py-10 text-center text-base">{description}</p>
         <button
           onClick={onClick}
           href="#"
-          className="flex items-center justify-center w-36 3xl:w-64 h-14 bg-accent-color translate-y-0 hover:-translate-y-2 duration-300 text-background-color rounded-lg "
+          className="group/button col-span-1 row-span-1 flex w-64 flex-col items-center justify-center rounded-xl bg-accent-color px-8 py-4 text-xl text-background-color duration-300 hover:bg-transparent hover:text-modal-text"
         >
           Read More
+          <span className="h-[1px] w-0 bg-accent-color duration-300 group-hover/button:w-full"></span>
         </button>
       </div>
     </div>

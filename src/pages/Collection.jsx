@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from "react";
 import Swiper from "swiper";
 import "swiper/css";
-import roboPack from "../assets/images/robopack.webp";
+import BoxCollection from "../assets/images/collections/Box.png";
+import PartCollection from "../assets/images/collections/Part.png";
+import RobotCollection from "../assets/images/collections/Robot.png";
 import CollectionPack from "../components/CollectionPack";
 import MobileColectionPack from "../components/MobileColectionPack";
 import MobileTitle from "../components/MobileTitle";
@@ -13,43 +15,16 @@ const Collection = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [modalData, setModalData] = useState({}); // State to store modal data
 
-  const openModal = (title, description) => {
-    setModalData({ title, description });
+  const openModal = (title, description, modalImage) => {
+    setModalData({ title, description, modalImage });
     setIsOpen(true);
+    console.log(modalImage);
   };
+
+  console.log(openModal);
 
   const closeModal = () => {
     setIsOpen(false);
-  };
-
-  useEffect(() => {
-    const swiper = new Swiper(".swiper-container", {
-      slidesPerView: "auto",
-      spaceBetween: 20,
-      on: {
-        slideChange: () => {
-          updateNavigationIndicators(swiper);
-        },
-      },
-    });
-
-    updateNavigationIndicators(swiper);
-  }, []);
-
-  const updateNavigationIndicators = (swiper) => {
-    const navigationIndicators = document.querySelectorAll(
-      ".navigation-indicator",
-    );
-
-    if (navigationIndicators) {
-      navigationIndicators.forEach((indicator, index) => {
-        if (index === swiper.activeIndex) {
-          indicator.classList.add("active");
-        } else {
-          indicator.classList.remove("active");
-        }
-      });
-    }
   };
 
   return (
@@ -68,33 +43,36 @@ const Collection = () => {
             <CollectionPack
               title={cards.firstCard.title}
               description={cards.firstCard.description}
-              roboPack={roboPack}
+              roboPack={RobotCollection}
               onClick={() =>
                 openModal(
                   cards.firstCard.title,
                   cards.firstCard.modalDescription,
+                  cards.firstCard.modalImage,
                 )
               }
             />
             <CollectionPack
               title={cards.secondCard.title}
               description={cards.secondCard.description}
-              roboPack={roboPack}
+              roboPack={BoxCollection}
               onClick={() =>
                 openModal(
                   cards.secondCard.title,
                   cards.secondCard.modalDescription,
+                  cards.secondCard.modalImage,
                 )
               }
             />
             <CollectionPack
               title={cards.thirdCard.title}
               description={cards.thirdCard.description}
-              roboPack={roboPack}
+              roboPack={PartCollection}
               onClick={() =>
                 openModal(
                   cards.thirdCard.title,
                   cards.thirdCard.modalDescription,
+                  cards.thirdCard.modalImage,
                 )
               }
             />
@@ -123,23 +101,22 @@ const Collection = () => {
         </div>
         {isOpen && (
           <Modal isOpen={isOpen} onClose={closeModal}>
-            <div className="flex  text-modal-text">
-              <img src={roboPack} alt="" className="w-96 self-center" />
-              <div>
+            <div className="flex h-[500px] gap-4 text-modal-text">
+              <img
+                src={modalData.modalImage}
+                alt="Modal Images"
+                className="h-full w-96 self-center rounded-xl bg-background-color object-cover p-1"
+              />
+              <div className="flex flex-col justify-between overflow-y-auto">
                 <h2 className="mb-4 font-chakraPetch text-4xl font-bold">
                   {modalData.title}
                 </h2>
                 <p className="">{modalData.description}</p>
                 <div className="flex justify-between">
-                  <button className="mt-4 w-32 rounded bg-secondary-color px-4 py-2 font-bold">
+                  <button className="group col-span-1 row-span-1 flex flex-col items-center justify-center rounded-xl bg-accent-color px-8 py-4 text-xl text-background-color duration-300 hover:bg-transparent hover:text-modal-text">
                     Read More
+                    <span className="h-[1px] w-0 bg-accent-color duration-300 group-hover:w-full"></span>
                   </button>
-                  {/* <button
-                  onClick={closeModal}
-                  className="mt-4 bg-secondary-color font-bold py-2 px-4 rounded w-32"
-                >
-                  Close
-                </button> */}
                 </div>
               </div>
             </div>

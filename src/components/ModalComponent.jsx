@@ -36,7 +36,7 @@ const Modal = ({ isOpen, onClose, children }) => {
               />
             </motion.div>
             <motion.div
-              className="relative rounded-lg bg-gray-gradient-full p-8 shadow-xl lg:max-w-[1024px]"
+              className="relative rounded-lg bg-background-color-2 p-8 shadow-xl lg:max-w-[1024px]"
               initial={{ opacity: 0, scale: 0.8, y: 500 }}
               animate={{ opacity: 1, scale: 1, y: 0 }}
               exit={{ opacity: 0, scale: 0.8, y: 500 }}

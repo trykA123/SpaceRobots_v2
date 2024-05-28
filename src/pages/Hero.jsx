@@ -20,7 +20,7 @@ const Hero = () => {
     <motion.section id="hero" className="relative" style={{ opacity }}>
       {/* Video background */}
       <video
-        className="absolute inset-0 w-full h-full object-cover"
+        className="absolute inset-0 h-full w-full object-cover"
         autoPlay
         muted
         loop
@@ -29,21 +29,25 @@ const Hero = () => {
         <source src={heroVideo} type="video/mp4" />
       </video>
       {/* Content */}
-      <div className="h-screen flex flex-col items-center justify-center relative z-10">
-        <div className="flex flex-col-reverse md:flex-col md:justify-between h-full mx-auto items-center justify-center">
-          <div className="h-full py-16 md:py-0 flex flex-col space-y-14 xl:space-y-6 items-center justify-center">
-            <h1 className="md:w-[600px] 3xl:w-[1080px] text-center md:text-center z-30">
+      <div className="relative z-10 flex h-screen flex-col items-center justify-center">
+        <div className="mx-auto flex h-full flex-col-reverse items-center justify-center md:flex-col md:justify-between">
+          <div className="flex h-full flex-col items-center justify-center space-y-14 py-16 md:py-0 xl:space-y-6">
+            <h1 className="z-30 text-center md:w-[600px] md:text-center 3xl:w-[1080px]">
               Explore the Unknown with Space Robots
             </h1>
             <motion.button
-              initial={{ opacity: 0,  y: 150 }}
+              initial={{ opacity: 0, y: 150 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 1, duration: 1 }}
-              className="py-4 px-8 bg-accent-color w-64 z-30 rounded-xl text-background-color font-chakraPetch uppercase text-2xl">Launch Dapp</motion.button>
+              className="group z-30 col-span-1 row-span-1 flex w-64 flex-col items-center justify-center  rounded-xl bg-accent-color  px-8 py-4  font-chakraPetch text-2xl  uppercase  text-background-color duration-300 hover:bg-transparent hover:text-modal-text"
+            >
+              Launch Dapp
+              <span className="h-[1px] w-0 bg-accent-color duration-300 group-hover:w-full"></span>
+            </motion.button>
           </div>
         </div>
         <motion.div
-          className="absolute inset-0 bg-gradient-to-b from-transparent via-background-color via-95% to-background-color z-20"
+          className="absolute inset-0 z-20 bg-gradient-to-b from-transparent via-background-color via-95% to-background-color"
           style={{ opacity }} // Apply opacity animation
         />
       </div>

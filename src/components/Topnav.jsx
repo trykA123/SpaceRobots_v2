@@ -3,7 +3,7 @@ import {
   faTwitter,
   faYoutube,
 } from "@fortawesome/free-brands-svg-icons";
-import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
+import { faBlog, faChevronDown } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { AnimatePresence, motion } from "framer-motion";
 import React, { useState } from "react";
@@ -29,7 +29,7 @@ const Topnav = () => {
           </a>
           <div className="flex h-full items-center gap-6 px-4 text-lg">
             <div
-              className="group relative flex h-full items-center gap-2"
+              className="group relative flex h-full items-center gap-2 font-chakraPetch uppercase"
               onMouseEnter={handleMouseEnter}
               onMouseLeave={handleMouseLeave}
             >
@@ -39,8 +39,33 @@ const Topnav = () => {
                 className={`duration-200 ${isDropdownOpen ? "-rotate-90" : "rotate-0"}`}
               />
             </div>
-            <div>Blog</div>
-            <div>Market</div>
+          </div>
+          {/* Socials */}
+          <div className="flex gap-4">
+            <a href="">
+              <FontAwesomeIcon
+                icon={faDiscord}
+                className="duration-100 hover:scale-110 hover:text-accent-color"
+              />
+            </a>
+            <a href="">
+              <FontAwesomeIcon
+                icon={faTwitter}
+                className="duration-100 hover:scale-110 hover:text-accent-color"
+              />
+            </a>
+            <a href="">
+              <FontAwesomeIcon
+                icon={faYoutube}
+                className="duration-100 hover:scale-110 hover:text-accent-color"
+              />
+            </a>
+            <a href="">
+              <FontAwesomeIcon
+                icon={faBlog}
+                className="duration-100 hover:scale-110 hover:text-accent-color"
+              />
+            </a>
           </div>
           <button className="group flex w-64 flex-col items-center rounded-xl bg-accent-color px-8 py-4 uppercase text-background-color duration-500 hover:bg-transparent hover:text-modal-text">
             Launch Dapp
@@ -64,45 +89,50 @@ const Topnav = () => {
                   animate={{ opacity: 1 }}
                   exit={{ opacity: 0 }}
                   transition={{ duration: 0.3 }}
-                  className="h-20 w-full rounded-2xl border border-primary-teal font-chakraPetch text-2xl uppercase  hover:shadow-md hover:shadow-primary-teal"
+                  className="group col-span-1 row-span-1 flex h-16 w-full flex-col items-center  justify-center  rounded-xl bg-background-color-2 px-8 py-4 font-chakraPetch text-xl uppercase shadow-md"
                 >
                   About
+                  <span className="h-[1px] w-0 bg-accent-color duration-300 group-hover:w-full"></span>
                 </motion.button>
                 <motion.button
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   exit={{ opacity: 0 }}
                   transition={{ duration: 0.3 }}
-                  className="h-20 w-full rounded-2xl border border-primary-teal font-chakraPetch text-2xl uppercase  hover:shadow-md hover:shadow-primary-teal"
+                  className="group col-span-1 row-span-1 flex h-16 w-full flex-col items-center  justify-center  rounded-xl bg-background-color-2 px-8 py-4 font-chakraPetch text-xl uppercase shadow-md"
                 >
                   Collections
+                  <span className="h-[1px] w-0 bg-accent-color duration-300 group-hover:w-full"></span>
                 </motion.button>
                 <motion.button
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   exit={{ opacity: 0 }}
                   transition={{ duration: 0.3 }}
-                  className="h-20 w-full rounded-2xl border border-primary-teal font-chakraPetch text-2xl uppercase  hover:shadow-md hover:shadow-primary-teal"
+                  className="group col-span-1 row-span-1 flex h-16 w-full flex-col items-center  justify-center  rounded-xl bg-background-color-2 px-8 py-4 font-chakraPetch text-xl uppercase shadow-md"
                 >
                   Stories
+                  <span className="h-[1px] w-0 bg-accent-color duration-300 group-hover:w-full"></span>
                 </motion.button>
                 <motion.button
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   exit={{ opacity: 0 }}
                   transition={{ duration: 0.3 }}
-                  className="h-20 w-full rounded-2xl border border-primary-teal font-chakraPetch text-2xl uppercase  hover:shadow-md hover:shadow-primary-teal"
+                  className="group col-span-1 row-span-1 flex h-16 w-full flex-col items-center  justify-center  rounded-xl bg-background-color-2 px-8 py-4 font-chakraPetch text-xl uppercase shadow-md"
                 >
                   Roadmap
+                  <span className="h-[1px] w-0 bg-accent-color duration-300 group-hover:w-full"></span>
                 </motion.button>
                 <motion.button
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   exit={{ opacity: 0 }}
                   transition={{ duration: 0.3 }}
-                  className="h-20 w-full rounded-2xl border border-primary-teal font-chakraPetch text-2xl uppercase  hover:shadow-md hover:shadow-primary-teal"
+                  className="group col-span-1 row-span-1 flex h-16 w-full flex-col items-center  justify-center  rounded-xl bg-background-color-2 px-8 py-4 font-chakraPetch text-xl uppercase shadow-md"
                 >
                   Team
+                  <span className="h-[1px] w-0 bg-accent-color duration-300 group-hover:w-full"></span>
                 </motion.button>
                 {/* <motion.button
                   initial={{ opacity: 0 }}
