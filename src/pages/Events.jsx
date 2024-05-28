@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import EventQuarter from "../components/EventQuarter";
 import MobileTitle from "../components/MobileTitle";
 import Modal from "../components/ModalComponent";
+import TypewriteParagraph from "../components/TypewriteParagraph";
+
 
 const Events = () => {
   const [selectedTab, setSelectedTab] = useState(0);
@@ -25,9 +27,11 @@ const Events = () => {
     <section id="events" className="my-24">
       <div className="container mx-auto h-screen">
         <div className="flex h-full w-full flex-col items-center">
-          <p className="font-chakraPetch text-2xl uppercase text-accent-color">
-            Stories
-          </p>
+          <TypewriteParagraph
+            firstWord="Stories"
+            secondWord="Events"
+            thirdWord="Discoveries"
+          />
           <h2 className="mb-12">Dive into the Unkown</h2>
           {/* Tabs navbar */}
 

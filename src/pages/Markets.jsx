@@ -6,6 +6,7 @@ import robopartLogo from "../assets/images/robopartLogo_1.webp";
 import spaceRobotLogo from "../assets/images/spacerobotlogo.webp";
 import MarketCollection from "../components/MarketCollection";
 import MobileTitle from "../components/MobileTitle";
+import TypewriteParagraph from "../components/TypewriteParagraph";
 
 import { motion } from "framer-motion";
 
@@ -113,37 +114,39 @@ const Markets = () => {
 
   return (
     <section id="markets">
-      <div className="flex flex-col container w-full items-center gap-1 justify-around h-full py-4 my-12 mx-auto">
-        <div className="w-full flex items-center justify-center">
+      <div className="container mx-auto my-12 flex h-full w-full flex-col items-center justify-around gap-1 py-4">
+        <div className="flex w-full items-center justify-center">
           {/* <MobileTitle title="Markets" /> */}
           <div className="flex flex-col items-center justify-center py-12">
-            <p className="text-accent-color text-2xl">NFT Marketplace</p>
-            <h2 className="">Explore the latest Listings</h2>
+            <TypewriteParagraph
+              firstWord="SRC"
+              secondWord="SRP"
+              thirdWord="Robo"
+            />
+            <h2>Explore the latest Listings</h2>
           </div>
         </div>
-        <div className="flex justify-center pb-12 rounded-xl shadow w-full">
-          <div className="hidden md:grid md:grid-flow-col md:animate-none md:gap-3 lg:mt-2 xl:mt-8">
+        <div className="flex w-full justify-center rounded-xl pb-12 shadow">
+          <div className="hidden md:grid md:animate-none md:grid-flow-col md:gap-3 lg:mt-2 xl:mt-8">
             {smallPacks.map((pack, index) => (
               <button
                 key={index}
-                className="flex items-center justify-center border-[1px] border-gray-15 relative duration-700 z-30 group mx-2 overflow-hidden rounded-md p-4 bg-secondary-color-2 hover:border-secondary-color"
+                className="group relative z-30 mx-2 flex items-center justify-center overflow-hidden rounded-md border-[1px] border-gray-15 bg-secondary-color-2 p-4 duration-700 hover:border-secondary-color"
                 onClick={() => setSelectedSmallPackIndex(index)}
               >
-                <p className="text-center abosolute font-bold">
-                  {pack.info}
-                </p>
+                <p className="abosolute text-center font-bold">{pack.info}</p>
               </button>
             ))}
           </div>
           <div
-            className={`grid grid-flow-col animate-slide gap-3 overscroll-contain max-w-fit md:hidden ${
+            className={`grid max-w-fit animate-slide grid-flow-col gap-3 overscroll-contain md:hidden ${
               isAnimationPaused ? "pause-animation" : ""
             }`}
           >
             {smallPacksMobile.map((pack, index) => (
               <button
                 key={index}
-                className="flex items-center justify-center w-32 h-32 3xl:w-40 3xl:h-40 4xl:w-48 4xl:h-48 border-[1px] border-gray-15 relative duration-700 z-30 group mx-2 xl:px-0 overflow-hidden rounded-md"
+                className="group relative z-30 mx-2 flex h-32 w-32 items-center justify-center overflow-hidden rounded-md border-[1px] border-gray-15 duration-700 xl:px-0 3xl:h-40 3xl:w-40 4xl:h-48 4xl:w-48"
                 onClick={() => {
                   setSelectedSmallPackIndex(index);
                   setIsAnimationPaused(true); // Pause animation on click
@@ -152,11 +155,11 @@ const Markets = () => {
                 onMouseLeave={() => setIsAnimationPaused(false)} // Resume animation on leave
               >
                 <div
-                  className={`bg-cover opacity-40 group-hover:opacity-100 duration-500 w-full h-full absolute overflow-hidden`}
+                  className={`absolute h-full w-full overflow-hidden bg-cover opacity-40 duration-500 group-hover:opacity-100`}
                   style={{ backgroundImage: `url(${pack.bgImg})` }}
                 ></div>
 
-                <p className="text-center abosolute font-bold opacity-100 group-hover:opacity-0 duration-500">
+                <p className="abosolute text-center font-bold opacity-100 duration-500 group-hover:opacity-0">
                   {pack.info}
                 </p>
               </button>

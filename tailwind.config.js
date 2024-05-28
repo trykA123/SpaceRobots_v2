@@ -10,6 +10,7 @@ module.exports = {
         xl: "6rem",
         "2xl": "12rem",
       },
+      center: true,
     },
     extend: {
       scale: {
@@ -34,6 +35,8 @@ module.exports = {
         jorjeBackground: "url('./assets/images/jorge.png')",
         tarantuloBackground: "url('./assets/images/tarantulo.png')",
         borisakeBackground: "url('./assets/images/borisake.png')",
+        "custom-gradient":
+          "linear-gradient(137deg, rgba(17, 18, 20, 0.75) 4.87%, rgba(12, 13, 15, 0.9) 75.88%)",
       },
       backgroundColor: {
         "gray-15": "rgba(68, 68, 68, 0.15)",

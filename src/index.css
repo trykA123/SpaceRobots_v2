@@ -54,7 +54,7 @@
     @apply flex h-full w-full;
   }
   .content {
-    @apply my-auto ml-[18%] 4xl:mx-[15%];
+    @apply my-auto;
   }
   .event-tab-id {
     @apply bg-background-color px-4 py-2 opacity-40 ;

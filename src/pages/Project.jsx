@@ -6,6 +6,8 @@ import { Canvas } from "@react-three/fiber";
 import { motion } from "framer-motion";
 import { useEffect, useRef } from "react";
 
+import TypewriteParagraph from "../components/TypewriteParagraph";
+
 import walking from "../assets/models/robot.glb?url";
 
 const RobotModel = () => {
@@ -13,7 +15,6 @@ const RobotModel = () => {
 
   const { scene, animations } = useGLTF(walking, true); // Update the path to your GLTF model
   const { actions, names } = useAnimations(animations, group);
-  console.log(names);
 
   useEffect(() => {
     if (actions && names && names.length > 0 && actions[names[0]]) {
@@ -31,21 +32,14 @@ const Project = () => {
   return (
     <section id="project" className="container mx-auto my-24">
       <div className="flex h-screen flex-col items-center justify-center">
-        <p className="font-chakraPetch text-2xl uppercase text-accent-color">
-          About
-        </p>
+        <TypewriteParagraph
+          firstWord="About"
+          secondWord="The Story"
+          thirdWord="Explore new frontier"
+        />
         <h2 className="mb-12">Discover your Robot</h2>
-        <div className="flex h-full w-full">
-          <div className="flex max-w-[600px] items-center justify-center ">
-            <div className="mx-auto flex-col items-center justify-center space-y-6 rounded-xl bg-background-color p-12">
-              <h2 className="">{text.title}</h2>
-              <p className="">{text.description}</p>
-              <button className="rounded-xl bg-accent-color px-8 py-4 text-xl text-background-color">
-                Read More
-              </button>
-            </div>
-          </div>
-          <div className="max-w-96 mx-auto flex h-full w-full items-center justify-center ">
+        <div className="grid h-full w-full grid-cols-3 grid-rows-6 gap-8">
+          <div className="max-w-96 row-span-6 mx-auto flex h-full w-full items-center justify-center rounded-xl bg-background-color">
             <Canvas camera={{ position: [-3, 2.5, 5.5], fov: 45 }}>
               <OrbitControls
                 enableZoom={false}
@@ -68,6 +62,25 @@ const Project = () => {
               <RobotModel />
             </Canvas>
           </div>
+          <h2 className="col-span-1 row-span-2 grid w-full place-content-center rounded-xl bg-background-color p-12">
+            {text.title}
+          </h2>
+          <p className="col-span-1 row-span-2 rounded-xl bg-background-color p-12">
+            {text.description}
+          </p>
+
+          <button className="col-span-1 row-span-1 rounded-xl bg-background-color px-8 py-4 text-xl duration-300 hover:bg-accent-color hover:text-background-color">
+            <h2>Read More</h2>
+          </button>
+          <h2 className="col-span-1 row-span-2 grid w-full place-content-center rounded-xl bg-background-color p-12">
+            7777 Robots
+          </h2>
+          <h2 className="col-span-1 row-span-3 grid w-full place-content-center rounded-xl bg-background-color p-12">
+            7777 Robots
+          </h2>
+          <h2 className="col-span-1 row-span-2 grid w-full place-content-center rounded-xl bg-background-color p-12">
+            7777 Robots
+          </h2>
         </div>
       </div>
     </section>

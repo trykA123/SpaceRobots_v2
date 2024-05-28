@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Swiper from "swiper";
 import "swiper/css";
-import Typewriter from "typewriter-effect";
+import TypewriteParagraph from "../components/TypewriteParagraph";
 import roboPack from "../assets/images/robopack.webp";
 import CollectionPack from "../components/CollectionPack";
 import MobileColectionPack from "../components/MobileColectionPack";
@@ -57,21 +57,14 @@ const Collection = () => {
       <div className="container mx-auto h-[100dvh]">
         <div className="flex h-full w-full flex-col items-center justify-between gap-24">
           <div className="flex flex-col items-center">
-            <p>
-              <Typewriter
-                options={{
-                  strings: ["Robots", "Robopacks", "Collection"],
-                  autoStart: true,
-                  loop: true,
-                  wrapperClassName:
-                    "font-chakraPetch text-2xl text-accent-color uppercase",
-                  cursorClassName:  "text-2xl"
-                }}
-              />
-            </p>
+            <TypewriteParagraph
+              firstWord="Space Robots"
+              secondWord="Robopacks"
+              thirdWord="Robo"
+            />
             <h2 className="mx-auto font-chakraPetch">Check it out</h2>
           </div>
-          <div className="relative flex justify-center gap-4 xl:flex w-full h-full">
+          <div className="relative flex h-full w-full justify-center gap-4 xl:flex">
             <CollectionPack
               title={cards.firstCard.title}
               description={cards.firstCard.description}
