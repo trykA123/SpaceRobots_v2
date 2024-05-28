@@ -68,8 +68,9 @@ const Project = () => {
           <p className="col-span-1 row-span-2 grid place-content-center rounded-xl bg-background-color p-12">
             {text.description}
           </p>
-          <button className="col-span-1 row-span-1 rounded-xl bg-accent-color px-8 py-4 text-xl text-background-color duration-300">
+          <button className="group col-span-1 row-span-1 flex flex-col items-center justify-center rounded-xl bg-accent-color px-8 py-4 text-xl text-background-color duration-300 hover:bg-transparent hover:text-modal-text">
             <h2>Read More</h2>
+            <span className="h-[1px] w-0 bg-accent-color duration-300 group-hover:w-full"></span>
           </button>
           <h2 className="col-span-1 row-span-2 grid w-full place-content-center rounded-xl bg-background-color p-12">
             7777 Robots
