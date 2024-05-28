@@ -10,13 +10,13 @@ const Modal = ({ isOpen, onClose, children }) => {
     <AnimatePresence mode="wait">
       {isOpen && (
         <motion.div
-          className="fixed z-40 inset-0 overflow-y-auto"
+          className="fixed inset-0 z-40 overflow-y-auto"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
         >
           <motion.div
-            className="flex items-center justify-center min-h-screen p-4"
+            className="flex min-h-screen items-center justify-center p-4"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
@@ -29,14 +29,14 @@ const Modal = ({ isOpen, onClose, children }) => {
               onClick={closeModal}
             >
               <motion.div
-                className="absolute inset-0 bg-transparent opacity-95"
+                className="absolute inset-0 bg-black/70"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
               />
             </motion.div>
             <motion.div
-              className="relative bg-gray-gradient-full rounded-lg p-8 shadow-xl shadow-primary-teal"
+              className="relative rounded-lg bg-gray-gradient-full p-8 shadow-xl lg:max-w-[1024px]"
               initial={{ opacity: 0, scale: 0.8, y: 500 }}
               animate={{ opacity: 1, scale: 1, y: 0 }}
               exit={{ opacity: 0, scale: 0.8, y: 500 }}

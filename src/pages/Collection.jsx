@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from "react";
 import Swiper from "swiper";
 import "swiper/css";
-import TypewriteParagraph from "../components/TypewriteParagraph";
 import roboPack from "../assets/images/robopack.webp";
 import CollectionPack from "../components/CollectionPack";
 import MobileColectionPack from "../components/MobileColectionPack";
 import MobileTitle from "../components/MobileTitle";
 import Modal from "../components/ModalComponent";
+import TypewriteParagraph from "../components/TypewriteParagraph";
 import { cards } from "../utils/collectionConstants";
 
 const Collection = () => {
@@ -38,7 +38,7 @@ const Collection = () => {
 
   const updateNavigationIndicators = (swiper) => {
     const navigationIndicators = document.querySelectorAll(
-      ".navigation-indicator"
+      ".navigation-indicator",
     );
 
     if (navigationIndicators) {
@@ -70,7 +70,10 @@ const Collection = () => {
               description={cards.firstCard.description}
               roboPack={roboPack}
               onClick={() =>
-                openModal(cards.firstCard.title, cards.firstCard.description)
+                openModal(
+                  cards.firstCard.title,
+                  cards.firstCard.modalDescription,
+                )
               }
             />
             <CollectionPack
@@ -78,7 +81,10 @@ const Collection = () => {
               description={cards.secondCard.description}
               roboPack={roboPack}
               onClick={() =>
-                openModal(cards.secondCard.title, cards.secondCard.description)
+                openModal(
+                  cards.secondCard.title,
+                  cards.secondCard.modalDescription,
+                )
               }
             />
             <CollectionPack
@@ -86,7 +92,10 @@ const Collection = () => {
               description={cards.thirdCard.description}
               roboPack={roboPack}
               onClick={() =>
-                openModal(cards.thirdCard.title, cards.thirdCard.description)
+                openModal(
+                  cards.thirdCard.title,
+                  cards.thirdCard.modalDescription,
+                )
               }
             />
           </div>
@@ -114,22 +123,24 @@ const Collection = () => {
         </div>
         {isOpen && (
           <Modal isOpen={isOpen} onClose={closeModal}>
-            <div className="flex flex-col text-modal-text">
+            <div className="flex  text-modal-text">
               <img src={roboPack} alt="" className="w-96 self-center" />
-              <h2 className="mb-4 font-chakraPetch text-4xl font-bold">
-                {modalData.title}
-              </h2>
-              <p className="">{modalData.description}</p>
-              <div className="flex justify-between">
-                <button className="mt-4 w-32 rounded bg-secondary-color px-4 py-2 font-bold">
-                  Read More
-                </button>
-                {/* <button
+              <div>
+                <h2 className="mb-4 font-chakraPetch text-4xl font-bold">
+                  {modalData.title}
+                </h2>
+                <p className="">{modalData.description}</p>
+                <div className="flex justify-between">
+                  <button className="mt-4 w-32 rounded bg-secondary-color px-4 py-2 font-bold">
+                    Read More
+                  </button>
+                  {/* <button
                   onClick={closeModal}
                   className="mt-4 bg-secondary-color font-bold py-2 px-4 rounded w-32"
                 >
                   Close
                 </button> */}
+                </div>
               </div>
             </div>
           </Modal>

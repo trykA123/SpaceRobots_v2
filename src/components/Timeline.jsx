@@ -36,7 +36,7 @@ const Timeline = ({ quater, firstInfo, secondInfo, thirdInfo, fourthInfo }) => {
   return (
     <motion.div
       ref={ref}
-      className="flex flex-col items-center justify-start"
+      className="justify-betwen flex flex-col items-center"
       variants={timelineVariants}
       initial="hidden"
       animate={controls}
@@ -44,7 +44,7 @@ const Timeline = ({ quater, firstInfo, secondInfo, thirdInfo, fourthInfo }) => {
       <div className="my-4 self-start py-4">
         <h3>{quater}</h3>
       </div>
-      <div className="mx-auto flex flex-col">
+      <div className="mx-auto flex h-full flex-col justify-between">
         <motion.div
           variants={timelineVariants}
           initial="hidden"

@@ -14,30 +14,12 @@ const Footer = () => {
 
   return (
     <footer className="w-full border-t border-accent-color bg-background-color-2 ">
-      <div className="container mx-auto grid h-96 grid-cols-2 place-content-center justify-items-center py-12">
-        <div className="flex flex-col space-y-4">
-          <h3>SOCIALS</h3>
-          <ul className="flex flex-col space-y-2">
-            <li className="group flex flex-col">
-              <a href="">Telegram</a>
-              <span className="h-[1px] w-0 bg-accent-color duration-700 group-hover:w-16"></span>
-            </li>
-            <li className="group flex flex-col">
-              <a href="">X (Twitter)</a>
-              <span className="h-[1px] w-0 bg-accent-color duration-700 group-hover:w-16"></span>
-            </li>
-            <li className="group flex flex-col">
-              <a href="">Discord</a>
-              <span className="h-[1px] w-0 bg-accent-color duration-700 group-hover:w-16"></span>
-            </li>
-            <li className="group flex flex-col">
-              <a href="">Blog</a>
-              <span className="h-[1px] w-0 bg-accent-color duration-700 group-hover:w-16"></span>
-            </li>
-          </ul>
+      <div className="container mx-auto grid h-96 grid-cols-3 place-content-center justify-items-center py-12">
+        <div className="col-span-1 text-accent-color">
+          <p>&copy; {year} SpaceRobots</p>
         </div>
+
         <div className="flex flex-col space-y-4">
-          <h3>Quick Links</h3>
           <ul className="flex flex-col space-y-2">
             <li className="group flex flex-col">
               <a href="">Home</a>
@@ -69,6 +51,26 @@ const Footer = () => {
             </li>
           </ul>
         </div>
+        <div className="flex flex-col space-y-4">
+          <ul className="flex flex-col space-y-2">
+            <li className="group flex flex-col">
+              <a href="">Telegram</a>
+              <span className="h-[1px] w-0 bg-accent-color duration-700 group-hover:w-16"></span>
+            </li>
+            <li className="group flex flex-col">
+              <a href="">X (Twitter)</a>
+              <span className="h-[1px] w-0 bg-accent-color duration-700 group-hover:w-16"></span>
+            </li>
+            <li className="group flex flex-col">
+              <a href="">Discord</a>
+              <span className="h-[1px] w-0 bg-accent-color duration-700 group-hover:w-16"></span>
+            </li>
+            <li className="group flex flex-col">
+              <a href="">Blog</a>
+              <span className="h-[1px] w-0 bg-accent-color duration-700 group-hover:w-16"></span>
+            </li>
+          </ul>
+        </div>
         {/* <div>
           <div className="flex justify-center space-x-4">
             <a
@@ -90,9 +92,6 @@ const Footer = () => {
             </a>
           </div>
         </div> */}
-        <div className="col-span-2 text-accent-color">
-          <p>&copy; {year} SpaceRobots</p>
-        </div>
       </div>
     </footer>
   );
