@@ -1,5 +1,4 @@
 import React from "react";
-import MobileTitle from "../components/MobileTitle";
 import Timeline from "../components/Timeline";
 import TypewriteParagraph from "../components/TypewriteParagraph";
 import { roadmapSections } from "../utils/roadmapConstants";
@@ -9,9 +8,6 @@ const Roadmap = () => {
     <section id="roadmap">
       <div className="">
         <div className="container mx-auto flex flex-col items-center pt-16">
-          {/* <p className="font-chakraPetch text-2xl uppercase text-accent-color">
-            Roadmap
-          </p> */}
           <TypewriteParagraph
             firstWord="The Past"
             secondWord="The Present"

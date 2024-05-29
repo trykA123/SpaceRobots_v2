@@ -17,4 +17,12 @@ export const team = {
     role5: "Developer",
     role6: "Developer",
   },
+  images: {
+    image1: "/assets/images/team/spacerobots-team-tarantulo.jpg",
+    image2: "/assets/images/team/spacerobots-team-simpleprick.jpg",
+    image3: "/assets/images/team/spacerobots-team-borisake.jpg",
+    image4: "/assets/images/team/spacerobots-team-jorje.jpg",
+    image5: "/assets/images/team/spacerobots-team-em.jpg",
+    image6: "/assets/images/team/spacerobots-team-tryka.jpg",
+  },
 };

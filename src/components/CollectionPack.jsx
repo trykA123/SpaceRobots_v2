@@ -1,5 +1,4 @@
 import React from "react";
-import Button from "./Button";
 
 const CollectionPack = ({ title, description, roboPack, onClick }) => {
   return (
@@ -12,7 +11,7 @@ const CollectionPack = ({ title, description, roboPack, onClick }) => {
       />
       <div className="absolute z-30 mx-auto flex scale-90 flex-col items-center pt-12 opacity-0 duration-700 group-hover:opacity-100">
         <h3 className="p-2 text-center uppercase">{title}</h3>
-        <p className="py-10 text-center text-base">{description}</p>
+        <h4 className="py-10 text-center ">{description}</h4>
         <button
           onClick={onClick}
           href="#"

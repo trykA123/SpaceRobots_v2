@@ -1,8 +1,7 @@
-import { motion, useAnimation } from "framer-motion";
+import { motion } from "framer-motion";
 import React, { useEffect, useState } from "react";
 import EventCardLeft from "../components/EventCardLeft";
 import { infos, storyName } from "../utils/eventsConstants";
-import EventCardMobile from "./EventCardMobile";
 
 const EventQuarter = ({ selectedTab, openModal }) => {
   const [showContent, setShowContent] = useState(false);

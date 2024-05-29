@@ -1,8 +1,5 @@
 import { gql, useQuery } from "@apollo/client";
-import { faArrowUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { motion } from "framer-motion";
-import xlogo from "../assets/images/xlogo.webp";
 
 import React from "react";
 

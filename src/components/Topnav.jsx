@@ -7,7 +7,8 @@ import { faBlog, faChevronDown } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { AnimatePresence, motion } from "framer-motion";
 import React, { useState } from "react";
-import titleLogo from "../assets/images/logo.webp";
+import Button from "./Button";
+import titleLogo from "/assets/images/logo.webp";
 
 const Topnav = () => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
@@ -22,7 +23,7 @@ const Topnav = () => {
 
   return (
     <nav className="container top-8 z-50 mx-auto hidden w-full transition-all duration-300 ease-in-out lg:fixed lg:left-0 lg:right-0 lg:flex">
-      <div className="mx-auto flex w-full max-w-[1200px] flex-col justify-between rounded-2xl bg-background-color px-8 shadow-lg">
+      <div className="mx-auto flex w-full max-w-[1200px] flex-col justify-between rounded-2xl bg-background-color px-4 shadow-lg">
         <div className="flex w-full items-center justify-between lg:h-20">
           <a href="#hero" className="cursor-pointer">
             <img src={titleLogo} alt="SpaceRobots Logo" className="w-72" />
@@ -67,10 +68,7 @@ const Topnav = () => {
               />
             </a>
           </div>
-          <button className="group flex w-64 flex-col items-center rounded-xl bg-accent-color px-8 py-4 uppercase text-background-color duration-500 hover:bg-transparent hover:text-modal-text">
-            Launch Dapp
-            <span className="h-[1px] w-0 bg-accent-color duration-300 group-hover:w-full"></span>
-          </button>
+          <Button name="Launch Dapp" />
         </div>
         <AnimatePresence>
           {isDropdownOpen && (
@@ -89,11 +87,11 @@ const Topnav = () => {
                   animate={{ opacity: 1 }}
                   exit={{ opacity: 0 }}
                   transition={{ duration: 0.3 }}
-                  className="group col-span-1 row-span-1 flex h-16 w-full flex-col items-center  justify-center  rounded-xl bg-background-color-2 px-8 py-4 font-chakraPetch text-xl uppercase shadow-md"
+                  className="group col-span-1 row-span-1 flex h-16 w-full flex-col items-center  justify-center rounded-xl bg-background-color-2 px-8 py-4 font-chakraPetch text-xl uppercase shadow-md"
                   href="#about"
                 >
                   About
-                  <span className="h-[1px] w-0 bg-accent-color duration-300 group-hover:w-full"></span>
+                  <span className="h-[1px] w-0 self-start bg-accent-color duration-300 group-hover:w-full"></span>
                 </motion.a>
                 <motion.a
                   initial={{ opacity: 0 }}
@@ -104,7 +102,7 @@ const Topnav = () => {
                   href="#collections"
                 >
                   Collections
-                  <span className="h-[1px] w-0 bg-accent-color duration-300 group-hover:w-full"></span>
+                  <span className="h-[1px] w-0 self-start bg-accent-color duration-300 group-hover:w-full"></span>
                 </motion.a>
                 <motion.a
                   initial={{ opacity: 0 }}
@@ -115,7 +113,7 @@ const Topnav = () => {
                   href="#stories"
                 >
                   Stories
-                  <span className="h-[1px] w-0 bg-accent-color duration-300 group-hover:w-full"></span>
+                  <span className="h-[1px] w-0 self-start bg-accent-color duration-300 group-hover:w-full"></span>
                 </motion.a>
                 <motion.a
                   initial={{ opacity: 0 }}
@@ -126,7 +124,7 @@ const Topnav = () => {
                   href="#roadmap"
                 >
                   Roadmap
-                  <span className="h-[1px] w-0 bg-accent-color duration-300 group-hover:w-full"></span>
+                  <span className="h-[1px] w-0 self-start bg-accent-color duration-300 group-hover:w-full"></span>
                 </motion.a>
                 <motion.a
                   initial={{ opacity: 0 }}
@@ -137,15 +135,8 @@ const Topnav = () => {
                   href="#team"
                 >
                   Team
-                  <span className="h-[1px] w-0 bg-accent-color duration-300 group-hover:w-full"></span>
+                  <span className="h-[1px] w-0 self-start bg-accent-color duration-300 group-hover:w-full"></span>
                 </motion.a>
-                {/* <motion.button
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  exit={{ opacity: 0 }}
-                  transition={{ duration: 0.3 }}
-                  className="h-24 w-full rounded-2xl bg-background-color-2"
-                ></motion.button> */}
               </div>
             </motion.div>
           )}

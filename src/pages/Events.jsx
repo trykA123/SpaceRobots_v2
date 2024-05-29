@@ -1,7 +1,6 @@
 import React, { useState } from "react";
-import BoxCollection from "../assets/images/collections/Box.png";
+import BoxCollection from "/assets/images/collections/Box.png";
 import EventQuarter from "../components/EventQuarter";
-import MobileTitle from "../components/MobileTitle";
 import Modal from "../components/ModalComponent";
 import TypewriteParagraph from "../components/TypewriteParagraph";
 
@@ -121,9 +120,9 @@ const Events = () => {
                   accusamus eum
                 </p>
                 <div className="flex justify-between self-center">
-                  <button className="group col-span-1 row-span-1 flex flex-col items-center justify-center rounded-xl bg-accent-color px-8 py-4 text-xl text-background-color duration-300 hover:bg-transparent hover:text-modal-text">
+                  <button className="group col-span-1 row-span-1 flex flex-col items-center justify-center rounded-xl bg-accent-color px-8 py-4 text-xl text-background-color duration-300 ">
                     Read More
-                    <span className="h-[1px] w-0 bg-accent-color duration-300 group-hover:w-full"></span>
+                    <span className="h-[1px] w-0 bg-background-color duration-300 group-hover:w-full"></span>
                   </button>
                 </div>
               </div>

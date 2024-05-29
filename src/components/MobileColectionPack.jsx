@@ -1,6 +1,6 @@
 import React from "react";
-import pack from "../assets/images/pack.webp";
-import roboPack from "../assets/images/robopack.webp";
+import pack from "/assets/images/pack.webp";
+import roboPack from "/assets/images/robopack.webp";
 const MobileColectionPack = () => {
   return (
     <div className="flex w-full h-[80%] md:h-[90%] justify-center items-center overflow-hidden">

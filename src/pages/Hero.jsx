@@ -1,6 +1,6 @@
 import { motion, useTransform, useViewportScroll } from "framer-motion";
 import React, { useEffect, useState } from "react";
-import heroVideo from "../assets/videos/video.mp4";
+import heroVideo from "/assets/videos/video.mp4";
 import MobileTitle from "../components/MobileTitle";
 import { text } from "../utils/heroConstants";
 

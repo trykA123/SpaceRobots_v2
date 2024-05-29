@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
 import Swiper from "swiper";
 import "swiper/css";
-import BoxCollection from "../assets/images/collections/Box.png";
-import PartCollection from "../assets/images/collections/Part.png";
-import RobotCollection from "../assets/images/collections/Robot.png";
+import BoxCollection from "/assets/images/collections/Box.png";
+import PartCollection from "/assets/images/collections/Part.png";
+import RobotCollection from "/assets/images/collections/Robot.png";
 import CollectionPack from "../components/CollectionPack";
 import MobileColectionPack from "../components/MobileColectionPack";
 import MobileTitle from "../components/MobileTitle";
@@ -113,9 +113,9 @@ const Collection = () => {
                 </h2>
                 <p className="">{modalData.description}</p>
                 <div className="flex justify-between">
-                  <button className="group col-span-1 row-span-1 flex flex-col items-center justify-center rounded-xl bg-accent-color px-8 py-4 text-xl text-background-color duration-300 hover:bg-transparent hover:text-modal-text">
+                  <button className="group col-span-1 row-span-1 flex flex-col items-center justify-center rounded-xl bg-accent-color px-8 py-4 text-xl text-background-color duration-300 ">
                     Read More
-                    <span className="h-[1px] w-0 bg-accent-color duration-300 group-hover:w-full"></span>
+                    <span className="h-[1px] w-0 bg-background-color duration-300 group-hover:w-full"></span>
                   </button>
                 </div>
               </div>

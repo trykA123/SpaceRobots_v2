@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import React from "react";
-import placeholderImg from "../assets/images/project.webp";
+import placeholderImg from "/assets/images/project.webp";
 
 const EventCardLeft = ({ info, date, openModal }) => {
   const handleClick = () => {
@@ -29,15 +29,13 @@ const EventCardLeft = ({ info, date, openModal }) => {
           </h3>
           <button
             onClick={handleClick}
-            className="absolute h-40 w-full scale-0 items-center justify-center gap-4 bg-background-color-2 font-chakraPetch uppercase delay-300 duration-700 group-hover:flex group-hover:scale-100 2xl:text-3xl"
+            className="group/button absolute flex h-52 w-full scale-0 flex-col items-center justify-center gap-4 bg-background-color-2 px-20 font-chakraPetch uppercase delay-300 duration-700 group-hover:flex group-hover:scale-100 2xl:text-3xl"
           >
+            <h3 className="text-center">{date}</h3>
+            <span className="h-[1px] w-0 self-start bg-accent-color delay-500 duration-700 group-hover/button:w-full"></span>
             Explore
           </button>
-          {/* <p className="opacity-70">{info}</p> */}
         </div>
-        {/* <div className="flex items-center justify-between">
-          
-        </div> */}
       </div>
     </motion.div>
   );

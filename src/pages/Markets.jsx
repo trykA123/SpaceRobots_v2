@@ -1,11 +1,10 @@
 import React, { useEffect, useState } from "react";
-import backgroundRobotLogo from "../assets/images/backgroundLogo.webp";
-import proteo from "../assets/images/proteo.webp";
-import roboPack from "../assets/images/robopack.webp";
-import robopartLogo from "../assets/images/robopartLogo_1.webp";
-import spaceRobotLogo from "../assets/images/spacerobotlogo.webp";
+import backgroundRobotLogo from "/assets/images/backgroundLogo.webp";
+import proteo from "/assets/images/proteo.webp";
+import roboPack from "/assets/images/robopack.webp";
+import robopartLogo from "/assets/images/robopartLogo_1.webp";
+import spaceRobotLogo from "/assets/images/spacerobotlogo.webp";
 import MarketCollection from "../components/MarketCollection";
-import MobileTitle from "../components/MobileTitle";
 import TypewriteParagraph from "../components/TypewriteParagraph";
 
 import { motion } from "framer-motion";
