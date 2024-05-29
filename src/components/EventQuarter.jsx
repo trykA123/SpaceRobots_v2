@@ -12,7 +12,6 @@ const EventQuarter = ({ selectedTab, openModal }) => {
     setTimeout(() => setShowContent(true), 1000);
   }, [selectedTab]);
 
-
   const events = [
     {
       left: [
@@ -133,7 +132,9 @@ const EventQuarter = ({ selectedTab, openModal }) => {
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       className={`mx-auto flex h-full w-full justify-center py-12 transition-all duration-700 ${
-        showContent ? "scale-100 opacity-100" : "scale-50 opacity-0"
+        showContent
+          ? "scale-100 opacity-100"
+          : "scale-50 opacity-0"
       }`}
     >
       {events[selectedTab].left}

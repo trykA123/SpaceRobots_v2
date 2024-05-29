@@ -28,7 +28,7 @@ const Collection = () => {
   };
 
   return (
-    <section id="collection" className="py-24">
+    <section id="collections" className="py-24">
       <div className="container mx-auto h-[100dvh]">
         <div className="flex h-full w-full flex-col items-center justify-between gap-24">
           <div className="flex flex-col items-center">

@@ -84,56 +84,61 @@ const Topnav = () => {
               className="overflow-hidden rounded-b-2xl bg-background-color shadow-lg"
             >
               <div className="grid grid-cols-5 gap-4 py-4">
-                <motion.button
+                <motion.a
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   exit={{ opacity: 0 }}
                   transition={{ duration: 0.3 }}
                   className="group col-span-1 row-span-1 flex h-16 w-full flex-col items-center  justify-center  rounded-xl bg-background-color-2 px-8 py-4 font-chakraPetch text-xl uppercase shadow-md"
+                  href="#about"
                 >
                   About
                   <span className="h-[1px] w-0 bg-accent-color duration-300 group-hover:w-full"></span>
-                </motion.button>
-                <motion.button
+                </motion.a>
+                <motion.a
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   exit={{ opacity: 0 }}
                   transition={{ duration: 0.3 }}
                   className="group col-span-1 row-span-1 flex h-16 w-full flex-col items-center  justify-center  rounded-xl bg-background-color-2 px-8 py-4 font-chakraPetch text-xl uppercase shadow-md"
+                  href="#collections"
                 >
                   Collections
                   <span className="h-[1px] w-0 bg-accent-color duration-300 group-hover:w-full"></span>
-                </motion.button>
-                <motion.button
+                </motion.a>
+                <motion.a
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   exit={{ opacity: 0 }}
                   transition={{ duration: 0.3 }}
                   className="group col-span-1 row-span-1 flex h-16 w-full flex-col items-center  justify-center  rounded-xl bg-background-color-2 px-8 py-4 font-chakraPetch text-xl uppercase shadow-md"
+                  href="#stories"
                 >
                   Stories
                   <span className="h-[1px] w-0 bg-accent-color duration-300 group-hover:w-full"></span>
-                </motion.button>
-                <motion.button
+                </motion.a>
+                <motion.a
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   exit={{ opacity: 0 }}
                   transition={{ duration: 0.3 }}
                   className="group col-span-1 row-span-1 flex h-16 w-full flex-col items-center  justify-center  rounded-xl bg-background-color-2 px-8 py-4 font-chakraPetch text-xl uppercase shadow-md"
+                  href="#roadmap"
                 >
                   Roadmap
                   <span className="h-[1px] w-0 bg-accent-color duration-300 group-hover:w-full"></span>
-                </motion.button>
-                <motion.button
+                </motion.a>
+                <motion.a
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   exit={{ opacity: 0 }}
                   transition={{ duration: 0.3 }}
                   className="group col-span-1 row-span-1 flex h-16 w-full flex-col items-center  justify-center  rounded-xl bg-background-color-2 px-8 py-4 font-chakraPetch text-xl uppercase shadow-md"
+                  href="#team"
                 >
                   Team
                   <span className="h-[1px] w-0 bg-accent-color duration-300 group-hover:w-full"></span>
-                </motion.button>
+                </motion.a>
                 {/* <motion.button
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}

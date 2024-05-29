@@ -24,7 +24,7 @@ const Events = () => {
   };
 
   return (
-    <section id="events" className="my-24">
+    <section id="stories" className="my-24">
       <div className="container mx-auto h-screen">
         <div className="flex h-full w-full flex-col items-center">
           <TypewriteParagraph

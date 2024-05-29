@@ -15,7 +15,7 @@ const EventCardLeft = ({ info, date, openModal }) => {
   return (
     <motion.div
       variants={item}
-      className="clip-path group relative flex justify-end duration-700 hover:-translate-y-4"
+      className="clip-path group relative flex justify-end duration-700"
     >
       <img
         src={placeholderImg}
@@ -29,7 +29,7 @@ const EventCardLeft = ({ info, date, openModal }) => {
           </h3>
           <button
             onClick={handleClick}
-            className="upper absolute h-40 w-full scale-0 items-center justify-center gap-4 bg-background-color-2 font-chakraPetch delay-300 duration-700 group-hover:flex group-hover:scale-100 2xl:text-3xl"
+            className="absolute h-40 w-full scale-0 items-center justify-center gap-4 bg-background-color-2 font-chakraPetch uppercase delay-300 duration-700 group-hover:flex group-hover:scale-100 2xl:text-3xl"
           >
             Explore
           </button>

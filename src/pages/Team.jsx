@@ -1,8 +1,8 @@
 import React from "react";
 import MobileTitle from "../components/MobileTitle";
 import TeamCard from "../components/TeamCard";
-import { team } from "../utils/teamContants";
 import TypewriteParagraph from "../components/TypewriteParagraph";
+import { team } from "../utils/teamContants";
 
 const Team = () => {
   return (

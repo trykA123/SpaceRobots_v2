@@ -1,5 +1,5 @@
 import React from "react";
-import pack from "../assets/images/pack.webp";
+import Button from "./Button";
 
 const CollectionPack = ({ title, description, roboPack, onClick }) => {
   return (
@@ -16,10 +16,10 @@ const CollectionPack = ({ title, description, roboPack, onClick }) => {
         <button
           onClick={onClick}
           href="#"
-          className="group/button col-span-1 row-span-1 flex w-64 flex-col items-center justify-center rounded-xl bg-accent-color px-8 py-4 text-xl text-background-color duration-300 hover:bg-transparent hover:text-modal-text"
+          className="group/button col-span-1 row-span-1 flex w-64 flex-col items-center justify-center rounded-xl bg-accent-color px-8 py-4 text-xl text-background-color duration-300"
         >
           Read More
-          <span className="h-[1px] w-0 bg-accent-color duration-300 group-hover/button:w-full"></span>
+          <span className="h-[1px] w-0 bg-background-color duration-300 group-hover/button:w-full"></span>
         </button>
       </div>
     </div>

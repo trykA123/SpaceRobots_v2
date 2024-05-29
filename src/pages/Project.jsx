@@ -30,7 +30,7 @@ const RobotModel = () => {
 
 const Project = () => {
   return (
-    <section id="project" className="container mx-auto my-24">
+    <section id="about" className="container mx-auto my-24">
       <div className="flex h-screen flex-col items-center justify-center">
         <TypewriteParagraph
           firstWord="About"
@@ -68,15 +68,15 @@ const Project = () => {
           <p className="col-span-1 row-span-2 grid place-content-center rounded-xl bg-background-color p-12">
             {text.description}
           </p>
-          <button className="group col-span-1 row-span-1 flex flex-col items-center justify-center rounded-xl bg-accent-color px-8 py-4 text-xl text-background-color duration-300 hover:bg-transparent hover:text-modal-text">
+          <button className="group col-span-1 row-span-1 flex flex-col items-center justify-center rounded-xl bg-accent-color px-8 py-4 text-xl text-background-color duration-300">
             <h2>Read More</h2>
-            <span className="h-[1px] w-0 bg-accent-color duration-300 group-hover:w-full"></span>
+            <span className="h-1 w-0 bg-background-color duration-500 group-hover:w-full"></span>
           </button>
           <h2 className="col-span-1 row-span-2 grid w-full place-content-center rounded-xl bg-background-color p-12">
             7777 Robots
           </h2>
           <h2 className="col-span-1 row-span-3 grid w-full place-content-center rounded-xl bg-background-color p-12">
-            7777 Robots
+            Multiple Collections
           </h2>
           <h2 className="col-span-1 row-span-2 grid w-full place-content-center rounded-xl bg-background-color p-12">
             7777 Robots

@@ -4,7 +4,7 @@ import heroVideo from "../assets/videos/video.mp4";
 import MobileTitle from "../components/MobileTitle";
 import { text } from "../utils/heroConstants";
 
-import Typewriter from "typewriter-effect";
+import Button from "../components/Button";
 
 const Hero = () => {
   const [windowHeight, setWindowHeight] = useState(0);
@@ -35,15 +35,14 @@ const Hero = () => {
             <h1 className="z-30 text-center md:w-[600px] md:text-center 3xl:w-[1080px]">
               Explore the Unknown with Space Robots
             </h1>
-            <motion.button
+            <motion.div
               initial={{ opacity: 0, y: 150 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 1, duration: 1 }}
-              className="group z-30 col-span-1 row-span-1 flex w-64 flex-col items-center justify-center  rounded-xl bg-accent-color  px-8 py-4  font-chakraPetch text-2xl  uppercase  text-background-color duration-300 hover:bg-transparent hover:text-modal-text"
+              className="z-30"
             >
-              Launch Dapp
-              <span className="h-[1px] w-0 bg-accent-color duration-300 group-hover:w-full"></span>
-            </motion.button>
+              <Button name="Launch Dapp" />
+            </motion.div>
           </div>
         </div>
         <motion.div

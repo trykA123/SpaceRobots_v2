@@ -1,9 +1,8 @@
 import React from "react";
 import MobileTitle from "../components/MobileTitle";
 import Timeline from "../components/Timeline";
-import { roadmapSections } from "../utils/roadmapConstants";
 import TypewriteParagraph from "../components/TypewriteParagraph";
-
+import { roadmapSections } from "../utils/roadmapConstants";
 
 const Roadmap = () => {
   return (
