@@ -15,21 +15,21 @@ const EventCardLeft = ({ info, date, openModal }) => {
   return (
     <motion.div
       variants={item}
-      className="clip-path group relative flex justify-end duration-700"
+      className="lg:clip-path group relative flex h-64 justify-end duration-700 lg:h-auto"
     >
       <img
         src={placeholderImg}
         alt="Story background"
-        className="h-full blur duration-700 group-hover:blur-0"
+        className="h-full w-full bg-cover blur duration-700 group-hover:blur-0"
       />
       <div className="absolute flex h-full w-full flex-col justify-center">
         <div className="flex h-full w-full flex-col items-center justify-center">
-          <h3 className="-rotate-90 delay-300 duration-700 group-hover:rotate-0 group-hover:scale-0 group-hover:text-base group-hover:opacity-0">
+          <h3 className="delay-300 duration-700 group-hover:rotate-0 group-hover:scale-0 group-hover:text-base group-hover:opacity-0 lg:-rotate-90">
             {date}
           </h3>
           <button
             onClick={handleClick}
-            className="group/button absolute flex h-52 w-full scale-0 flex-col items-center justify-center gap-4 bg-background-color-2 px-20 font-chakraPetch uppercase delay-300 duration-700 group-hover:flex group-hover:scale-100 2xl:text-3xl"
+            className="group/button absolute flex w-full scale-0 flex-col items-center justify-center gap-4 bg-background-color-2 px-20 font-chakraPetch uppercase delay-300 duration-700 group-hover:flex group-hover:scale-100 lg:h-52 2xl:text-3xl"
           >
             <h3 className="text-center">{date}</h3>
             <span className="h-[1px] w-0 self-start bg-accent-color delay-500 duration-700 group-hover/button:w-full"></span>

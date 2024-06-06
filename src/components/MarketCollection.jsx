@@ -1,7 +1,7 @@
+import { motion, stagger, useAnimate } from "framer-motion";
 import React from "react";
 import MarketCard from "../components/MarketCard";
 import { useCollectionAuctions } from "../services/api";
-import { useAnimate, stagger, motion } from "framer-motion";
 
 const MarketCollection = ({ collectionTicker }) => {
   let numMarketCards = 8;
@@ -11,11 +11,8 @@ const MarketCollection = ({ collectionTicker }) => {
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Error: {error.message}</p>;
 
-
   return (
-    <div
-      className="grid grid-cols-4 gap-8"
-    >
+    <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
       {[...Array(numMarketCards)].map((_, index) => {
         const edge = data.auctions.edges[index];
         if (!edge) {

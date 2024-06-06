@@ -35,7 +35,7 @@ const Events = () => {
           {/* Tabs navbar */}
 
           <div className="flex items-center justify-center">
-            <ul className="flex space-x-12">
+            <ul className="lg:flex space-x-12 hidden">
               <li
                 className={`event-tab-id ${
                   selectedTab === 0

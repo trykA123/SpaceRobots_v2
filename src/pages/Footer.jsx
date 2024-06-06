@@ -9,12 +9,12 @@ const Footer = () => {
 
   return (
     <footer className="w-full border-t border-accent-color bg-background-color-2 ">
-      <div className="mx-auto grid h-96 max-w-[1200px] grid-cols-3 place-content-center justify-items-center py-12">
-        <div className="flex flex-col gap-4">
+      <div className="mx-auto grid h-96 max-w-[1200px container grid-cols-2 place-content-center justify-items-center py-12 lg:grid-cols-3">
+        <div className="col-span-2 flex flex-col gap-2 p-4 lg:col-span-1 lg:gap-4 lg:p-0">
           <a href="#hero" className="cursor-pointer">
             <img src={titleLogo} alt="SpaceRobots Logo" className="w-96" />
           </a>
-          <div className="col-span-1 text-accent-color">
+          <div className="col-span-1 self-center text-accent-color lg:self-auto">
             <p>&copy; {year} SpaceRobots</p>
           </div>
         </div>

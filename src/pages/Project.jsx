@@ -31,14 +31,14 @@ const RobotModel = () => {
 const Project = () => {
   return (
     <section id="about" className="container mx-auto my-24">
-      <div className="flex h-screen flex-col items-center justify-center">
+      <div className="flex lg:h-screen flex-col items-center justify-center">
         <TypewriteParagraph
           firstWord="About"
           secondWord="The Story"
           thirdWord="Explore new frontier"
         />
         <h2 className="mb-12">Discover your Robot</h2>
-        <div className="grid h-full w-full grid-cols-3 grid-rows-6 gap-8">
+        <div className="grid h-full w-full lg:grid-cols-3 lg:grid-rows-6 lg:gap-8 gap-4">
           <div className="max-w-96 row-span-6 mx-auto flex h-full w-full items-center justify-center rounded-xl bg-background-color">
             <Canvas camera={{ position: [-3, 2.5, 5.5], fov: 45 }}>
               <OrbitControls
@@ -66,7 +66,7 @@ const Project = () => {
             {text.title}
           </h2>
           <p className="col-span-1 row-span-2 grid place-content-center rounded-xl bg-background-color p-12">
-            {text.description}
+            {/* {text.description} */}
           </p>
           <h2 className="col-span-1 row-span-1 grid w-full place-content-center rounded-xl bg-background-color p-12">
             7777 Robots

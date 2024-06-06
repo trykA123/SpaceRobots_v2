@@ -14,7 +14,7 @@ const Roadmap = () => {
             thirdWord="The Future"
           />
           <h2>Building the universe</h2>
-          <div className="flex ">
+          <div className="hidden lg:flex">
             <div className="grid grid-cols-3 gap-8">
               {roadmapSections.map((section, index) => (
                 <Timeline

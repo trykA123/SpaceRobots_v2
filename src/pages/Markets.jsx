@@ -137,7 +137,7 @@ const Markets = () => {
               </button>
             ))}
           </div>
-          <div
+          {/* <div
             className={`grid max-w-fit animate-slide grid-flow-col gap-3 overscroll-contain md:hidden ${
               isAnimationPaused ? "pause-animation" : ""
             }`}
@@ -163,7 +163,7 @@ const Markets = () => {
                 </p>
               </button>
             ))}
-          </div>
+          </div> */}
         </div>
         <div>
           <MarketCollection

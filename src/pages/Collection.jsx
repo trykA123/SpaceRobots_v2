@@ -1,15 +1,14 @@
 import React, { useEffect, useState } from "react";
 import Swiper from "swiper";
 import "swiper/css";
-import BoxCollection from "/assets/images/collections/Box.png";
-import PartCollection from "/assets/images/collections/Part.png";
-import RobotCollection from "/assets/images/collections/Robot.png";
 import CollectionPack from "../components/CollectionPack";
 import MobileColectionPack from "../components/MobileColectionPack";
-import MobileTitle from "../components/MobileTitle";
 import Modal from "../components/ModalComponent";
 import TypewriteParagraph from "../components/TypewriteParagraph";
 import { cards } from "../utils/collectionConstants";
+import BoxCollection from "/assets/images/collections/Box.png";
+import PartCollection from "/assets/images/collections/Part.png";
+import RobotCollection from "/assets/images/collections/Robot.png";
 
 const Collection = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -39,7 +38,7 @@ const Collection = () => {
             />
             <h2 className="mx-auto font-chakraPetch">Check it out</h2>
           </div>
-          <div className="relative flex h-full w-full justify-center gap-4 xl:flex">
+          <div className="relative flex h-full w-full flex-col justify-center gap-4 lg:flex-row">
             <CollectionPack
               title={cards.firstCard.title}
               description={cards.firstCard.description}
@@ -78,7 +77,7 @@ const Collection = () => {
             />
           </div>
         </div>
-        <div className="z-10 flex h-[100dvh] w-full flex-col items-center justify-center bg-gradient-to-b from-gray-gradient-full via-gray-gradient to-gray-gradient-full pt-12 xl:hidden">
+        {/* <div className="z-10 flex h-[100dvh] w-full flex-col items-center justify-center bg-gradient-to-b from-gray-gradient-full via-gray-gradient to-gray-gradient-full pt-12 xl:hidden">
           <MobileTitle title={"Collections"} className="mt-12" />
           <div className="swiper-container">
             <div className="swiper-wrapper">
@@ -98,7 +97,7 @@ const Collection = () => {
               <div className="navigation-indicator"></div>
             </div>
           </div>
-        </div>
+        </div> */}
         {isOpen && (
           <Modal isOpen={isOpen} onClose={closeModal}>
             <div className="flex h-[500px] gap-4 text-modal-text">
