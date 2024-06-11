@@ -13,7 +13,7 @@ const Roadmap = () => {
             secondWord="The Present"
             thirdWord="The Future"
           />
-          <h2>Building the universe</h2>
+          <h2 className="mx-auto text-center">Building the universe</h2>
           <div className="hidden lg:flex">
             <div className="grid grid-cols-3 gap-8">
               {roadmapSections.map((section, index) => (

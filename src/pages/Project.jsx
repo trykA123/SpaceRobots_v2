@@ -31,15 +31,15 @@ const RobotModel = () => {
 const Project = () => {
   return (
     <section id="about" className="container mx-auto my-24">
-      <div className="flex lg:h-screen flex-col items-center justify-center">
+      <div className="flex flex-col items-center justify-center lg:h-screen">
         <TypewriteParagraph
           firstWord="About"
           secondWord="The Story"
           thirdWord="Explore new frontier"
         />
-        <h2 className="mb-12">Discover your Robot</h2>
-        <div className="grid h-full w-full lg:grid-cols-3 lg:grid-rows-6 lg:gap-8 gap-4">
-          <div className="max-w-96 row-span-6 mx-auto flex h-full w-full items-center justify-center rounded-xl bg-background-color">
+        <h2 className="mx-auto mb-12 text-center">Discover your Robot</h2>
+        <div className="grid h-full w-full gap-4 lg:grid-cols-3 lg:grid-rows-6 lg:gap-8">
+          <div className="lg:max-w-96 mx-auto flex h-96 w-full items-center justify-center rounded-xl bg-background-color lg:row-span-6 lg:h-full">
             <Canvas camera={{ position: [-3, 2.5, 5.5], fov: 45 }}>
               <OrbitControls
                 enableZoom={false}
@@ -62,25 +62,25 @@ const Project = () => {
               <RobotModel />
             </Canvas>
           </div>
-          <h2 className="col-span-1 row-span-2 grid w-full place-content-center rounded-xl bg-accent-color p-12 text-background-color">
+          <h2 className="col-span-1 row-span-2 grid w-full place-content-center rounded-xl bg-accent-color p-12 text-center text-background-color">
             {text.title}
           </h2>
-          <p className="col-span-1 row-span-2 grid place-content-center rounded-xl bg-background-color p-12">
+          <p className="col-span-1 row-span-2 grid place-content-center rounded-xl bg-background-color p-12 text-center">
             {/* {text.description} */}
           </p>
-          <h2 className="col-span-1 row-span-1 grid w-full place-content-center rounded-xl bg-background-color p-12">
+          <h2 className="col-span-1 row-span-1 grid w-full place-content-center rounded-xl bg-background-color p-12 text-center">
             7777 Robots
           </h2>
-          <h2 className="col-span-1 row-span-2 grid w-full place-content-center rounded-xl bg-background-color p-12">
+          <h2 className="col-span-1 row-span-2 grid w-full place-content-center rounded-xl bg-background-color p-12 text-center">
             7777 Robots
           </h2>
-          <h2 className="col-span-1 row-span-3 grid w-full place-content-center rounded-xl bg-background-color p-12">
+          <h2 className="col-span-1 row-span-3 grid w-full place-content-center rounded-xl bg-background-color p-12 text-center">
             Multiple Collections
           </h2>
-          <h2 className="col-span-1 row-span-1 grid w-full place-content-center rounded-xl bg-background-color p-12">
+          <h2 className="col-span-1 row-span-1 grid w-full place-content-center rounded-xl bg-background-color p-12 text-center">
             7777 Robots
           </h2>
-          <button className="group col-span-1 row-span-1 flex flex-col items-center justify-center rounded-xl bg-accent-color px-8 py-4 text-xl text-background-color duration-300">
+          <button className="group col-span-1 row-span-1 flex flex-col items-center justify-center rounded-xl bg-accent-color px-8 py-4 text-center text-xl text-background-color duration-300">
             <h2>Read More</h2>
             <span className="h-1 w-0 bg-background-color duration-500 group-hover:w-full"></span>
           </button>

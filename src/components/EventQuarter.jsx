@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import React, { useEffect, useState } from "react";
-import EventCardLeft from "../components/EventCardLeft";
+import EventCard from "../components/EventCard";
 import { infos, storyName } from "../utils/eventsConstants";
 
 const EventQuarter = ({ selectedTab, openModal }) => {
@@ -14,25 +14,25 @@ const EventQuarter = ({ selectedTab, openModal }) => {
   const events = [
     {
       left: [
-        <EventCardLeft
+        <EventCard
           key={1}
           info={infos.firstThing}
           date={storyName.story1}
           openModal={openModal}
         />,
-        <EventCardLeft
+        <EventCard
           key={2}
           openModal={openModal}
           info={infos.firstThing}
           date={storyName.story2}
         />,
-        <EventCardLeft
+        <EventCard
           key={3}
           openModal={openModal}
           info={infos.firstThing}
           date={storyName.story3}
         />,
-        <EventCardLeft
+        <EventCard
           key={4}
           openModal={openModal}
           info={infos.firstThing}
@@ -42,25 +42,25 @@ const EventQuarter = ({ selectedTab, openModal }) => {
     },
     {
       left: [
-        <EventCardLeft
+        <EventCard
           key={1}
           info={infos.firstThing}
           date={storyName.story1}
           openModal={openModal}
         />,
-        <EventCardLeft
+        <EventCard
           key={2}
           openModal={openModal}
           info={infos.firstThing}
           date={storyName.story2}
         />,
-        <EventCardLeft
+        <EventCard
           key={3}
           openModal={openModal}
           info={infos.firstThing}
           date={storyName.story3}
         />,
-        <EventCardLeft
+        <EventCard
           key={4}
           openModal={openModal}
           info={infos.firstThing}
@@ -70,25 +70,25 @@ const EventQuarter = ({ selectedTab, openModal }) => {
     },
     {
       left: [
-        <EventCardLeft
+        <EventCard
           key={1}
           info={infos.firstThing}
           date={storyName.story1}
           openModal={openModal}
         />,
-        <EventCardLeft
+        <EventCard
           key={2}
           openModal={openModal}
           info={infos.firstThing}
           date={storyName.story2}
         />,
-        <EventCardLeft
+        <EventCard
           key={3}
           openModal={openModal}
           info={infos.firstThing}
           date={storyName.story3}
         />,
-        <EventCardLeft
+        <EventCard
           key={4}
           openModal={openModal}
           info={infos.firstThing}
@@ -98,25 +98,25 @@ const EventQuarter = ({ selectedTab, openModal }) => {
     },
     {
       left: [
-        <EventCardLeft
+        <EventCard
           key={1}
           info={infos.firstThing}
           date={storyName.story1}
           openModal={openModal}
         />,
-        <EventCardLeft
+        <EventCard
           key={2}
           openModal={openModal}
           info={infos.firstThing}
           date={storyName.story2}
         />,
-        <EventCardLeft
+        <EventCard
           key={3}
           openModal={openModal}
           info={infos.firstThing}
           date={storyName.story3}
         />,
-        <EventCardLeft
+        <EventCard
           key={4}
           openModal={openModal}
           info={infos.firstThing}
@@ -130,7 +130,7 @@ const EventQuarter = ({ selectedTab, openModal }) => {
     <motion.div
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
-      className={`mx-auto grid grid-cols-2 lg:flex h-full w-full justify-center py-12 transition-all duration-700 lg:flex-row gap-4 ${
+      className={`mx-auto grid grid-cols-1 lg:flex h-full w-full justify-center py-12 transition-all duration-700 lg:flex-row gap-4 ${
         showContent ? "scale-100 opacity-100" : "scale-50 opacity-0"
       }`}
     >

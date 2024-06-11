@@ -36,7 +36,7 @@ const Collection = () => {
               secondWord="Robopacks"
               thirdWord="Robo"
             />
-            <h2 className="mx-auto font-chakraPetch">Check it out</h2>
+            <h2 className="mx-auto text-center">Check it out</h2>
           </div>
           <div className="relative flex h-full w-full flex-col justify-center gap-4 lg:flex-row">
             <CollectionPack
@@ -100,19 +100,19 @@ const Collection = () => {
         </div> */}
         {isOpen && (
           <Modal isOpen={isOpen} onClose={closeModal}>
-            <div className="flex h-[500px] gap-4 text-modal-text">
+            <div className="flex max-h-[600px] flex-col gap-4 text-modal-text lg:max-h-[500px] lg:flex-row">
               <img
                 src={modalData.modalImage}
                 alt="Modal Images"
-                className="h-full w-96 self-center rounded-xl bg-background-color object-cover p-1"
+                className="h-48 w-full self-center rounded-xl border border-accent-color bg-background-color object-cover p-1 lg:h-full lg:w-96"
               />
-              <div className="flex flex-col justify-between overflow-y-auto">
-                <h2 className="mb-4 font-chakraPetch text-4xl font-bold">
-                  {modalData.title}
-                </h2>
-                <p className="">{modalData.description}</p>
+              <div className="flex flex-col justify-center gap-4 ">
+                <h2 className="font-chakraPetch lg:mb-4">{modalData.title}</h2>
+                <p className="h-[220px] overflow-y-auto lg:h-auto">
+                  {modalData.description}
+                </p>
                 <div className="flex justify-between">
-                  <button className="group col-span-1 row-span-1 flex flex-col items-center justify-center rounded-xl bg-accent-color px-8 py-4 text-xl text-background-color duration-300 ">
+                  <button className="group col-span-1 row-span-1 flex flex-col items-center justify-center rounded-xl bg-accent-color px-8 py-4 text-xl text-background-color duration-300">
                     Read More
                     <span className="h-[1px] w-0 bg-background-color duration-300 group-hover:w-full"></span>
                   </button>

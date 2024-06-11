@@ -22,28 +22,27 @@
 
 @layer base {
   body {
-    @apply space-y-32 overflow-auto bg-background-color-2 text-modal-text overflow-x-hidden;
+    @apply space-y-32 overflow-auto overflow-x-hidden bg-background-color-2 text-modal-text;
   }
 
   h1 {
-    @apply font-chakraPetch text-4xl font-semibold 
-    uppercase
-    lg:text-6xl
-    2xl:text-7xl;
+    @apply font-chakraPetch text-4xl font-semibold uppercase lg:text-[64px] lg:leading-tight;
   }
   h2 {
-    @apply font-chakraPetch font-semibold uppercase 2xl:text-5xl;
+    @apply font-chakraPetch text-3xl font-semibold uppercase lg:text-5xl;
   }
   h3 {
-    @apply font-chakraPetch font-semibold uppercase 2xl:text-3xl;
+    @apply font-chakraPetch text-2xl font-semibold uppercase lg:text-4xl;
   }
   h4 {
-    @apply text-xl font-bold font-chakraPetch;
+    @apply font-chakraPetch text-xl font-bold lg:text-3xl;
+  }
+  h5 {
+    @apply font-chakraPetch text-lg font-bold lg:text-xl;
   }
   p {
     @apply font-archivo text-base font-normal;
   }
-
   li {
     @apply cursor-pointer font-chakraPetch text-base font-bold uppercase leading-6 tracking-tighter;
   }
@@ -57,7 +56,7 @@
     @apply my-auto;
   }
   .event-tab-id {
-    @apply bg-background-color px-4 py-2 opacity-40 ;
+    @apply bg-background-color px-4 py-2 opacity-40;
   }
   /* Hamburger Menu */
   .hamburger {
@@ -180,6 +179,10 @@
 
   .clip-path {
     clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+  }
+
+  .clip-path-mobile {
+    clip-path: polygon(5% 0%, 100% 0%, 95% 100%, 0% 100%);
   }
 
   @keyframes loading {

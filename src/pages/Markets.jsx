@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from "react";
+import MarketCollection from "../components/MarketCollection";
+import TypewriteParagraph from "../components/TypewriteParagraph";
 import backgroundRobotLogo from "/assets/images/backgroundLogo.webp";
 import proteo from "/assets/images/proteo.webp";
 import roboPack from "/assets/images/robopack.webp";
 import robopartLogo from "/assets/images/robopartLogo_1.webp";
 import spaceRobotLogo from "/assets/images/spacerobotlogo.webp";
-import MarketCollection from "../components/MarketCollection";
-import TypewriteParagraph from "../components/TypewriteParagraph";
 
 import { motion } from "framer-motion";
 
@@ -122,7 +122,7 @@ const Markets = () => {
               secondWord="SRP"
               thirdWord="Robo"
             />
-            <h2>Explore the latest Listings</h2>
+            <h2 className="mx-auto text-center">Explore the latest Listings</h2>
           </div>
         </div>
         <div className="flex w-full justify-center rounded-xl pb-12 shadow">

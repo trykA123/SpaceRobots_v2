@@ -6,6 +6,12 @@ import { useCollectionAuctions } from "../services/api";
 const MarketCollection = ({ collectionTicker }) => {
   let numMarketCards = 8;
 
+  const mobileBreakpoint = window.innerWidth < 1024;
+
+  if (mobileBreakpoint) {
+    numMarketCards = 4;
+  }
+
   const { loading, error, data } = useCollectionAuctions(collectionTicker);
 
   if (loading) return <p>Loading...</p>;

@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import BoxCollection from "/assets/images/collections/Box.png";
 import EventQuarter from "../components/EventQuarter";
 import Modal from "../components/ModalComponent";
 import TypewriteParagraph from "../components/TypewriteParagraph";
+import BoxCollection from "/assets/images/collections/Box.png";
 
 const Events = () => {
   const [selectedTab, setSelectedTab] = useState(0);
@@ -31,11 +31,11 @@ const Events = () => {
             secondWord="Events"
             thirdWord="Discoveries"
           />
-          <h2 className="mb-12">Dive into the Unkown</h2>
+          <h2 className="mx-auto mb-12 text-center">Dive into the Unkown</h2>
           {/* Tabs navbar */}
 
           <div className="flex items-center justify-center">
-            <ul className="lg:flex space-x-12 hidden">
+            <ul className="hidden space-x-12 lg:flex">
               <li
                 className={`event-tab-id ${
                   selectedTab === 0
@@ -83,17 +83,15 @@ const Events = () => {
         </div>
         {isOpen && (
           <Modal isOpen={isOpen} onClose={closeModal}>
-            <div className="flex h-[500px] gap-4 text-modal-text">
+            <div className="flex max-h-[600px] flex-col gap-4 text-modal-text lg:max-h-[500px] lg:flex-row">
               <img
                 src={BoxCollection}
                 alt="Modal Images"
-                className="h-full w-96 self-center rounded-xl bg-background-color object-cover p-1"
+                className="h-48 w-full self-center rounded-xl border border-accent-color bg-background-color object-cover p-1 lg:h-full lg:w-96"
               />
-              <div className="flex flex-col justify-between overflow-y-auto">
-                <h2 className="mb-4 font-chakraPetch text-4xl font-bold">
-                  test
-                </h2>
-                <p className="">
+              <div className="flex flex-col justify-between gap-4">
+                <h2 className="lg:mb-4">test</h2>
+                <p className="h-[220px] overflow-y-auto lg:h-auto">
                   Lorem ipsum dolor sit amet consectetur adipisicing elit.
                   Sapiente, magnam dignissimos vitae tempore quas nesciunt
                   deserunt soluta sequi voluptatibus aliquam cum, explicabo
@@ -119,8 +117,8 @@ const Events = () => {
                   deserunt soluta sequi voluptatibus aliquam cum, explicabo
                   accusamus eum
                 </p>
-                <div className="flex justify-between self-center">
-                  <button className="group col-span-1 row-span-1 flex flex-col items-center justify-center rounded-xl bg-accent-color px-8 py-4 text-xl text-background-color duration-300 ">
+                <div className="flex justify-between">
+                  <button className="group col-span-1 row-span-1 flex flex-col items-center justify-center rounded-xl bg-accent-color px-8 py-4 text-xl text-background-color duration-300">
                     Read More
                     <span className="h-[1px] w-0 bg-background-color duration-300 group-hover:w-full"></span>
                   </button>

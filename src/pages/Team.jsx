@@ -13,7 +13,7 @@ const Team = () => {
             secondWord="...initialize"
             thirdWord="Team"
           />
-          <h2 className="mb-12">Hard Working Robots</h2>
+          <h2 className="mx-auto mb-12 text-center">Hard Working Robots</h2>
           <div className="flex h-full w-full flex-col justify-center lg:flex-row">
             <TeamCard
               name={team.names.name1}
