@@ -130,9 +130,7 @@ const EventQuarter = ({ selectedTab, openModal }) => {
     <motion.div
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
-      className={`mx-auto grid grid-cols-1 lg:flex h-full w-full justify-center py-12 transition-all duration-700 lg:flex-row gap-4 ${
-        showContent ? "scale-100 opacity-100" : "scale-50 opacity-0"
-      }`}
+      className="mx-auto grid h-full w-full grid-cols-1 justify-center gap-4 py-12 transition-all duration-700 lg:flex lg:flex-row"
     >
       {events[selectedTab].left}
     </motion.div>

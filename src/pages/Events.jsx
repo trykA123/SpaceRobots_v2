@@ -1,16 +1,22 @@
+import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { AnimatePresence, motion } from "framer-motion";
 import React, { useState } from "react";
 import EventQuarter from "../components/EventQuarter";
 import Modal from "../components/ModalComponent";
 import TypewriteParagraph from "../components/TypewriteParagraph";
+import { tabs } from "../utils/eventsConstants";
 import BoxCollection from "/assets/images/collections/Box.png";
 
 const Events = () => {
   const [selectedTab, setSelectedTab] = useState(0);
   const [isOpen, setIsOpen] = useState(false);
   const [modalData, setModalData] = useState({}); // State to store modal data
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
   function handleTabClick(tabIndex) {
     setSelectedTab(tabIndex);
+    setIsDropdownOpen(false); // Close dropdown after selection
   }
 
   const openModal = (title, description) => {
@@ -31,91 +37,79 @@ const Events = () => {
             secondWord="Events"
             thirdWord="Discoveries"
           />
-          <h2 className="mx-auto mb-12 text-center">Dive into the Unkown</h2>
-          {/* Tabs navbar */}
+          <h2 className="mx-auto mb-12 text-center">Dive into the Unknown</h2>
 
+          {/* Tabs navbar */}
           <div className="flex items-center justify-center">
-            <ul className="hidden space-x-12 lg:flex">
-              <li
-                className={`event-tab-id ${
-                  selectedTab === 0
-                    ? "border border-accent-color opacity-100"
-                    : "opacity-50"
-                }`}
-                onClick={() => handleTabClick(0)}
-              >
-                Space Robots Universe
-              </li>
-              <li
-                className={`event-tab-id ${
-                  selectedTab === 1
-                    ? "border border-accent-color opacity-100"
-                    : "opacity-50"
-                }`}
-                onClick={() => handleTabClick(1)}
-              >
-                Space Robots Universe
-              </li>
-              <li
-                className={`event-tab-id ${
-                  selectedTab === 2
-                    ? "border border-accent-color opacity-100"
-                    : "opacity-50"
-                }`}
-                onClick={() => handleTabClick(2)}
-              >
-                Space Robots Universe
-              </li>
-              <li
-                className={`event-tab-id ${
-                  selectedTab === 3
-                    ? "border border-accent-color opacity-100"
-                    : "opacity-50"
-                }`}
-                onClick={() => handleTabClick(3)}
-              >
-                Space Robots Universe
-              </li>
+            {/* Tabs for larger screens */}
+            <ul className="hidden space-x-12 md:flex">
+              {tabs.map((tab, index) => (
+                <li
+                  key={index}
+                  className={`event-tab-id ${
+                    selectedTab === index
+                      ? "border border-accent-color opacity-100"
+                      : "opacity-50"
+                  }`}
+                  onClick={() => handleTabClick(index)}
+                >
+                  {tab}
+                </li>
+              ))}
             </ul>
+
+            {/* Dropdown for mobile screens */}
+            <div className="relative bg-accent-color p-2 text-background-color lg:hidden">
+              <button
+                className="flex w-64 items-center justify-center gap-2 p-2 font-chakraPetch uppercase"
+                onClick={() => setIsDropdownOpen(!isDropdownOpen)}
+                type="button"
+              >
+                {tabs[selectedTab]}
+                <FontAwesomeIcon icon={faChevronDown} />
+              </button>
+              <AnimatePresence>
+                {isDropdownOpen && (
+                  <motion.ul
+                    initial={{ opacity: 0, height: 0 }}
+                    animate={{ opacity: 1, height: "auto" }}
+                    exit={{ opacity: 0, height: 0 }}
+                    className="absolute left-0 z-10 mt-2 flex w-64 flex-col gap-2 bg-background-color text-white"
+                  >
+                    {tabs.map((tab, index) => (
+                      <motion.li
+                        key={index}
+                        className={`event-tab-id bg-background-color p-2 ${
+                          selectedTab === index
+                            ? "text-accent-color opacity-100"
+                            : " opacity-50"
+                        }`}
+                        onClick={() => handleTabClick(index)}
+                      >
+                        {tab}
+                      </motion.li>
+                    ))}
+                  </motion.ul>
+                )}
+              </AnimatePresence>
+            </div>
           </div>
+
           {/* Event components */}
           <EventQuarter selectedTab={selectedTab} openModal={openModal} />
         </div>
         {isOpen && (
           <Modal isOpen={isOpen} onClose={closeModal}>
-            <div className="flex z-50 max-h-[600px] flex-col gap-4 text-modal-text lg:max-h-[500px] lg:flex-row">
+            <div className="z-50 flex h-[600px] flex-col gap-4 text-modal-text lg:h-[500px] lg:flex-row">
               <img
                 src={BoxCollection}
                 alt="Modal Images"
                 className="h-48 w-full self-center rounded-xl border border-accent-color bg-background-color object-cover p-1 lg:h-full lg:w-96"
               />
               <div className="flex flex-col justify-between gap-4">
-                <h2 className="lg:mb-4">test</h2>
+                <h2 className="lg:mb-4">{modalData.title}</h2>
                 <p className="h-[220px] overflow-y-auto lg:h-auto">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Sapiente, magnam dignissimos vitae tempore quas nesciunt
-                  deserunt soluta sequi voluptatibus aliquam cum, explicabo
-                  accusamus eum dolore culpa provident et pariatur tempora!
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Sapiente, magnam dignissimos vitae tempore quas nesciunt
-                  deserunt soluta sequi voluptatibus aliquam cum, explicabo
-                  accusamus eum dolore culpa provident et pariatur tempora!
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Sapiente, magnam dignissimos vitae tempore quas nesciunt
-                  deserunt soluta sequi voluptatibus aliquam cum, explicabo
-                  accusamus eum dolore culpa provident et pariatur tempora!
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Sapiente, magnam dignissimos vitae tempore quas nesciunt
-                  deserunt soluta sequi voluptatibus aliquam cum, explicabo
-                  accusamus eum dolore culpa provident et pariatur tempora!
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Sapiente, magnam dignissimos vitae tempore quas nesciunt
-                  deserunt soluta sequi voluptatibus aliquam cum, explicabo
-                  accusamus eum dolore culpa provident et pariatur tempora!
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Sapiente, magnam dignissimos vitae tempore quas nesciunt
-                  deserunt soluta sequi voluptatibus aliquam cum, explicabo
-                  accusamus eum
+                  {modalData.description}
                 </p>
                 <div className="flex justify-between">
                   <button

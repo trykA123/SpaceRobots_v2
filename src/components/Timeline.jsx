@@ -41,9 +41,10 @@ const Timeline = ({ quater, firstInfo, secondInfo, thirdInfo, fourthInfo }) => {
       initial="hidden"
       animate={controls}
     >
-      <div className="my-4 self-start py-4">
+      <div className="self-start lg:py-4">
         <h3>{quater}</h3>
       </div>
+      <span className="h-1 w-full bg-accent-color" />
       <div className="mx-auto flex h-full flex-col justify-between">
         <motion.div
           variants={timelineVariants}

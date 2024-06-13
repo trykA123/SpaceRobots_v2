@@ -13,9 +13,9 @@ const Roadmap = () => {
             secondWord="The Present"
             thirdWord="The Future"
           />
-          <h2 className="mx-auto text-center">Building the universe</h2>
-          <div className="hidden lg:flex">
-            <div className="grid grid-cols-3 gap-8">
+          <h2 className="mx-auto text-center mb-12">Building the universe</h2>
+          <div className="flex flex-col lg:flex-row">
+            <div className="grid gap-8 lg:grid-cols-3">
               {roadmapSections.map((section, index) => (
                 <Timeline
                   key={index}
