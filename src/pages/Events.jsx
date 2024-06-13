@@ -83,7 +83,7 @@ const Events = () => {
         </div>
         {isOpen && (
           <Modal isOpen={isOpen} onClose={closeModal}>
-            <div className="flex max-h-[600px] flex-col gap-4 text-modal-text lg:max-h-[500px] lg:flex-row">
+            <div className="flex z-50 max-h-[600px] flex-col gap-4 text-modal-text lg:max-h-[500px] lg:flex-row">
               <img
                 src={BoxCollection}
                 alt="Modal Images"
@@ -118,9 +118,12 @@ const Events = () => {
                   accusamus eum
                 </p>
                 <div className="flex justify-between">
-                  <button className="group col-span-1 row-span-1 flex flex-col items-center justify-center rounded-xl bg-accent-color px-8 py-4 text-xl text-background-color duration-300">
+                  <button
+                    type="button"
+                    className="group col-span-1 row-span-1 flex flex-col items-center justify-center rounded-xl bg-accent-color px-8 py-4 text-xl text-background-color duration-300"
+                  >
                     Read More
-                    <span className="h-[1px] w-0 bg-background-color duration-300 group-hover:w-full"></span>
+                    <span className="h-[1px] w-0 bg-background-color duration-300 group-hover:w-full" />
                   </button>
                 </div>
               </div>

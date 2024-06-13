@@ -28,11 +28,12 @@ const EventCard = ({ info, date, openModal }) => {
             {date}
           </h3>
           <button
+            type="button"
             onClick={handleClick}
             className="group/button absolute flex w-full scale-0 flex-col items-center justify-center gap-4 bg-background-color-2 px-20 font-chakraPetch uppercase delay-300 duration-700 group-hover:flex group-hover:scale-100 lg:h-64 2xl:text-3xl"
           >
             <h3 className="hidden text-center lg:block">{date}</h3>
-            <span className="hidden lg:block lg:h-[1px] lg:w-0 lg:self-start lg:bg-accent-color lg:delay-500 lg:duration-700 lg:group-hover/button:w-full"></span>
+            <span className="hidden lg:block lg:h-[1px] lg:w-0 lg:self-start lg:bg-accent-color lg:delay-500 lg:duration-700 lg:group-hover/button:w-full" />
             Explore
           </button>
         </div>

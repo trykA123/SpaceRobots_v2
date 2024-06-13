@@ -6,7 +6,7 @@ const RoadmapQuater = () => {
     <div>
       <div className="container bg-slate-950 mx-auto w-full h-full">
         <div className="relative wrap overflow-hidden p-10 h-full">
-          <div className="border-2-2 absolute border-opacity-20 border-gray-700 h-full border left-[50%]"></div>
+          <div className="border-2-2 absolute border-opacity-20 border-gray-700 h-full border left-[50%]"/>
           <TimelineItem
             position="right"
             number="1"

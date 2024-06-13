@@ -40,16 +40,20 @@ const MobileMenu = () => {
   };
 
   return (
-    <nav className="container fixed left-0 right-0 top-8 z-50 mx-auto flex w-full justify-end transition-all duration-300 ease-in-out lg:hidden">
+    <nav className="container fixed left-0 right-0 top-8 z-40 mx-auto flex w-full justify-end transition-all duration-300 ease-in-out lg:hidden">
       <div
         ref={menuRef}
         className={`relative ${isDropdownOpen ? "w-full pb-4" : "w-12"} rounded-2xl bg-background-color shadow-lg transition-all duration-300 `}
       >
         <div className="flex h-10 items-center justify-end p-3 px-4">
-          <button onClick={toggleDropdown} className="flex flex-col gap-1">
-            <div className="h-[2px] w-4 bg-white"></div>
-            <div className="h-[2px] w-4 bg-white"></div>
-            <div className="h-[2px] w-4 bg-white"></div>
+          <button
+            onClick={toggleDropdown}
+            className="flex flex-col gap-1"
+            type="button"
+          >
+            <div className="h-[2px] w-4 bg-white"/>
+            <div className="h-[2px] w-4 bg-white"/>
+            <div className="h-[2px] w-4 bg-white"/>
           </button>
         </div>
         <AnimatePresence>
@@ -67,7 +71,7 @@ const MobileMenu = () => {
                   animate={{ opacity: 1 }}
                   exit={{ opacity: 0 }}
                   transition={{ duration: 0.3 }}
-                  className="group self-center flex h-16 w-72 flex-col items-center justify-center rounded-xl bg-background-color-2 px-8 py-4 font-chakraPetch text-xl uppercase shadow-md"
+                  className="group flex h-16 w-72 flex-col items-center justify-center self-center rounded-xl bg-background-color-2 px-8 py-4 font-chakraPetch text-xl uppercase shadow-md"
                   href="#about"
                   onClick={handleLinkClick}
                 >
@@ -79,7 +83,7 @@ const MobileMenu = () => {
                   animate={{ opacity: 1 }}
                   exit={{ opacity: 0 }}
                   transition={{ duration: 0.3 }}
-                  className="group self-center flex h-16 w-72 flex-col items-center justify-center rounded-xl bg-background-color-2 px-8 py-4 font-chakraPetch text-xl uppercase shadow-md"
+                  className="group flex h-16 w-72 flex-col items-center justify-center self-center rounded-xl bg-background-color-2 px-8 py-4 font-chakraPetch text-xl uppercase shadow-md"
                   href="#collections"
                   onClick={handleLinkClick}
                 >
@@ -91,7 +95,7 @@ const MobileMenu = () => {
                   animate={{ opacity: 1 }}
                   exit={{ opacity: 0 }}
                   transition={{ duration: 0.3 }}
-                  className="group self-center flex h-16 w-72 flex-col items-center justify-center rounded-xl bg-background-color-2 px-8 py-4 font-chakraPetch text-xl uppercase shadow-md"
+                  className="group flex h-16 w-72 flex-col items-center justify-center self-center rounded-xl bg-background-color-2 px-8 py-4 font-chakraPetch text-xl uppercase shadow-md"
                   href="#stories"
                   onClick={handleLinkClick}
                 >
@@ -103,7 +107,7 @@ const MobileMenu = () => {
                   animate={{ opacity: 1 }}
                   exit={{ opacity: 0 }}
                   transition={{ duration: 0.3 }}
-                  className="group self-center flex h-16 w-72 flex-col items-center justify-center rounded-xl bg-background-color-2 px-8 py-4 font-chakraPetch text-xl uppercase shadow-md"
+                  className="group flex h-16 w-72 flex-col items-center justify-center self-center rounded-xl bg-background-color-2 px-8 py-4 font-chakraPetch text-xl uppercase shadow-md"
                   href="#roadmap"
                   onClick={handleLinkClick}
                 >
@@ -115,7 +119,7 @@ const MobileMenu = () => {
                   animate={{ opacity: 1 }}
                   exit={{ opacity: 0 }}
                   transition={{ duration: 0.3 }}
-                  className="group self-center flex h-16 w-72 flex-col items-center justify-center rounded-xl bg-background-color-2 px-8 py-4 font-chakraPetch text-xl uppercase shadow-md"
+                  className="group flex h-16 w-72 flex-col items-center justify-center self-center rounded-xl bg-background-color-2 px-8 py-4 font-chakraPetch text-xl uppercase shadow-md"
                   href="#team"
                   onClick={handleLinkClick}
                 >

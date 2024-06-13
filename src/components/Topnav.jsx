@@ -91,7 +91,7 @@ const Topnav = () => {
                   href="#about"
                 >
                   About
-                  <span className="h-[1px] w-0 self-start bg-accent-color duration-300 group-hover:w-full"></span>
+                  <span className="h-[1px] w-0 self-start bg-accent-color duration-300 group-hover:w-full" />
                 </motion.a>
                 <motion.a
                   initial={{ opacity: 0 }}
@@ -102,7 +102,7 @@ const Topnav = () => {
                   href="#collections"
                 >
                   Collections
-                  <span className="h-[1px] w-0 self-start bg-accent-color duration-300 group-hover:w-full"></span>
+                  <span className="h-[1px] w-0 self-start bg-accent-color duration-300 group-hover:w-full" />
                 </motion.a>
                 <motion.a
                   initial={{ opacity: 0 }}
@@ -113,7 +113,7 @@ const Topnav = () => {
                   href="#stories"
                 >
                   Stories
-                  <span className="h-[1px] w-0 self-start bg-accent-color duration-300 group-hover:w-full"></span>
+                  <span className="h-[1px] w-0 self-start bg-accent-color duration-300 group-hover:w-full" />
                 </motion.a>
                 <motion.a
                   initial={{ opacity: 0 }}
@@ -124,7 +124,7 @@ const Topnav = () => {
                   href="#roadmap"
                 >
                   Roadmap
-                  <span className="h-[1px] w-0 self-start bg-accent-color duration-300 group-hover:w-full"></span>
+                  <span className="h-[1px] w-0 self-start bg-accent-color duration-300 group-hover:w-full" />
                 </motion.a>
                 <motion.a
                   initial={{ opacity: 0 }}
@@ -135,7 +135,7 @@ const Topnav = () => {
                   href="#team"
                 >
                   Team
-                  <span className="h-[1px] w-0 self-start bg-accent-color duration-300 group-hover:w-full"></span>
+                  <span className="h-[1px] w-0 self-start bg-accent-color duration-300 group-hover:w-full" />
                 </motion.a>
               </div>
             </motion.div>
