@@ -100,7 +100,7 @@ const Collection = () => {
         </div> */}
         {isOpen && (
           <Modal isOpen={isOpen} onClose={closeModal}>
-            <div className="z-50 flex max-h-[600px] flex-col gap-4 text-modal-text lg:max-h-[500px] lg:flex-row">
+            <div className="z-50 flex h-[600px] flex-col gap-4 text-modal-text lg:h-[500px] lg:flex-row">
               <img
                 src={modalData.modalImage}
                 alt="Modal Images"
