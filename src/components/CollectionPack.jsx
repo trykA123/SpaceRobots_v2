@@ -20,7 +20,7 @@ const CollectionPack = ({ title, description, roboPack, onClick }) => {
           type="button"
           onClick={onClick}
           href="#"
-          className="group/button col-span-1 row-span-1 flex w-64 flex-col items-center justify-center rounded-xl bg-accent-color px-8 py-4 text-xl text-background-color duration-300 group-hover:opacity-100 lg:opacity-0"
+          className="group/button col-span-1 row-span-1 flex w-64 flex-col items-center justify-center rounded-xl bg-accent-color px-8 py-4 font-chakraPetch text-xl uppercase text-background-color duration-300 group-hover:opacity-100 lg:opacity-0"
         >
           Read More
           <span className="h-[1px] w-0 bg-background-color duration-300 group-hover/button:w-full" />

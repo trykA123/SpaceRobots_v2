@@ -56,20 +56,27 @@ const MarketCard = ({ key, ...props }) => {
     // Show skeleton loading while data is loading
     return (
       <div className="group z-30 flex" key={key}>
-        <div className="flex scale-90 space-y-3 rounded-md bg-gray-15 from-teal-text-100 via-teal-text-40 to-teal-text-0 px-6 group-hover:bg-gradient-to-b 3xl:scale-100">
-          <div className="skeleton mt-6 h-80 w-full rounded-md" />
-          <div className="skeleton mb-4 h-8 w-3/4 rounded-md" />
-          <div className="flex h-16 items-center justify-between">
-            <div className="flex items-center">
-              <div className="skeleton mr-2 h-7 w-7 rounded-full" />
-              <div className="skeleton h-12 w-20 rounded-md py-4" />
+        <motion.div
+          className="flex flex-col rounded-md border border-secondary-color-2 bg-background-color p-4 shadow-xl transition-all duration-500 hover:border-primary-teal"
+          initial={{ opacity: 0, y: 150 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1.5 }}
+        >
+          <div className="skeleton h-80 w-full rounded-md" />
+          <div className="flex w-full flex-col justify-between gap-4 p-4">
+            <div className="skeleton mb-4 h-8 w-3/4 rounded-md" />
+            <div className="flex flex-col items-center justify-between gap-4">
+              <div className="flex w-full items-center justify-between">
+                <div className="flex items-center">
+                  <div className="skeleton mr-2 h-7 w-7 rounded-full" />
+                  <div className="skeleton h-12 w-20 rounded-md py-4" />
+                </div>
+                <div className="skeleton h-8 w-8 rounded-full" />
+              </div>
+              <div className="skeleton h-16 w-full rounded-xl" />
             </div>
-            <button
-              type="button"
-              className="skeleton h-16 w-3/5 gap-4 rounded-md"
-            />
           </div>
-        </div>
+        </motion.div>
       </div>
     );
   }

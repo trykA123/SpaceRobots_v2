@@ -62,7 +62,7 @@ const Project = () => {
               <RobotModel />
             </Canvas>
           </div>
-          <h2 className="col-span-1 row-span-2 grid w-full place-content-center rounded-xl bg-accent-color p-12 text-center text-background-color">
+          <h2 className="col-span-1 row-span-2 grid w-full place-content-center rounded-xl bg-primary-teal p-12 text-center text-background-color">
             {text.title}
           </h2>
           <p className="col-span-1 row-span-2 grid place-content-center rounded-xl bg-background-color p-12 text-center">
