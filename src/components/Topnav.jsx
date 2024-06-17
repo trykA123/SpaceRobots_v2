@@ -43,25 +43,25 @@ const Topnav = () => {
           </div>
           {/* Socials */}
           <div className="flex gap-4">
-            <a href="">
+            <a href="https://discord.gg/SpaceRobots">
               <FontAwesomeIcon
                 icon={faDiscord}
                 className="duration-100 hover:scale-110 hover:text-accent-color"
               />
             </a>
-            <a href="">
+            <a href="#x">
               <FontAwesomeIcon
                 icon={faTwitter}
                 className="duration-100 hover:scale-110 hover:text-accent-color"
               />
             </a>
-            <a href="">
+            <a href="#youtube">
               <FontAwesomeIcon
                 icon={faYoutube}
                 className="duration-100 hover:scale-110 hover:text-accent-color"
               />
             </a>
-            <a href="">
+            <a href="#blog">
               <FontAwesomeIcon
                 icon={faBlog}
                 className="duration-100 hover:scale-110 hover:text-accent-color"

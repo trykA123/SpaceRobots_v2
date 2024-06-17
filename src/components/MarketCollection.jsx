@@ -26,7 +26,7 @@ const MarketCollection = ({ collectionTicker }) => {
         }
         const price = (
           edge.node.maxBid.amount /
-          Math.pow(10, edge.node.maxBid.tokenData.decimals)
+          10 ** edge.node.maxBid.tokenData.decimals
         ).toFixed(2);
         const token = edge.node.maxBid.token;
         const url = edge.node.asset.media[0].url;

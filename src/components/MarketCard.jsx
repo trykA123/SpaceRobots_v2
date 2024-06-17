@@ -64,7 +64,10 @@ const MarketCard = ({ key, ...props }) => {
               <div className="skeleton mr-2 h-7 w-7 rounded-full" />
               <div className="skeleton h-12 w-20 rounded-md py-4" />
             </div>
-            <button className="skeleton h-16 w-3/5 gap-4 rounded-md" />
+            <button
+              type="button"
+              className="skeleton h-16 w-3/5 gap-4 rounded-md"
+            />
           </div>
         </div>
       </div>
@@ -86,7 +89,7 @@ const MarketCard = ({ key, ...props }) => {
       <div className="flex flex-col rounded-md border border-secondary-color-2 bg-background-color p-4 shadow-xl transition-all duration-500 hover:border-primary-teal">
         <img
           src={props.url}
-          alt="MarketCard image"
+          alt="NFT"
           className="rounded-md object-cover duration-500"
           loading="lazy"
         />
@@ -106,11 +109,15 @@ const MarketCard = ({ key, ...props }) => {
                 alt="Market's Icon"
               />
             </div>
-            <button className="flex h-16 w-full items-center justify-center gap-4 rounded-xl bg-primary-teal font-semibold text-background-color duration-500">
+            <button
+              type="button"
+              className="flex h-16 w-full items-center justify-center gap-4 rounded-xl bg-primary-teal font-semibold text-background-color duration-500"
+            >
               <a
                 href={marketUrl}
                 target="_blank"
                 className="flex items-center 3xl:text-xl"
+                rel="noreferrer"
               >
                 Upgrade collection{" "}
               </a>

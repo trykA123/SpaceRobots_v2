@@ -9,7 +9,7 @@ const EventQuarter = ({ selectedTab, openModal }) => {
   useEffect(() => {
     setShowContent(false);
     setTimeout(() => setShowContent(true), 1000);
-  }, [selectedTab]);
+  }, []);
 
   const events = [
     {

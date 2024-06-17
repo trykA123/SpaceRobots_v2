@@ -52,6 +52,16 @@ const Events = () => {
                       : "opacity-50"
                   }`}
                   onClick={() => handleTabClick(index)}
+                  onKeyDown={(event) => {
+                    if (event.key === "Enter" || event.key === " ") {
+                      handleTabClick(index);
+                    }
+                  }}
+                  onKeyUp={(event) => {
+                    if (event.key === "Enter" || event.key === " ") {
+                      handleTabClick(index);
+                    }
+                  }}
                 >
                   {tab}
                 </li>

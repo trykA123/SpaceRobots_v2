@@ -51,9 +51,9 @@ const MobileMenu = () => {
             className="flex flex-col gap-1"
             type="button"
           >
-            <div className="h-[2px] w-4 bg-white"/>
-            <div className="h-[2px] w-4 bg-white"/>
-            <div className="h-[2px] w-4 bg-white"/>
+            <div className="h-[2px] w-4 bg-white" />
+            <div className="h-[2px] w-4 bg-white" />
+            <div className="h-[2px] w-4 bg-white" />
           </button>
         </div>
         <AnimatePresence>
@@ -66,7 +66,7 @@ const MobileMenu = () => {
               className="overflow-hidden"
             >
               <div className="flex flex-col justify-center gap-4 p-4">
-                <motion.a
+                <motion.button
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   exit={{ opacity: 0 }}
@@ -76,9 +76,9 @@ const MobileMenu = () => {
                   onClick={handleLinkClick}
                 >
                   About
-                  <span className="h-[1px] w-0 self-start bg-accent-color duration-300 group-hover:w-full"></span>
-                </motion.a>
-                <motion.a
+                  <span className="h-[1px] w-0 self-start bg-accent-color duration-300 group-hover:w-full" />
+                </motion.button>
+                <motion.button
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   exit={{ opacity: 0 }}
@@ -88,9 +88,9 @@ const MobileMenu = () => {
                   onClick={handleLinkClick}
                 >
                   Collections
-                  <span className="h-[1px] w-0 self-start bg-accent-color duration-300 group-hover:w-full"></span>
-                </motion.a>
-                <motion.a
+                  <span className="h-[1px] w-0 self-start bg-accent-color duration-300 group-hover:w-full" />
+                </motion.button>
+                <motion.button
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   exit={{ opacity: 0 }}
@@ -100,9 +100,9 @@ const MobileMenu = () => {
                   onClick={handleLinkClick}
                 >
                   Stories
-                  <span className="h-[1px] w-0 self-start bg-accent-color duration-300 group-hover:w-full"></span>
-                </motion.a>
-                <motion.a
+                  <span className="h-[1px] w-0 self-start bg-accent-color duration-300 group-hover:w-full" />
+                </motion.button>
+                <motion.button
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   exit={{ opacity: 0 }}
@@ -112,9 +112,9 @@ const MobileMenu = () => {
                   onClick={handleLinkClick}
                 >
                   Roadmap
-                  <span className="h-[1px] w-0 self-start bg-accent-color duration-300 group-hover:w-full"></span>
-                </motion.a>
-                <motion.a
+                  <span className="h-[1px] w-0 self-start bg-accent-color duration-300 group-hover:w-full" />
+                </motion.button>
+                <motion.button
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   exit={{ opacity: 0 }}
@@ -124,29 +124,29 @@ const MobileMenu = () => {
                   onClick={handleLinkClick}
                 >
                   Team
-                  <span className="h-[1px] w-0 self-start bg-accent-color duration-300 group-hover:w-full"></span>
-                </motion.a>
+                  <span className="h-[1px] w-0 self-start bg-accent-color duration-300 group-hover:w-full" />
+                </motion.button>
                 {/* Socials */}
                 <div className="flex justify-center gap-6 py-8">
-                  <a href="">
+                  <a href="https://discord.gg/SpaceRobots">
                     <FontAwesomeIcon
                       icon={faDiscord}
                       className="text-2xl duration-100 hover:scale-110 hover:text-accent-color"
                     />
                   </a>
-                  <a href="">
+                  <a href="https://twitter.com/SpaceRobots">
                     <FontAwesomeIcon
                       icon={faTwitter}
                       className="text-2xl duration-100 hover:scale-110 hover:text-accent-color"
                     />
                   </a>
-                  <a href="">
+                  <a href="#youtube">
                     <FontAwesomeIcon
                       icon={faYoutube}
                       className="text-2xl duration-100 hover:scale-110 hover:text-accent-color"
                     />
                   </a>
-                  <a href="">
+                  <a href="#b">
                     <FontAwesomeIcon
                       icon={faBlog}
                       className="text-2xl duration-100 hover:scale-110 hover:text-accent-color"

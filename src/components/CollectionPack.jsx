@@ -3,7 +3,7 @@ import React from "react";
 const CollectionPack = ({ title, description, roboPack, onClick }) => {
   return (
     <div className="group relative flex h-full w-full items-center justify-center duration-700 ">
-      <div className="absolute z-10 flex w-full items-center justify-center rounded-lg bg-gradient-to-b from-gray-gradient-full via-gray-gradient to-gray-gradient-full"></div>
+      <div className="absolute z-10 flex w-full items-center justify-center rounded-lg bg-gradient-to-b from-gray-gradient-full via-gray-gradient to-gray-gradient-full" />
       <img
         src={roboPack}
         alt="RoboPack background"
@@ -17,12 +17,13 @@ const CollectionPack = ({ title, description, roboPack, onClick }) => {
           {description}
         </h4>
         <button
+          type="button"
           onClick={onClick}
           href="#"
           className="group/button col-span-1 row-span-1 flex w-64 flex-col items-center justify-center rounded-xl bg-accent-color px-8 py-4 text-xl text-background-color duration-300 group-hover:opacity-100 lg:opacity-0"
         >
           Read More
-          <span className="h-[1px] w-0 bg-background-color duration-300 group-hover/button:w-full"></span>
+          <span className="h-[1px] w-0 bg-background-color duration-300 group-hover/button:w-full" />
         </button>
       </div>
     </div>

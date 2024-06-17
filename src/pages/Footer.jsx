@@ -9,7 +9,7 @@ const Footer = () => {
 
   return (
     <footer className="w-full border-t border-accent-color bg-background-color-2 ">
-      <div className="mx-auto grid h-96 max-w-[1200px container grid-cols-2 place-content-center justify-items-center py-12 lg:grid-cols-3">
+      <div className="max-w-[1200px container mx-auto grid h-96 grid-cols-2 place-content-center justify-items-center py-12 lg:grid-cols-3">
         <div className="col-span-2 flex flex-col gap-2 p-4 lg:col-span-1 lg:gap-4 lg:p-0">
           <a href="#hero" className="cursor-pointer">
             <img src={titleLogo} alt="SpaceRobots Logo" className="w-96" />
@@ -22,76 +22,55 @@ const Footer = () => {
         <div className="flex flex-col space-y-4">
           <ul className="flex flex-col space-y-2">
             <li className="group flex flex-col">
-              <a href="">Home</a>
-              <span className="h-[1px] w-0 bg-accent-color duration-700 group-hover:w-16"></span>
+              <a href="#hero">Home</a>
+              <span className="h-[1px] w-0 bg-accent-color duration-700 group-hover:w-16" />
             </li>
             <li className="group flex flex-col">
-              <a href="">About</a>
-              <span className="h-[1px] w-0 bg-accent-color duration-700 group-hover:w-16"></span>
+              <a href="#about">About</a>
+              <span className="h-[1px] w-0 bg-accent-color duration-700 group-hover:w-16" />
             </li>
             <li className="group flex flex-col">
-              <a href="">Collections</a>
-              <span className="h-[1px] w-0 bg-accent-color duration-700 group-hover:w-16"></span>
+              <a href="#collections">Collections</a>
+              <span className="h-[1px] w-0 bg-accent-color duration-700 group-hover:w-16" />
+            </li>
+            {/* <li className="group flex flex-col">
+              <a href="#">Market</a>
+              <span className="h-[1px] w-0 bg-accent-color duration-700 group-hover:w-16"/>
+            </li> */}
+            <li className="group flex flex-col">
+              <a href="#stories">Stories</a>
+              <span className="h-[1px] w-0 bg-accent-color duration-700 group-hover:w-16" />
             </li>
             <li className="group flex flex-col">
-              <a href="">Market</a>
-              <span className="h-[1px] w-0 bg-accent-color duration-700 group-hover:w-16"></span>
+              <a href="#roadmap">Roadmap</a>
+              <span className="h-[1px] w-0 bg-accent-color duration-700 group-hover:w-16" />
             </li>
             <li className="group flex flex-col">
-              <a href="">Stories</a>
-              <span className="h-[1px] w-0 bg-accent-color duration-700 group-hover:w-16"></span>
-            </li>
-            <li className="group flex flex-col">
-              <a href="">Roadmap</a>
-              <span className="h-[1px] w-0 bg-accent-color duration-700 group-hover:w-16"></span>
-            </li>
-            <li className="group flex flex-col">
-              <a href="">Team</a>
-              <span className="h-[1px] w-0 bg-accent-color duration-700 group-hover:w-16"></span>
+              <a href="#team">Team</a>
+              <span className="h-[1px] w-0 bg-accent-color duration-700 group-hover:w-16" />
             </li>
           </ul>
         </div>
         <div className="flex flex-col space-y-4">
           <ul className="flex flex-col space-y-2">
             <li className="group flex flex-col">
-              <a href="">Telegram</a>
-              <span className="h-[1px] w-0 bg-accent-color duration-700 group-hover:w-16"></span>
+              <a href="https://t.me/SpaceRobots">Telegram</a>
+              <span className="h-[1px] w-0 bg-accent-color duration-700 group-hover:w-16" />
             </li>
             <li className="group flex flex-col">
-              <a href="">X (Twitter)</a>
-              <span className="h-[1px] w-0 bg-accent-color duration-700 group-hover:w-16"></span>
+              <a href="https://twitter.com/SpaceRobots">X (Twitter)</a>
+              <span className="h-[1px] w-0 bg-accent-color duration-700 group-hover:w-16" />
             </li>
             <li className="group flex flex-col">
-              <a href="">Discord</a>
-              <span className="h-[1px] w-0 bg-accent-color duration-700 group-hover:w-16"></span>
+              <a href="https://discord.gg/SpaceRobots">Discord</a>
+              <span className="h-[1px] w-0 bg-accent-color duration-700 group-hover:w-16" />
             </li>
             <li className="group flex flex-col">
-              <a href="">Blog</a>
-              <span className="h-[1px] w-0 bg-accent-color duration-700 group-hover:w-16"></span>
+              <a href="#blog">Blog</a>
+              <span className="h-[1px] w-0 bg-accent-color duration-700 group-hover:w-16" />
             </li>
           </ul>
         </div>
-        {/* <div>
-          <div className="flex justify-center space-x-4">
-            <a
-              href="https://discord.gg/SpaceRobots"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <FontAwesomeIcon icon={faDiscord} size="2x" />
-            </a>
-            <a href="https://t.me/SpaceRobots" target="_blank" rel="noreferrer">
-              <FontAwesomeIcon icon={faTelegram} size="2x" />
-            </a>
-            <a
-              href="https://twitter.com/SpaceRobots"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <FontAwesomeIcon icon={faTwitter} size="2x" />
-            </a>
-          </div>
-        </div> */}
       </div>
     </footer>
   );

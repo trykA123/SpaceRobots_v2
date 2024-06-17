@@ -12,11 +12,11 @@ const MobileColectionPack = () => {
           <div className="flex flex-col space-y-24 pt-32 items-center absolute mx-auto z-10 -translate-x-4 md:translate-y-10">
             <img
               src={roboPack}
-              alt="Collection pack robopack image"
+              alt="Collection pack robopack"
               className="scale-150 md:scale-[2]"
             />
             <a
-              href="#"
+              href="#robo"
               className="flex items-center justify-center w-48 h-14 bg-teal-300 rounded-sm duration-300 -translate-y-2"
             >
               Open

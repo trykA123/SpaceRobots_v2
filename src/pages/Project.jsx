@@ -21,7 +21,7 @@ const RobotModel = () => {
       // Use the full animation name when accessing the action
       actions[names[0]]?.play();
     }
-  }, [names]);
+  }, [names, actions]);
 
   return (
     <primitive ref={group} object={scene} scale={1} position={[0, -1.5, 0]} />

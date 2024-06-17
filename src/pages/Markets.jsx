@@ -127,9 +127,10 @@ const Markets = () => {
         </div>
         <div className="flex w-full justify-center rounded-xl pb-12 shadow">
           <div className="hidden md:grid md:animate-none md:grid-flow-col md:gap-3 lg:mt-2 xl:mt-8">
-            {smallPacks.map((pack, index) => (
+            {smallPacks.map((pack) => (
               <button
-                key={index}
+                type="button"
+                key={pack.id} // Assuming pack has a unique identifier like 'id'
                 className="group relative z-30 mx-2 flex items-center justify-center overflow-hidden rounded-md border-[1px] border-gray-15 bg-secondary-color-2 p-4 duration-700 hover:border-secondary-color"
                 onClick={() => setSelectedSmallPackIndex(index)}
               >
@@ -137,33 +138,6 @@ const Markets = () => {
               </button>
             ))}
           </div>
-          {/* <div
-            className={`grid max-w-fit animate-slide grid-flow-col gap-3 overscroll-contain md:hidden ${
-              isAnimationPaused ? "pause-animation" : ""
-            }`}
-          >
-            {smallPacksMobile.map((pack, index) => (
-              <button
-                key={index}
-                className="group relative z-30 mx-2 flex h-32 w-32 items-center justify-center overflow-hidden rounded-md border-[1px] border-gray-15 duration-700 xl:px-0 3xl:h-40 3xl:w-40 4xl:h-48 4xl:w-48"
-                onClick={() => {
-                  setSelectedSmallPackIndex(index);
-                  setIsAnimationPaused(true); // Pause animation on click
-                }}
-                onMouseEnter={() => setIsAnimationPaused(true)} // Pause animation on hover
-                onMouseLeave={() => setIsAnimationPaused(false)} // Resume animation on leave
-              >
-                <div
-                  className={`absolute h-full w-full overflow-hidden bg-cover opacity-40 duration-500 group-hover:opacity-100`}
-                  style={{ backgroundImage: `url(${pack.bgImg})` }}
-                ></div>
-
-                <p className="abosolute text-center font-bold opacity-100 duration-500 group-hover:opacity-0">
-                  {pack.info}
-                </p>
-              </button>
-            ))}
-          </div> */}
         </div>
         <div>
           <MarketCollection
