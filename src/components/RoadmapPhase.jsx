@@ -1,9 +1,15 @@
 import { motion, useAnimation } from "framer-motion";
 import React, { useEffect } from "react";
 import { useInView } from "react-intersection-observer";
-import TimelineItem from "./TimelineItem";
+import MilestoneCard from "./MilestoneCard";
 
-const Timeline = ({ quater, firstInfo, secondInfo, thirdInfo, fourthInfo }) => {
+const RoadmapPhase = ({
+  quater,
+  firstMilestoneCard,
+  secondMilestoneCard,
+  thirdMilestoneCard,
+  forthMilestoneCard,
+}) => {
   const [ref, inView] = useInView();
   const controls = useAnimation();
 
@@ -44,7 +50,7 @@ const Timeline = ({ quater, firstInfo, secondInfo, thirdInfo, fourthInfo }) => {
       <div className="self-start lg:py-4">
         <h3>{quater}</h3>
       </div>
-      <span className="h-1 w-full bg-accent-color" />
+      <span className="h-[1px] w-full bg-primary-teal" />
       <div className="mx-auto flex h-full flex-col justify-between">
         <motion.div
           variants={timelineVariants}
@@ -60,32 +66,32 @@ const Timeline = ({ quater, firstInfo, secondInfo, thirdInfo, fourthInfo }) => {
             }}
           >
             <motion.div variants={itemVariants}>
-              <TimelineItem
-                title={firstInfo.title}
-                content={firstInfo.info}
-                status={firstInfo.status}
+              <MilestoneCard
+                title={firstMilestoneCard.title}
+                content={firstMilestoneCard.info}
+                status={firstMilestoneCard.status}
               />
             </motion.div>
             <motion.div variants={itemVariants}>
-              <TimelineItem
-                title={secondInfo.title}
-                content={secondInfo.info}
-                status={secondInfo.status}
+              <MilestoneCard
+                title={secondMilestoneCard.title}
+                content={secondMilestoneCard.info}
+                status={secondMilestoneCard.status}
               />
             </motion.div>
             <motion.div variants={itemVariants}>
-              <TimelineItem
-                title={thirdInfo.title}
-                content={thirdInfo.info}
-                status={thirdInfo.status}
+              <MilestoneCard
+                title={thirdMilestoneCard.title}
+                content={thirdMilestoneCard.info}
+                status={thirdMilestoneCard.status}
               />
             </motion.div>
-            {fourthInfo && (
+            {forthMilestoneCard && (
               <motion.div variants={itemVariants}>
-                <TimelineItem
-                  title={fourthInfo.title}
-                  content={fourthInfo.info}
-                  status={fourthInfo.status}
+                <MilestoneCard
+                  title={forthMilestoneCard.title}
+                  content={forthMilestoneCard.info}
+                  status={forthMilestoneCard.status}
                 />
               </motion.div>
             )}
@@ -96,4 +102,4 @@ const Timeline = ({ quater, firstInfo, secondInfo, thirdInfo, fourthInfo }) => {
   );
 };
 
-export default Timeline;
+export default RoadmapPhase;

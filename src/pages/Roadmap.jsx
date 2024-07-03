@@ -1,5 +1,5 @@
 import React from "react";
-import Timeline from "../components/Timeline";
+import RoadmapPhase from "../components/RoadmapPhase";
 import TypewriteParagraph from "../components/TypewriteParagraph";
 import { roadmapSections } from "../utils/roadmapConstants";
 
@@ -13,17 +13,17 @@ const Roadmap = () => {
             secondWord="The Present"
             thirdWord="The Future"
           />
-          <h2 className="mx-auto text-center mb-12">Building the universe</h2>
+          <h2 className="mx-auto mb-12 text-center">Building the universe</h2>
           <div className="flex flex-col lg:flex-row">
             <div className="grid gap-8 lg:grid-cols-3">
               {roadmapSections.map((section, index) => (
-                <Timeline
+                <RoadmapPhase
                   key={index}
                   quater={section.title}
-                  firstInfo={section.firstInfo}
-                  secondInfo={section.secondInfo}
-                  thirdInfo={section.thirdInfo}
-                  fourthInfo={section.forthInfo}
+                  firstMilestoneCard={section.firstMilestoneCard}
+                  secondMilestoneCard={section.secondMilestoneCard}
+                  thirdMilestoneCard={section.thirdMilestoneCard}
+                  forthMilestoneCard={section.forthMilestoneCard}
                 />
               ))}
             </div>

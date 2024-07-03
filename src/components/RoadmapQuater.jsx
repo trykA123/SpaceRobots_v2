@@ -1,5 +1,5 @@
 import React from "react";
-import TimelineItem from "./TimelineItem";
+import TimelineItem from "./MilestoneCard";
 
 const RoadmapQuater = () => {
   return (
