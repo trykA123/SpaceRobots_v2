@@ -1,5 +1,5 @@
 import React from "react";
-import { text } from "../utils/projectConstants";
+import { projectContent } from "../utils/projectConstants";
 
 import { OrbitControls, useAnimations, useGLTF } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
@@ -62,29 +62,33 @@ const Project = () => {
               <RobotModel />
             </Canvas>
           </div>
-          <h2 className="col-span-1 row-span-2 grid w-full place-content-center rounded-xl bg-primary-teal p-12 text-center text-background-color">
-            {text.title}
+          <motion.h2
+            initial={{ opacity: 0, y: -100 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            className="col-span-1 row-span-2 grid w-full place-content-center rounded-xl bg-background-color p-12 text-center duration-300 hover:bg-primary-teal hover:text-background-color"
+          >
+            {projectContent.title}
+          </motion.h2>
+          <h2 className="col-span-1 row-span-2 grid w-full place-content-center rounded-xl bg-background-color p-12 text-center duration-300 hover:bg-primary-teal hover:text-background-color">
+            {projectContent.cards.secondCard}
           </h2>
-          <p className="col-span-1 row-span-2 grid place-content-center rounded-xl bg-background-color p-12 text-center">
-            {/* {text.description} */}
-          </p>
-          <h2 className="col-span-1 row-span-1 grid w-full place-content-center rounded-xl bg-background-color p-12 text-center">
-            7777 Robots
+          <h2 className="col-span-1 row-span-1 grid w-full place-content-center rounded-xl bg-background-color p-12 text-center duration-300 hover:bg-primary-teal hover:text-background-color">
+            {projectContent.cards.thirdCard}
           </h2>
-          <h2 className="col-span-1 row-span-2 grid w-full place-content-center rounded-xl bg-background-color p-12 text-center">
-            7777 Robots
+          <h2 className="col-span-1 row-span-2 grid w-full place-content-center rounded-xl bg-background-color p-12 text-center duration-300 hover:bg-primary-teal hover:text-background-color">
+            {projectContent.cards.fourthCard}
           </h2>
-          <h2 className="col-span-1 row-span-3 grid w-full place-content-center rounded-xl bg-background-color p-12 text-center">
-            Multiple Collections
+          <h2 className="col-span-1 row-span-3 grid w-full place-content-center rounded-xl bg-background-color p-12 text-center duration-300 hover:bg-primary-teal hover:text-background-color">
+            {projectContent.cards.fifthCard}
           </h2>
-          <h2 className="col-span-1 row-span-1 grid w-full place-content-center rounded-xl bg-background-color p-12 text-center">
-            7777 Robots
+          <h2 className="col-span-1 row-span-1 grid w-full place-content-center rounded-xl bg-background-color p-12 text-center duration-300 hover:bg-primary-teal hover:text-background-color">
+            {projectContent.cards.sixthCard}
           </h2>
           <button
             type="button"
             className="group col-span-1 row-span-1 flex flex-col items-center justify-center rounded-xl bg-accent-color px-8 py-4 text-center text-xl text-background-color duration-300"
           >
-            <h2>Read More</h2>
+            <h2>{projectContent.button.text}</h2>
             <span className="h-1 w-0 bg-background-color duration-500 group-hover:w-full" />
           </button>
         </div>

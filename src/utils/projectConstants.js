@@ -1,7 +1,15 @@
 // PROJECT CONSTANTS
-
-export const text = {
+export const projectContent = {
   title: "UPGRADABLE ROBOTS",
-  description:
-    "Space Robots NFTs are part of an upgradable collection that allows collectors to enhance their digital assets over time. With each upgrade, the capabilities and abilities of the robot are expanded, providing new opportunities for exploration and discovery. As you progress through the collection, your Space Robot NFT becomes more advanced and valuable, reflecting the increasing knowledge and technological capabilities of our species. By owning a Space Robots NFT, you're not just collecting a unique digital asset, but also investing in the future of space exploration.",
+  cards: {
+    firstCard: "7777 Robots",
+    secondCard: "Multiple Collections",
+    thirdCard: "7777 Robots",
+    fourthCard: "Customize your future",
+    fifthCard: "Unlock new possibilities",
+    sixthCard: "Create your own robot",
+  },
+  button: {
+    text: "Read More",
+  },
 };
