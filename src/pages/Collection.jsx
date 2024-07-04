@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import Swiper from "swiper";
 import "swiper/css";
 import CollectionPack from "../components/CollectionPack";
-import MobileColectionPack from "../components/MobileColectionPack";
 import Modal from "../components/ModalComponent";
 import TypewriteParagraph from "../components/TypewriteParagraph";
 import { cards } from "../utils/collectionConstants";
@@ -77,27 +76,6 @@ const Collection = () => {
             />
           </div>
         </div>
-        {/* <div className="z-10 flex h-[100dvh] w-full flex-col items-center justify-center bg-gradient-to-b from-gray-gradient-full via-gray-gradient to-gray-gradient-full pt-12 xl:hidden">
-          <MobileTitle title={"Collections"} className="mt-12" />
-          <div className="swiper-container">
-            <div className="swiper-wrapper">
-              <div className="swiper-slide">
-                <MobileColectionPack />
-              </div>
-              <div className="swiper-slide">
-                <MobileColectionPack />
-              </div>
-              <div className="swiper-slide">
-                <MobileColectionPack />
-              </div>
-            </div>
-            <div className="navigation-indicator-container -translate-y-16">
-              <div className="navigation-indicator"></div>
-              <div className="navigation-indicator"></div>
-              <div className="navigation-indicator"></div>
-            </div>
-          </div>
-        </div> */}
         {isOpen && (
           <Modal isOpen={isOpen} onClose={closeModal}>
             <div className="z-50 flex h-[600px] flex-col gap-4 text-modal-text lg:h-[500px] lg:flex-row">

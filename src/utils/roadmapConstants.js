@@ -1,5 +1,4 @@
 // ROADMAP CONSTANTS
-
 export const titles = {
   Q1: "Done",
   Q2: "In Progress",

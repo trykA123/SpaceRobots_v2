@@ -1,4 +1,11 @@
 // EVENT CONSTANTS
+export const tabs = [
+  "Space Robots Universe",
+  "Stellar Mechanics",
+  "Galactic Drift",
+  "Abyss of the Cosmos",
+];
+
 export const eventsData = [
   {
     tab: "Space Robots Universe",
