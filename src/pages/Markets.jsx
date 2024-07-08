@@ -1,38 +1,28 @@
 import React, { useEffect, useState } from "react";
 import MarketCollection from "../components/MarketCollection";
 import TypewriteParagraph from "../components/TypewriteParagraph";
-import backgroundRobotLogo from "/assets/images/backgroundLogo.webp";
-import proteo from "/assets/images/proteo.webp";
-import roboPack from "/assets/images/robopack.webp";
-import robopartLogo from "/assets/images/robopartLogo_1.webp";
-import spaceRobotLogo from "/assets/images/spacerobotlogo.webp";
 
 import { motion } from "framer-motion";
 
 const Markets = () => {
   const smallPacks = [
     {
-      bgImg: robopartLogo,
       info: "Space Robots - Roboparts",
       collectionTicker: "SRP-ec2514",
     },
     {
-      bgImg: roboPack,
       info: "Space Robots - General",
       collectionTicker: "SPACEROBOT-bfbf9d",
     },
     {
-      bgImg: spaceRobotLogo,
       info: "Space Robots",
       collectionTicker: "SRC-27d8ff",
     },
     {
-      bgImg: backgroundRobotLogo,
       info: "Space Robots - Backgrounds",
       collectionTicker: "SRB-0f1b1d",
     },
     {
-      bgImg: proteo,
       info: "Proteo Robots",
       collectionTicker: "PROTEOROBO-6df9cd",
     },
