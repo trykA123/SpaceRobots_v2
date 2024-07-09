@@ -1,157 +1,87 @@
-import { gql, useQuery } from "@apollo/client";
-import React from "react";
-import roboPack from "../assets/images/robopack.png";
-import MarketCard from "../components/MarketCard";
+import React, { useEffect, useState } from "react";
+import MarketCollection from "../components/MarketCollection";
+import TypewriteParagraph from "../components/TypewriteParagraph";
 
-const COLLECTION_AUCTIONS_QUERY = gql`
-  query collectionAuctions(
-    $customFilters: [AuctionCustomFilter]
-    $sorting: [Sorting!]
-    $filters: FiltersExpression
-    $grouping: Grouping
-    $pagination: ConnectionArgs
-  ) {
-    auctions(
-      customFilters: $customFilters
-      sorting: $sorting
-      filters: $filters
-      grouping: $grouping
-      pagination: $pagination
-    ) {
-      edges {
-        node {
-          asset {
-            identifier
-            name
-            media {
-              url
-            }
-          }
-          maxBid {
-            amount
-            token
-            usdAmount
-            tokenData {
-              decimals
-              symbol
-              __typename
-            }
-            __typename
-          }
-          minBid {
-            amount
-            token
-            usdAmount
-            tokenData {
-              decimals
-              symbol
-              __typename
-            }
-            __typename
-          }
-          status
-        }
-      }
-    }
-  }
-`;
-
-const COLLECTION_VARIABLES = {
-  customFilters: [],
-  filters: {
-    filters: [
-      {
-        field: "status",
-        op: "EQ",
-        values: ["Running"],
-      },
-      {
-        field: "collection",
-        op: "EQ",
-        values: ["SRC-27d8ff"],
-      },
-    ],
-    operator: "AND",
-  },
-  pagination: {
-    after: "",
-    first: 5,
-  },
-  sorting: [
-    {
-      direction: "DESC",
-      field: "creationDate",
-    },
-  ],
-};
+import { motion } from "framer-motion";
 
 const Markets = () => {
   const smallPacks = [
-    { bgImg: "packImg1", info: "Space Robots - Roboparts" },
-    { bgImg: "packImg2", info: "Space Robots - General" },
-    { bgImg: "packImg3", info: "Space Robots - Roboparts" },
-    { bgImg: "packImg4", info: "Space Robots - Backgrounds" },
-    { bgImg: "packImg5", info: "Proteo Robots" },
+    {
+      info: "Space Robots - Roboparts",
+      collectionTicker: "SRP-ec2514",
+    },
+    {
+      info: "Space Robots - General",
+      collectionTicker: "SPACEROBOT-bfbf9d",
+    },
+    {
+      info: "Space Robots",
+      collectionTicker: "SRC-27d8ff",
+    },
+    {
+      info: "Space Robots - Backgrounds",
+      collectionTicker: "SRB-0f1b1d",
+    },
+    {
+      info: "Proteo Robots",
+      collectionTicker: "PROTEOROBO-6df9cd",
+    },
   ];
 
-  let numMarketCards = 3;
-  if (window.innerWidth > 1920 && window.innerWidth < 3440) {
-    numMarketCards = 4;
-  } else if (window.innerWidth >= 3440) {
-    numMarketCards = 5;
-  }
+  const [selectedSmallPackIndex, setSelectedSmallPackIndex] = useState(2);
+  const [isAnimationPaused, setIsAnimationPaused] = useState(false);
 
-  const { loading, error, data } = useQuery(COLLECTION_AUCTIONS_QUERY, {
-    variables: COLLECTION_VARIABLES,
-  });
+  useEffect(() => {
+    // Attach a click event listener to the document or an outer container
+    const handleClickOutside = (event) => {
+      if (!event.target.closest(".grid")) {
+        // User clicked outside the grid, so resume the animation
+        setIsAnimationPaused(false);
+      }
+    };
 
-  if (loading) return <p>Loading...</p>;
-  if (error) return <p>Error: {error.message}</p>;
+    document.addEventListener("mouseover", handleClickOutside);
+
+    return () => {
+      // Remove the event listener when the component unmounts
+      document.removeEventListener("mouseover", handleClickOutside);
+    };
+  }, []);
 
   return (
     <section id="markets">
-      <div className="flex flex-col bg-background bg-cover pl-[10%] 4xl:pl-[15%] pt-[5%] h-screen w-screen">
-        <div className="flex space-x-12 justify-center w-[90%] py-10">
-          {smallPacks.map((pack) => (
-            <div className="flex items-center justify-center w-48 h-48 border-[1px] border-gray-15 rounded-md relative duration-700 z-30 group">
-              <div
-                className={`bg-${pack.bgImg} bg-cover opacity-40 group-hover:opacity-100 duration-500`}
-              ></div>
-              <p className="text-center abosolute font-bold text-white opacity-100 group-hover:opacity-0">
-                {pack.info}
-              </p>
-            </div>
-          ))}
-        </div>
-        <div className="flex px-20">
-          <div className="flex 3xl:justify-center gap-16 pt-9">
-            {[...Array(numMarketCards)].map((_, index) => {
-              const edge = data.auctions.edges[index];
-              if (!edge) {
-                return null;
-              }
-              const price =
-                edge.node.maxBid.amount /
-                Math.pow(10, edge.node.maxBid.tokenData.decimals);
-              const token = edge.node.maxBid.token;
-              const url = edge.node.asset.media[0].url;
-              const name = edge.node.asset.name;
-              const key = edge.node.id;
-              const assetId = edge.node.asset.identifier;
-              console.log(token);
-
-              return (
-                <MarketCard
-                  price={price}
-                  url={url}
-                  token={token}
-                  name={name}
-                  key={key}
-                  assetId={assetId}
-                />
-              );
-            })}
+      <div className="container mx-auto my-12 flex h-full w-full flex-col items-center justify-around gap-1 py-4">
+        <div className="flex w-full items-center justify-center">
+          <div className="flex flex-col items-center justify-center py-12">
+            <TypewriteParagraph
+              firstWord="SRC"
+              secondWord="SRP"
+              thirdWord="Robo"
+            />
+            <h2 className="mx-auto text-center">Explore the latest Listings</h2>
           </div>
+        </div>
+        <div className="flex w-full overflow-x-auto rounded-xl pb-12 shadow lg:justify-center">
+          <div className="flex md:animate-none md:gap-3 lg:mt-2 xl:mt-8">
+            {smallPacks.map((pack, index) => (
+              <button
+                type="button"
+                key={index} // Assuming pack has a unique identifier like 'id'
+                className="group relative z-30 mx-2 flex w-48 items-center justify-center overflow-hidden rounded-md border-[1px] border-gray-15 bg-secondary-color-2 p-4 duration-700 hover:border-secondary-color lg:w-auto"
+                onClick={() => setSelectedSmallPackIndex(index)}
+              >
+                <p className="abosolute text-center font-bold">{pack.info}</p>
+              </button>
+            ))}
+          </div>
+        </div>
+        <div>
+          <MarketCollection
+            selectedSmallPackIndex={selectedSmallPackIndex}
+            collectionTicker={
+              smallPacks[selectedSmallPackIndex].collectionTicker
+            }
+          />
         </div>
       </div>
     </section>

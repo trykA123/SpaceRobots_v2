@@ -1,41 +1,30 @@
 import React from "react";
-import banner from "../assets/images/banner.png";
-import pack from "../assets/images/pack.png";
-import roboPack from "../assets/images/robopack.png";
 
-const CollectionPack = () => {
+const CollectionPack = ({ title, description, roboPack, onClick }) => {
   return (
-    <div className="flex flex-col w-[486px] 3xl:h-[934px] h-[80%] relative items-center justify-center text-white opacity-[15%] group hover:opacity-100 duration-700">
-      <div className="flex items-center justify-center absolute z-10 top-0 w-full h-full bg-gradient-to-b from-gray-gradient-full via-gray-gradient to-gray-gradient-full"></div>
+    <div className="group relative flex h-full w-full items-center justify-center duration-700 ">
+      <div className="absolute z-10 flex w-full items-center justify-center rounded-lg bg-gradient-to-b from-gray-gradient-full via-gray-gradient to-gray-gradient-full" />
       <img
-        src={pack}
-        alt="Pack background"
-        className="object-cover absolute top-0"
+        src={roboPack}
+        alt="RoboPack background"
+        className="absolute h-full w-full rounded-lg object-cover opacity-50 duration-700 lg:opacity-100 lg:group-hover:opacity-40"
       />
-      {/* TODO: move the image from bg to an img, and on bg add a gradient overit
-       */}
-      <div className="relative opacity-0 md:-translate-y-32 md:group-hover:translate-y-6 3xl:-translate-y-32 group-hover:opacity-100 3xl:group-hover:-translate-y-12 duration-700 ">
-        <img src={banner} alt="" />
-        <p className="absolute z-20 top-2 font-chakraPetch text-xl uppercase left-6">
-          Robopacks
-        </p>
-      </div>
-      <div className="flex flex-col pt-12 items-center absolute mx-auto px-20 opacity-0 group-hover:opacity-100 duration-700 z-30">
-        <img
-          src={roboPack}
-          alt=""
-          className="translate-y-96 scale-90 
-          group-hover:-translate-y-0 3xl:group-hover:scale-110 duration-700"
-        />
-        <p className="py-10 text-base text-center">
-          By owning a Space Robots NFT, you're not just collecting a unique
-          digital asset, but also investing in the future of space exploration.
-          you're not just collecting a unique digital asset, but also investing
-          in the future of space exploration.
-        </p>
-        <div className="flex items-center justify-center w-64 h-14 bg-teal-300 rounded-sm translate-y-0 hover:-translate-y-2 duration-300">
-          <a href="">Open</a>
-        </div>
+      <div className="absolute z-30 mx-auto flex scale-90 flex-col items-center duration-700 lg:pt-12 ">
+        <h3 className="p-2 text-center uppercase group-hover:opacity-100 lg:opacity-0">
+          {title}
+        </h3>
+        <h4 className="hidden py-10 text-center group-hover:opacity-100 lg:flex lg:opacity-0">
+          {description}
+        </h4>
+        <button
+          type="button"
+          onClick={onClick}
+          href="#"
+          className="group/button col-span-1 row-span-1 flex w-64 flex-col items-center justify-center rounded-xl bg-accent-color px-8 py-4 font-chakraPetch text-xl uppercase text-background-color duration-300 group-hover:opacity-100 lg:opacity-0"
+        >
+          Read More
+          <span className="h-[1px] w-0 bg-background-color duration-300 group-hover/button:w-full" />
+        </button>
       </div>
     </div>
   );

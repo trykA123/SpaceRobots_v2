@@ -1,40 +1,96 @@
 import React from "react";
-import robot from "../assets/images/upgraderobot.png";
+import { projectContent } from "../utils/projectConstants";
+
+import { OrbitControls, useAnimations, useGLTF } from "@react-three/drei";
+import { Canvas } from "@react-three/fiber";
+import { motion } from "framer-motion";
+import { useEffect, useRef } from "react";
+
+import TypewriteParagraph from "../components/TypewriteParagraph";
+
+import walking from "../assets/models/robot.glb?url";
+
+const RobotModel = () => {
+  const group = useRef();
+
+  const { scene, animations } = useGLTF(walking, true); // Update the path to your GLTF model
+  const { actions, names } = useAnimations(animations, group);
+
+  useEffect(() => {
+    if (actions && names && names.length > 0 && actions[names[0]]) {
+      // Use the full animation name when accessing the action
+      actions[names[0]]?.play();
+    }
+  }, [names, actions]);
+
+  return (
+    <primitive ref={group} object={scene} scale={1} position={[0, -1.5, 0]} />
+  );
+};
 
 const Project = () => {
   return (
-    <section id="project">
-      <div className="h-screen w-screen bg-saturn bg-cover text-white">
-        <div className="container-content">
-          <div className="w-1/2 content">
-            <div className="flex-col m-auto space-y-6 4xl:space-y-12 items-center justify-center">
-              <h1 className="md:w-[600px] 4xl:w-[1080px]">UPGRADABLE ROBOTS</h1>
-              <p className="md:w-[500px] 3xl:w-[750px]">
-                Space Robots NFTs are part of an upgradable collection that
-                allows collectors to enhance their digital assets over time.
-                With each upgrade, the capabilities and abilities of the robot
-                are expanded, providing new opportunities for exploration and
-                discovery. As you progress through the collection, your Space
-                Robot NFT becomes more advanced and valuable, reflecting the
-                increasing knowledge and technological capabilities of our
-                species. By owning a Space Robots NFT, you're not just
-                collecting a unique digital asset, but also investing in the
-                future of space exploration.
-              </p>
-              <div className="w-64 bg-teal-400 rounded-sm flex items-center justify-center cursor-pointer h-14">
-                <a href="#" className="font-chakraPetch text-base uppercase">
-                  Collection
-                </a>
-              </div>
-            </div>
+    <section id="about" className="container mx-auto my-24">
+      <div className="flex flex-col items-center justify-center lg:h-screen">
+        <TypewriteParagraph
+          firstWord="About"
+          secondWord="The Story"
+          thirdWord="Explore new frontier"
+        />
+        <h2 className="mx-auto mb-12 text-center">Discover your Robot</h2>
+        <div className="grid h-full w-full gap-4 lg:grid-cols-3 lg:grid-rows-6 lg:gap-8">
+          <div className="lg:max-w-96 mx-auto flex h-96 w-full items-center justify-center rounded-xl bg-background-color lg:row-span-6 lg:h-full">
+            <Canvas camera={{ position: [-3, 2.5, 5.5], fov: 45 }}>
+              <OrbitControls
+                enableZoom={false}
+                maxDistance={6}
+                minDistance={5}
+              />
+              <ambientLight intensity={Math.PI / 2} />
+              <spotLight
+                position={[10, 10, 10]}
+                angle={0.15}
+                penumbra={1}
+                decay={0}
+                intensity={Math.PI}
+              />
+              <pointLight
+                position={[-10, -10, -10]}
+                decay={0}
+                intensity={Math.PI}
+              />
+              <RobotModel />
+            </Canvas>
           </div>
-          <div className="w-1/2 flex items-center justify-center my-[10%] 3xl:my-[5%] mx-auto">
-            <img
-              src={robot}
-              alt=""
-              className="object-contain 4xl:w-auto w-[60%]"
-            />
-          </div>
+          <motion.h2
+            initial={{ opacity: 0, y: -100 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            className="col-span-1 row-span-2 grid w-full place-content-center rounded-xl bg-background-color p-12 text-center duration-300 hover:bg-primary-teal hover:text-background-color"
+          >
+            {projectContent.title}
+          </motion.h2>
+          <h2 className="col-span-1 row-span-2 grid w-full place-content-center rounded-xl bg-background-color p-12 text-center duration-300 hover:bg-primary-teal hover:text-background-color">
+            {projectContent.cards.secondCard}
+          </h2>
+          <h2 className="col-span-1 row-span-1 grid w-full place-content-center rounded-xl bg-background-color p-12 text-center duration-300 hover:bg-primary-teal hover:text-background-color">
+            {projectContent.cards.thirdCard}
+          </h2>
+          <h2 className="col-span-1 row-span-2 grid w-full place-content-center rounded-xl bg-background-color p-12 text-center duration-300 hover:bg-primary-teal hover:text-background-color">
+            {projectContent.cards.fourthCard}
+          </h2>
+          <h2 className="col-span-1 row-span-3 grid w-full place-content-center rounded-xl bg-background-color p-12 text-center duration-300 hover:bg-primary-teal hover:text-background-color">
+            {projectContent.cards.fifthCard}
+          </h2>
+          <h2 className="col-span-1 row-span-1 grid w-full place-content-center rounded-xl bg-background-color p-12 text-center duration-300 hover:bg-primary-teal hover:text-background-color">
+            {projectContent.cards.sixthCard}
+          </h2>
+          <button
+            type="button"
+            className="group col-span-1 row-span-1 flex flex-col items-center justify-center rounded-xl bg-accent-color px-8 py-4 text-center text-xl text-background-color duration-300"
+          >
+            <h2>{projectContent.button.text}</h2>
+            <span className="h-1 w-0 bg-background-color duration-500 group-hover:w-full" />
+          </button>
         </div>
       </div>
     </section>

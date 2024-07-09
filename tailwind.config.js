@@ -2,19 +2,41 @@
 module.exports = {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
+    container: {
+      padding: {
+        DEFAULT: "1rem",
+        sm: "2rem",
+        lg: "5rem",
+        xl: "6rem",
+        "2xl": "12rem",
+      },
+      center: true,
+    },
     extend: {
+      scale: {
+        200: "2.0",
+      },
       fontFamily: {
         chakraPetch: "ChakraPetch",
         archivo: "Archivo",
       },
       backgroundImage: {
-        projectImg: "url('./assets/images/upgraderobot.png')",
-        packImg: "url('./assets/images/pack.png')",
-        packImg1: "url('./assets/images/robo1.png')",
-        background: "url('./assets/images/backgroundFull.png')",
-        saturn: "url('./assets/images/gradients.png')",
-        collectionBackgound: "url('./assets/images/collection.png')",
-        heroBackground: "url('./assets/images/heroBackground.png')",
+        projectImg: "url('./assets/images/upgraderobot.webp')",
+        packImg: "url('./assets/images/pack.webp')",
+        packImg1: "url('./assets/images/robo1.webp')",
+        background: "url('./assets/images/backgroundFull.webp')",
+        saturn: "url('./assets/images/gradients.webp')",
+        collectionBackgound: "url('./assets/images/collection.webp')",
+        heroBackground: "url('./assets/images/heroBackground.webp')",
+        teamBackground: "url('./assets/images/Banner.png')",
+        liviuBackground: "url('./assets/images/liviu.png')",
+        trykaBackground: "url('./assets/images/trka.png')",
+        simpleprickBackground: "url('./assets/images/simpleprick.png')",
+        jorjeBackground: "url('./assets/images/jorge.png')",
+        tarantuloBackground: "url('./assets/images/tarantulo.png')",
+        borisakeBackground: "url('./assets/images/borisake.png')",
+        "custom-gradient":
+          "linear-gradient(137deg, rgba(17, 18, 20, 0.75) 4.87%, rgba(12, 13, 15, 0.9) 75.88%)",
       },
       backgroundColor: {
         "gray-15": "rgba(68, 68, 68, 0.15)",
@@ -27,11 +49,33 @@ module.exports = {
         "gray-15": "rgba(68, 68, 68, 0.15)",
         "gray-gradient": "rgba(24, 24, 24, 0.01)",
         "gray-gradient-full": "rgba(16, 16, 16, 1)",
+        "mobile-menu-blue": "rgba(12, 18, 38, 1)",
+        "background-color": "#101010",
+        "background-color-2": "#080808",
+        "primary-teal": "#14c2a3",
+        "secondary-color": "#0b9c33",
+        "secondary-color-2": "#0F1E13",
+        "accent-color": "#f1f100",
+        "modal-text": "#fddedf",
       },
       screens: {
         "3xl": "1920px",
         "4xl": "2560px",
         "5xl": "3840px",
+      },
+      keyframes: {
+        wiggle: {
+          "0%, 100%": { transform: "translateY(0%)" },
+          "50%": { transform: "translateY(10%)" },
+        },
+        slide: {
+          to: { transform: "translateX(calc(-50% - 6px))" },
+        },
+      },
+      animation: {
+        wiggle: "wiggle 1.5s ease-in-out infinite",
+        slide: "slide 20s infinite linear",
+        skeletonLoading: "1s linear infinite alternate",
       },
     },
   },

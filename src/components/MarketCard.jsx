@@ -1,7 +1,5 @@
 import { gql, useQuery } from "@apollo/client";
-import { faArrowUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import xlogo from "../assets/images/xlogo.png";
+import { motion } from "framer-motion";
 
 import React from "react";
 
@@ -31,8 +29,7 @@ const SELECTED_AUCTION_QUERY = gql`
   }
 `;
 
-const MarketCard = (props) => {
-  console.log(props.assetId);
+const MarketCard = ({ key, ...props }) => {
   const SELECTED_VARIABLES = {
     filters: {
       filters: [
@@ -55,43 +52,87 @@ const MarketCard = (props) => {
     variables: SELECTED_VARIABLES,
   });
 
-  if (loading) return <p>Loading...</p>;
+  if (loading) {
+    // Show skeleton loading while data is loading
+    return (
+      <div className="group z-30 flex" key={key}>
+        <motion.div
+          className="flex flex-col rounded-md border border-secondary-color-2 bg-background-color p-4 shadow-xl transition-all duration-500 hover:border-primary-teal"
+          initial={{ opacity: 0, y: 150 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1.5 }}
+        >
+          <div className="skeleton h-80 w-full rounded-md" />
+          <div className="flex w-full flex-col justify-between gap-4 p-4">
+            <div className="skeleton mb-4 h-8 w-3/4 rounded-md" />
+            <div className="flex flex-col items-center justify-between gap-4">
+              <div className="flex w-full items-center justify-between">
+                <div className="flex items-center">
+                  <div className="skeleton mr-2 h-7 w-7 rounded-full" />
+                  <div className="skeleton h-12 w-20 rounded-md py-4" />
+                </div>
+                <div className="skeleton h-8 w-8 rounded-full" />
+              </div>
+              <div className="skeleton h-16 w-full rounded-xl" />
+            </div>
+          </div>
+        </motion.div>
+      </div>
+    );
+  }
   if (error) return <p>Error: {error.message}</p>;
 
-  console.log(data.auctions);
-
-  const marketName = data.auctions.edges[0].node.marketplace.name;
   const marketUrl = data.auctions.edges[0].node.marketplace.url;
   const marketIconUrl = data.auctions.edges[0].node.marketplace.iconUrl;
 
   return (
-    <div className="flex z-30 group">
-      <div className="flex flex-col 3xl:w-[400px] 3xl:h-[550px] bg-gray-15 rounded-md group-hover:bg-gradient-to-b from-teal-text-100 via-teal-text-40 to-teal-text-0 px-6 space-y-3">
-        <img src={props.url} alt="" className="pt-6 rounded-md object-cover" />
-        <h3>{props.name}</h3>
-        <div className="flex h-16 items-center justify-between">
-          <div className="flex items-center">
-            <img src={xlogo} className="w-7 h-7" />
-            <h4 className="text-teal-text-100 text-2xl leading-[95px] font-chakraPetch font-semibold">
-              {props.price}
-            </h4>
-          </div>
-          <div className="flex items-center justify-center text-white hover:text-black w-2/5 h-16 hover:bg-teal-300 bg-gray-15 rounded-md font-semibold gap-4 group-hover:w-3/5 duration-500 group-hover:-translate-x-2">
-            <a
-              href={marketUrl}
-              target="_blank"
-              className="flex items-center text-xl"
+    <motion.div
+      className="group z-30 flex"
+      key={key}
+      initial={{ opacity: 0, y: 150 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 1.5 }}
+    >
+      <div className="flex flex-col rounded-md border border-secondary-color-2 bg-background-color p-4 shadow-xl transition-all duration-500 hover:border-primary-teal">
+        <img
+          src={props.url}
+          alt="NFT"
+          className="rounded-md object-cover duration-500"
+          loading="lazy"
+        />
+        <div className="flex w-full flex-col justify-between gap-4 p-4">
+          <h3>{props.name}</h3>
+          <div className="flex flex-col items-center justify-between gap-4">
+            <div className="flex w-full items-center justify-between">
+              <div className="flex items-center">
+                {/* <img src={xlogo} className="w-7 h-7" alt="multiversx logo" /> */}
+                <h4 className="font-chakraPetch font-semibold text-primary-teal">
+                  {props.price} EGLD
+                </h4>
+              </div>
+              <img
+                src={marketIconUrl}
+                className="h-8 w-8"
+                alt="Market's Icon"
+              />
+            </div>
+            <button
+              type="button"
+              className="flex h-16 w-full items-center justify-center gap-4 rounded-xl bg-primary-teal font-semibold text-background-color duration-500"
             >
-              BUY on <img src={marketIconUrl} className="w-12 h-12" />
-            </a>
-            {/* <FontAwesomeIcon
-              icon={faArrowUpRightFromSquare}
-              className="text-teal-text-100 hidden opacity-0 group-hover:block group-hover:opacity-100 duration-500"
-            /> */}
+              <a
+                href={marketUrl}
+                target="_blank"
+                className="flex items-center 3xl:text-xl"
+                rel="noreferrer"
+              >
+                Upgrade collection{" "}
+              </a>
+            </button>
           </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

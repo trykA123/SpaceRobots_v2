@@ -1,8 +1,9 @@
+import { motion } from "framer-motion";
 import React, { useEffect, useState } from "react";
-import EventCardLeft from "../components/EventCardLeft";
-import EventCardRight from "../components/EventCardRight";
+import EventCard from "../components/EventCard";
+import { eventsData } from "../utils/eventsConstants";
 
-const EventQuarter = ({ selectedTab }) => {
+const EventQuarter = ({ selectedTab, openModal }) => {
   const [showContent, setShowContent] = useState(false);
 
   useEffect(() => {
@@ -10,42 +11,24 @@ const EventQuarter = ({ selectedTab }) => {
     setTimeout(() => setShowContent(true), 1000);
   }, [selectedTab]);
 
-  const events = [
-    {
-      left: [<EventCardLeft key={1} />, <EventCardLeft key={2} />],
-      right: [<EventCardRight key={1} />, <EventCardRight key={2} />],
-    },
-    {
-      left: [<EventCardLeft key={1} />, <EventCardLeft key={2} />],
-      right: [<EventCardRight key={1} />, <EventCardRight key={2} />],
-    },
-    {
-      left: [<EventCardLeft key={1} />, <EventCardLeft key={2} />],
-      right: [<EventCardRight key={1} />, <EventCardRight key={2} />],
-    },
-    {
-      left: [<EventCardLeft key={1} />, <EventCardLeft key={2} />],
-      right: [<EventCardRight key={1} />, <EventCardRight key={2} />],
-    },
-  ];
+  const selectedEvents = eventsData[selectedTab].stories;
 
   return (
-    <div
-      className={`flex h-full transition-all duration-700 ${
-        showContent ? "opacity-100 scale-100" : "opacity-0 scale-50"
-      }`}
+    <motion.div
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      className="mx-auto grid h-full w-full grid-cols-1 justify-center gap-4 py-12 transition-all duration-700 lg:flex lg:flex-row"
     >
-      {/* Left events */}
-      <div className="flex flex-col w-1/2 items-center justify-around pt-24">
-        {events[selectedTab].left}
-      </div>
-      {/* Middle line */}
-      <div className="h-full w-[1px] bg-gradient-to-b from-transparent via-white"></div>
-      {/* Right events */}
-      <div className="flex flex-col w-1/2 items-center justify-around pb-24">
-        {events[selectedTab].right}
-      </div>
-    </div>
+      {selectedEvents.map((event, index) => (
+        <EventCard
+          key={index}
+          title={event.title}
+          description={event.description}
+          date={event.date}
+          openModal={openModal}
+        />
+      ))}
+    </motion.div>
   );
 };
 

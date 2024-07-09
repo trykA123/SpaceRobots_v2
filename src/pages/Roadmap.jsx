@@ -1,30 +1,29 @@
 import React from "react";
-import Timeline from "../components/Timeline";
-import { roadmapSections } from "../utils/constants";
+import RoadmapPhase from "../components/RoadmapPhase";
+import TypewriteParagraph from "../components/TypewriteParagraph";
+import { roadmapSections } from "../utils/roadmapConstants";
 
 const Roadmap = () => {
   return (
     <section id="roadmap">
-      <div className="bg-slate-950 h-screen">
-        <div className="flex flex-col w-1/2 mx-auto pt-36 pb-8">
-          <h1 className="flex w-full items-center justify-center h-32">
-            ROADMAP
-          </h1>
-          <div className="flex  h-[500px] 3xl:h-[850px]">
-            {/* <div className="bg-gradient-to-b from-teal-text-100 via-blue-400 to-purple-900 h-full mt-10 mx-4 pt-48 fixed">
-            <div className="h-full w-2 left-1 relative">
-              <div className="sticky top-40 left-1/2 transform -translate-x-1/2 bg-blue-400 h-8 w-8 rounded-full border-4 border-white z-10"></div>
-            </div>
-          </div> */}
-            <div className="flex flex-col overflow-y-auto">
+      <div className="">
+        <div className="container mx-auto flex flex-col items-center pt-16">
+          <TypewriteParagraph
+            firstWord="The Past"
+            secondWord="The Present"
+            thirdWord="The Future"
+          />
+          <h2 className="mx-auto mb-12 text-center">Building the universe</h2>
+          <div className="flex flex-col lg:flex-row">
+            <div className="grid gap-8 lg:grid-cols-3">
               {roadmapSections.map((section, index) => (
-                <Timeline
+                <RoadmapPhase
                   key={index}
                   quater={section.title}
-                  firstInfo={section.firstInfo}
-                  secondInfo={section.secondInfo}
-                  thirdInfo={section.thirdInfo}
-                  fourthInfo={section.forthInfo}
+                  firstMilestoneCard={section.firstMilestoneCard}
+                  secondMilestoneCard={section.secondMilestoneCard}
+                  thirdMilestoneCard={section.thirdMilestoneCard}
+                  forthMilestoneCard={section.forthMilestoneCard}
                 />
               ))}
             </div>
