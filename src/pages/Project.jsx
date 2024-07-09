@@ -63,34 +63,56 @@ const Project = () => {
             </Canvas>
           </div>
           <motion.h2
-            initial={{ opacity: 0, y: -100 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, scale: 0 }}
+            whileInView={{ opacity: 1, scale: 1 }}
             className="col-span-1 row-span-2 grid w-full place-content-center rounded-xl bg-background-color p-12 text-center duration-300 hover:bg-primary-teal hover:text-background-color"
           >
             {projectContent.title}
           </motion.h2>
-          <h2 className="col-span-1 row-span-2 grid w-full place-content-center rounded-xl bg-background-color p-12 text-center duration-300 hover:bg-primary-teal hover:text-background-color">
+          <motion.h2
+            initial={{ opacity: 0, scale: 0 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            className="col-span-1 row-span-2 grid w-full place-content-center rounded-xl bg-background-color p-12 text-center duration-300 hover:bg-primary-teal hover:text-background-color"
+          >
             {projectContent.cards.secondCard}
-          </h2>
-          <h2 className="col-span-1 row-span-1 grid w-full place-content-center rounded-xl bg-background-color p-12 text-center duration-300 hover:bg-primary-teal hover:text-background-color">
+          </motion.h2>
+          <motion.h2
+            initial={{ opacity: 0, scale: 0 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            className="col-span-1 row-span-1 grid w-full place-content-center rounded-xl bg-background-color p-12 text-center duration-300 hover:bg-primary-teal hover:text-background-color"
+          >
             {projectContent.cards.thirdCard}
-          </h2>
-          <h2 className="col-span-1 row-span-2 grid w-full place-content-center rounded-xl bg-background-color p-12 text-center duration-300 hover:bg-primary-teal hover:text-background-color">
+          </motion.h2>
+          <motion.h2
+            initial={{ opacity: 0, scale: 0 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            className="col-span-1 row-span-2 grid w-full place-content-center rounded-xl bg-background-color p-12 text-center duration-300 hover:bg-primary-teal hover:text-background-color"
+          >
             {projectContent.cards.fourthCard}
-          </h2>
-          <h2 className="col-span-1 row-span-3 grid w-full place-content-center rounded-xl bg-background-color p-12 text-center duration-300 hover:bg-primary-teal hover:text-background-color">
+          </motion.h2>
+          <motion.h2
+            initial={{ opacity: 0, scale: 0 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            className="col-span-1 row-span-3 grid w-full place-content-center rounded-xl bg-background-color p-12 text-center duration-300 hover:bg-primary-teal hover:text-background-color"
+          >
             {projectContent.cards.fifthCard}
-          </h2>
-          <h2 className="col-span-1 row-span-1 grid w-full place-content-center rounded-xl bg-background-color p-12 text-center duration-300 hover:bg-primary-teal hover:text-background-color">
+          </motion.h2>
+          <motion.h2
+            initial={{ opacity: 0, scale: 0 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            className="col-span-1 row-span-1 grid w-full place-content-center rounded-xl bg-background-color p-12 text-center duration-300 hover:bg-primary-teal hover:text-background-color"
+          >
             {projectContent.cards.sixthCard}
-          </h2>
-          <button
+          </motion.h2>
+          <motion.button
+            initial={{ opacity: 0, scale: 0 }}
+            whileInView={{ opacity: 1, scale: 1 }}
             type="button"
             className="group col-span-1 row-span-1 flex flex-col items-center justify-center rounded-xl bg-accent-color px-8 py-4 text-center text-xl text-background-color duration-300"
           >
             <h2>{projectContent.button.text}</h2>
             <span className="h-1 w-0 bg-background-color duration-500 group-hover:w-full" />
-          </button>
+          </motion.button>
         </div>
       </div>
     </section>
