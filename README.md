@@ -3,8 +3,8 @@ SpaceRobots is a React website created using Vite.
 ## Getting Started
 These instructions will help you set up and run the SpaceRobots project on your local machine.
 ### Prerequisites
-- Node.js (version X.X.X or higher)
-- npm (version X.X.X or higher)
+- Node.js 
+- npm
 ### Installation
 1. Clone the repository:
    git clone
