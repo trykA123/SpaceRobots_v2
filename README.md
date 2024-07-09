@@ -29,6 +29,7 @@ SpaceRobots uses JSON files to manage various text content. These files are loca
 - `projectConstants.js`
 - `roadmapConstants.js`
 - `teamContants.js`
+  
 To modify the text content of the website, edit these files as needed. The changes will be reflected in the corresponding sections of the website.
 ## Contributing
 trykA123
