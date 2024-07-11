@@ -1,5 +1,5 @@
 import { AnimatePresence, motion } from "framer-motion";
-import React, { useState } from "react";
+import React from "react";
 
 const Modal = ({ isOpen, onClose, children }) => {
   const closeModal = () => {

@@ -1,8 +1,7 @@
 // PROJECT CONSTANTS
 export const projectContent = {
-  title: "UPGRADABLE ROBOTS",
   cards: {
-    firstCard: "7777 Robots",
+    firstCard: "Upgradeble robots",
     secondCard: "Multiple Collections",
     thirdCard: "7777 Robots",
     fourthCard: "Customize your future",

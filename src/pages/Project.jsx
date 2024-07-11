@@ -67,7 +67,7 @@ const Project = () => {
             whileInView={{ opacity: 1, scale: 1 }}
             className="col-span-1 row-span-2 grid w-full place-content-center rounded-xl bg-background-color p-12 text-center duration-300 hover:bg-primary-teal hover:text-background-color"
           >
-            {projectContent.title}
+            {projectContent.cards.firstCard}
           </motion.h2>
           <motion.h2
             initial={{ opacity: 0, scale: 0 }}
