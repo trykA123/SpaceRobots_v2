@@ -1,13 +1,8 @@
-import React, { useEffect, useState } from "react";
-import Swiper from "swiper";
-import "swiper/css";
+import React, { useState } from "react";
 import CollectionPack from "../components/CollectionPack";
 import Modal from "../components/ModalComponent";
 import TypewriteParagraph from "../components/TypewriteParagraph";
 import { cards } from "../utils/collectionConstants";
-import BoxCollection from "/assets/images/collections/Box.png";
-import PartCollection from "/assets/images/collections/Part.png";
-import RobotCollection from "/assets/images/collections/Robot.png";
 
 const Collection = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -41,7 +36,7 @@ const Collection = () => {
             <CollectionPack
               title={cards.firstCard.title}
               description={cards.firstCard.description}
-              roboPack={RobotCollection}
+              roboPack={cards.firstCard.backgroundImage}
               onClick={() =>
                 openModal(
                   cards.firstCard.title,
@@ -53,7 +48,7 @@ const Collection = () => {
             <CollectionPack
               title={cards.secondCard.title}
               description={cards.secondCard.description}
-              roboPack={BoxCollection}
+              roboPack={cards.secondCard.backgroundImage}
               onClick={() =>
                 openModal(
                   cards.secondCard.title,
@@ -65,7 +60,7 @@ const Collection = () => {
             <CollectionPack
               title={cards.thirdCard.title}
               description={cards.thirdCard.description}
-              roboPack={PartCollection}
+              roboPack={cards.thirdCard.backgroundImage}
               onClick={() =>
                 openModal(
                   cards.thirdCard.title,

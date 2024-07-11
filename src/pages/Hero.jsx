@@ -1,7 +1,6 @@
 import { motion, useTransform, useViewportScroll } from "framer-motion";
 import React, { useEffect, useState } from "react";
-import heroVideo from "/assets/videos/video.mp4";
-import { text } from "../utils/heroConstants";
+import { text, video } from "../utils/heroConstants";
 
 import Button from "../components/Button";
 
@@ -25,14 +24,14 @@ const Hero = () => {
         loop
         playsInline
       >
-        <source src={heroVideo} type="video/mp4" />
+        <source src={video} type="video/mp4" />
       </video>
       {/* Content */}
       <div className="relative z-10 flex h-screen flex-col items-center justify-center">
         <div className="mx-auto flex h-full flex-col-reverse items-center justify-center md:flex-col md:justify-between">
           <div className="flex h-full flex-col items-center justify-center space-y-14 py-16 md:py-0 xl:space-y-6">
             <h1 className="z-30 text-center md:w-[600px] md:text-center 3xl:w-[1080px]">
-              Explore the Unknown with Space Robots
+              {text.title}
             </h1>
             <motion.div
               initial={{ opacity: 0, y: 150 }}
