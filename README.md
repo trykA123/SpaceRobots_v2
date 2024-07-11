@@ -117,14 +117,19 @@ Changing these fields will affect the following:
 ### Example: Modifying the title in heroConstants.js
 To change the content of the hero, navigate to `utils/heroContants.js` and modify the `text` object. Here's an example of the structure:
 ```javascript
+export const video = "/assets/videos/video.mp4";
+
 export const text = {
   title: "Explore the Unknown with Space Robots",
 };
+
 ```
 
 Changing these fields will affect the following:
 
 `title`: This will update the title from the Hero Section.
+
+`video`: This will change the background video
 ### Example: Modifying the title in heroConstants.js
 To change the content of a project, navigate to `utils/projectConstants.js` and modify the `projectContent` object. Here's an example of the structure:
 ```javascript
@@ -249,3 +254,9 @@ Changing these fields will affect the following:
 
 * `images`: Contains the paths to the images of the team members.
    * `image1`, `image2`, etc.: Each image field corresponds to a team member's image. Make sure to provide the correct path to the new image file.
+
+##For assets, you can find them in `public/assets`.
+
+To add more images, you can place them in `public/assets/images/[collections/storieImages/team]` depending on what images you want to add. 
+
+Also to convert to .webp, you can use: https://squoosh.app/
