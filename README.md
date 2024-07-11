@@ -232,12 +232,12 @@ export const team = {
     role6: "Developer",
   },
   images: {
-    image1: "/assets/images/team/spacerobots-team-tarantulo.jpg",
-    image2: "/assets/images/team/spacerobots-team-simpleprick.jpg",
-    image3: "/assets/images/team/spacerobots-team-borisake.jpg",
-    image4: "/assets/images/team/spacerobots-team-jorje.jpg",
-    image5: "/assets/images/team/spacerobots-team-em.jpg",
-    image6: "/assets/images/team/spacerobots-team-tryka.jpg",
+    image1: "/assets/images/team/spacerobots-team-tarantulo.webp",
+    image2: "/assets/images/team/spacerobots-team-simpleprick.webp",
+    image3: "/assets/images/team/spacerobots-team-borisake.webp",
+    image4: "/assets/images/team/spacerobots-team-jorje.webp",
+    image5: "/assets/images/team/spacerobots-team-em.webp",
+    image6: "/assets/images/team/spacerobots-team-tryka.webp",
   },
 };
 ```
