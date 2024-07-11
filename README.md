@@ -38,9 +38,12 @@ To change the content of the first card in the collection, navigate to `utils/co
 ```javascript
 export const cards = {
   firstCard: {
-    title: "Space Robots",
-    description: "By owning a Space Robots NFT, you're not just collecting a unique digital asset, but also investing in the future of space exploration.",
-    modalDescription: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ab id et culpa quibusdam, exercitationem consequatur vitae. Ipsum nobis deserunt veritatis natus iste. Accusamus nam voluptates, magnam minus aspernatur eius est.Rem aliquam, accusantium ex consequatur cum excepturi modi quam nemo quos aliquid quas odit voluptatum esse qui nulla earum possimus?",
+        title: "Space Robots",
+    description:
+      "By owning a Space Robots NFT, you're not just collecting a unique digital asset, but also investing in the future of space exploration.",
+    modalDescription:
+      "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ab id et culpa quibusdam, exercitationem consequatur vitae. Ipsum nobis deserunt veritatis natus iste. Accusamus nam voluptates, magnam minus aspernatur eius est.Rem aliquam, accusantium ex consequatur cum excepturi modi quam nemo quos aliquid quas odit voluptatum esse qui nulla earum possimus?",
+    backgroundImage: "/assets/images/collections/Robot.png",
     modalImage: "/assets/images/collections/RobotOne.png",
   },
   // ... other cards
@@ -55,7 +58,9 @@ Changing these fields will affect the following:
 
 `modalDescription`: This will change the more detailed description that appears when the card is ReadMore button is clicked.
 
-`modalImage`: This will replace the image shown for this card, both in its collapsed state and when expanded. Make sure to provide the correct path to the new image file.
+`backgroundImage`: This will replace the background image for the card.
+
+`modalImage`: This will replace the image shown by the modal for this card. Make sure to provide the correct path to the new image file.
 ### Example: Modifying the Story Types (tabs) and Story in storiesConstants.js
 To change the story type, navigate to `utils/storiesConstants.js` and modify the `tabs` object. Here's the structure:
 ```javascript
@@ -75,26 +80,26 @@ To change the story, navigate to `utils/storiesConstants.js` and modify the `sto
       {
         title: "0001: Expedition into the Unknown",
         description:
-          "lorem ipsum dolor sit amet, consectetur adip nonum soc cursus",
-        date: "2024-07-04",
+          "lorem ipsum dolor sit amet, consectetur adip nonum soc cursus, lorem ipsum dolor sit amet, consectetur adip nonum soc cursus, lorem ipsum dolor sit amet, consectetur adip nonum soc cursus",
+        image: "/assets/images/storiesImages/project.webp",
       },
       {
         title: "0002: Stellar Shadows",
         description:
           "lorem ipsum dolor sit amet, consectetur adip nonum soc cursus",
-        date: "2024-08-15",
+        image: "/assets/images/storiesImages/project.webp",
       },
       {
         title: "0003: Galactic Echoes",
         description:
           "lorem ipsum dolor sit amet, consectetur adip nonum soc cursus",
-        date: "2024-09-23",
+        image: "/assets/images/storiesImages/project.webp",
       },
       {
         title: "0004: Abyss of the Cosmos",
         description:
           "lorem ipsum dolor sit amet, consectetur adip nonum soc cursus",
-        date: "2024-10-31",
+        image: "/assets/images/storiesImages/project.webp",
       },
     ],
   },
@@ -108,7 +113,7 @@ Changing these fields will affect the following:
 
 `description`: This will change the more detailed description that appears when the card is ReadMore button is clicked.
 
-`modalImage`: This will replace the image shown for this card, both in its collapsed state and when expanded. Make sure to provide the correct path to the new image file.
+`image`: This will replace the image shown for this card, both in its collapsed state and when expanded. Make sure to provide the correct path to the new image file.
 ### Example: Modifying the title in heroConstants.js
 To change the content of the hero, navigate to `utils/heroContants.js` and modify the `text` object. Here's an example of the structure:
 ```javascript
